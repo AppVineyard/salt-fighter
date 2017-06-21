@@ -7,7 +7,7 @@ if(count($_POST)>0) {
 	if($count==0) {
 		$message = "Invalid Username or Password!";
 	} else {
-		$message = "$_POST["userName"]"."You are successfully authenticated!";
+		$message = "'$_POST["userName"]'.'You are successfully authenticated!'";
 	}
 }
 ?>
