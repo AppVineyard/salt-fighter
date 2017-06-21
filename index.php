@@ -4,6 +4,7 @@ if(count($_POST)>0) {
 	$conn = mysqli_connect("us-cdbr-iron-east-03.cleardb.net","bee6bfe3a31317","789e80c3","heroku_2154a2bf255ffd7");
 	$result = mysqli_query($conn,"SELECT * FROM users WHERE userName='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
 	$count  = mysqli_num_rows($result);
+	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 	if($count==0) {
 		$message = "Invalid Username or Password!";
 	} else {
@@ -18,7 +19,7 @@ if(count($_POST)>0) {
 </head>
 <body>
 <form name="frmUser" method="post" action="">
-	<div class="message"><?php if($message!="") { echo $_POST["userName"].','.$message; } ?></div>
+	<div class="message"><?php if($message!="") { echo 'Welcome '.$row["displayName"].' ,'.$message; } ?></div>
 		<table border="0" cellpadding="10" cellspacing="1" width="500" align="center" class="tblLogin">
 			<tr class="tableheader">
 			<td align="center" colspan="2">Enter Login Details</td>
