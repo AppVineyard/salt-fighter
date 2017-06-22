@@ -30,7 +30,7 @@ if(count($_POST)>0) {
          <button type="submit" name="submit"> Submit</button>
      </form>
 
-     <div class="message"></div>
+     <div class="message"><?php if($message!="") { echo $message; } ?></div>
  </div>
 
  </body>
