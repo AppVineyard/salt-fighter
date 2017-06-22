@@ -3,11 +3,12 @@
 }
 body{
     background-color: #6f6f6f;
+    margin:0;
+    padding:0;
 }
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     max-width:100%;
 }
 
@@ -48,6 +49,7 @@ button{
     border: 0;
     background-color: #8e9e93;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
+    transition: all .25s
 }
 
 .message {
@@ -74,13 +76,13 @@ button{
 
     }
     #login img{
-        max-width:50%;
+        max-width:80%;
         margin-bottom: 10%;
         height: auto;
     }
     input[type='text'], input[type="password"] {
         padding-left: .5em;
-        margin-bottom: em;
+        margin-bottom: 1em;
         width:80%;
         height:2em;
         border-radius: 7px;
@@ -99,5 +101,8 @@ button{
         border: 0;
         background-color: #8e9e93;
         box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    }
+    button:active{
+        background-color: #d5968b;
     }
 }
