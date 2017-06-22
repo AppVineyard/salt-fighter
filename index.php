@@ -8,7 +8,7 @@ if(count($_POST)>0) {
 	if($count==0) {
 		$message = "Invalid Username or Password!";
 	} else {
-		$message = "You are successfully authenticated!";
+		$message = 'Welcome '.$row["displayName"].', '.'You are successfully authenticated!'."</br>".$row["qotd"];
 	}
 }
 ?>
@@ -19,7 +19,7 @@ if(count($_POST)>0) {
 </head>
 <body>
 <form name="frmUser" method="post" action="">
-	<div class="message"><?php if($message!="") { echo 'Welcome '.$row["displayName"].', '.$message."</br>".$row["qotd"]; } ?></div>
+	<div class="message"><?php if($message!="") { echo $message; } ?></div>
 		<table border="0" cellpadding="10" cellspacing="1" width="500" align="center" class="tblLogin">
 			<tr class="tableheader">
 			<td align="center" colspan="2">Enter Login Details</td>
