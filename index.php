@@ -31,6 +31,7 @@ if (document.addEventListener) {
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1">
      <title>ZabSucks : Login</title>
+     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
      <link href="zabSucks.css" type="text/css" rel="stylesheet"/>
  </head>
  <body>

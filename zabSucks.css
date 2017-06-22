@@ -1,5 +1,5 @@
 *{
-    font-family: sans-serif;
+    font-family: 'Lato', sans-serif;
 }
 body{
     background-color: #6f6f6f;
@@ -18,7 +18,7 @@ body{
     height: 80vh;
     width:30vw;
     margin: 10vh auto;
-    background-color: #dee0dc;
+    background-color: #c5c7c3;
 
     border-radius: 10px;
     box-shadow: 6px 5px 10px rgba(57, 57, 57, 0.74);
@@ -51,22 +51,53 @@ button{
 }
 
 .message {
-color: #FF0000;
-font-weight: bold;
-text-align: center;
-width: 100%;
+    color: #FF0000;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
     margin-top: 5%;
 }
 .bioImg{
     margin-top: 5%;
 }
 @media(max-width: 767px){
+
     #login{
         border-radius: 0%;
         margin: 0;
-        padding;
+        padding-top: 5vh;
         width:100vw;
-        height:100vh;
-    }
+        max-width:100%;
+        height:auto;
+        min-height:100vh;
+        background-color: #828380;
 
+    }
+    #login img{
+        max-width:50%;
+        margin-bottom: 10%;
+        height: auto;
+    }
+    input[type='text'], input[type="password"] {
+        padding-left: .5em;
+        margin-bottom: em;
+        width:80%;
+        height:2em;
+        border-radius: 7px;
+        border: 1px solid #dddddd;
+        box-shadow: none;
+
+        font-size: 1.5em;
+        color: #282828;
+    }
+    button{
+        margin-top: 2em;
+        font-size: 1.5em;
+        height:2em;
+        width:8em;
+        border-radius: 5px;
+        border: 0;
+        background-color: #8e9e93;
+        box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    }
 }
