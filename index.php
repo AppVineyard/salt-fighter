@@ -14,6 +14,19 @@ if(count($_POST)>0) {
 ?>
 <html>
  <html lang="en">
+ <script>
+if (document.addEventListener) {
+        document.addEventListener('contextmenu', function(e) {
+            alert("Zab, stop trying to steal our code."); //here you draw your own menu
+            e.preventDefault();
+        }, false);
+    } else {
+        document.attachEvent('oncontextmenu', function() {
+            alert("Zab, stop trying to steal our code.");
+            window.event.returnValue = false;
+        });
+    }
+</script>
  <head>
      <meta charset="UTF-8">
      <title>ZabSucks : Login</title>
