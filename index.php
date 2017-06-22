@@ -31,6 +31,7 @@ if(count($_POST)>0) {
      </form>
 
      <div class="message"><?php if($message!="") { echo $message; } ?></div>
+     <div><<?php if($row["bio_url"] !="") { echo '<img src="'.$row["bio_url"].'">'; } ?>
  </div>
 
  </body>
