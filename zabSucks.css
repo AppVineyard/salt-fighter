@@ -51,7 +51,7 @@ button{
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
     transition: all .25s
 }
-.fblog{
+#fblog{
     height:2.3em;
     width:7em;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
