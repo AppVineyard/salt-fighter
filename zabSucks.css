@@ -49,13 +49,10 @@ button{
     border: 0;
     background-color: #8e9e93;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
-    transition: all .25s
+    transition: all .25s;
+    margin-bottom: 5%;
 }
-#fblog{
-    height:2.3em;
-    width:7em;
-    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.64);
-    transition: all .25s
+#fblog{ 
 }
 .message {
     color: #FF0000;
