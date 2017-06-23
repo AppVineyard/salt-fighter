@@ -73,6 +73,7 @@ if (document.addEventListener) {
          <input type="text" class="login-input" name="birthday" value="" placeholder="DD/MM/YYYY">
          <button type="submit" name="submit" value ="Register"> Submit</button>
      </form>
+:
 </div>
 
  </body>
