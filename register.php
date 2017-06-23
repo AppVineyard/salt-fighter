@@ -118,10 +118,10 @@ if (document.addEventListener) {
          <input type="password" name="password" placeholder="Password" class="login-input"><br>
          <button type="submit" name="submit"> Submit</button>
      </form>
-
-     <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+<div id="fblog">
+<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
 </fb:login-button>
-
+</div>
 <div id="status">
 </div>
      <div class="message"><?php if($message!="") { echo $message; } ?></div>
