@@ -1,55 +1,19 @@
 <?php
-$message="";
-if(count($_POST)>0) {
-	$conn = mysqli_connect("us-cdbr-iron-east-03.cleardb.net","bee6bfe3a31317","789e80c3","heroku_2154a2bf255ffd7");
-	$result = mysqli_query($conn,"SELECT * FROM users WHERE userName='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
-	$count  = mysqli_num_rows($result);
-	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	if($count==0) {
-		$message = "Invalid Username or Password!";
-	} else {
-		$message = 'Welcome '.$row["displayName"].', '.'You are successfully authenticated!'."</br>".$row["qotd"];
-	}
+# login.php
+
+session_start();
+
+include 'fbconfig.php';
+
+$helper = $fb->getRedirectLoginHelper();
+
+$permissions = ['email']; // Optional permissions
+$loginUrl = $helper->getLoginUrl($my_url.'/login-callback.php', $permissions);
+
+if ($_SESSION['fb_id']) {
+    header("Location:".$my_url."/welcome.php");
+} else {
+    echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
 }
+
 ?>
-<html>
- <html lang="en">
- <script>
-if (document.addEventListener) {
-        document.addEventListener('contextmenu', function(e) {
-            alert("Zab, stop trying to steal our code."); //here you draw your own menu
-            e.preventDefault();
-        }, false);
-    } else {
-        document.attachEvent('oncontextmenu', function() {
-            alert("Zab, stop trying to steal our code.");
-            window.event.returnValue = false;
-        });
-    }
-</script>
- <head>
-     <meta charset="UTF-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-     <title>ZabSucks : Login</title>
-     <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet">
-     <link href="zabSucks.css" type="text/css" rel="stylesheet"/>
- </head>
- <body>
-
-
- <div id="login">
-     <img src="zabSucks.png">
-     <form name="frmUser" method="post" action="">
-         <input type="text" name="userName" placeholder="User Name" class="login-input"><br>
-         <input type="password" name="password" placeholder="Password" class="login-input"><br>
-         <button type="submit" name="submit"> Submit</button>
-     </form>
-
-     <div class="message"><?php if($message!="") { echo $message; } ?></div>
-     <div class="bioImg"><?php if($row["bio_url"] !="") { echo '<img src="'.$row["bio_url"].'">'; } ?>
- </div> 
-</div>
-
- </body>
- </html>
-
