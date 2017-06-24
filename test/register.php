@@ -16,10 +16,10 @@ require 'dbconfig.php';
 
 $check = mysqli_query($conn,"select * from users where fb_id='$fb_uid'");
 
-$check = mysqli_num_rows($conn,$check);
+$check = mysqli_num_rows($check);
 
 
-   $query = "INSERT INTO users (fb_id,fb_first_name,fb_last_name,fb_gender,fb_email,birthday,address) VALUES ('$fb_uid','$fb_firstname','$fb_lastname','$fb_gender','$fb_email',STR_TO_DATE('$birthday', '%m/%d/%Y'),'$address')ON DUPLICATE KEY UPDATE users SET fb_id='$fb_uid', fb_first_name = '$fb_firstname', fb_last_name = '$fb_lastname', fb_gender = '$fb_gender', fb_email='$fb_email', birthday=STR_TO_DATE('$birthday', '%m/%d/%Y'), address='$address' where fb_id='$fb_uid'";
+   $query = "INSERT INTO users (fb_id,fb_first_name,fb_last_name,fb_gender,fb_email,birthday,address) VALUES ('$fb_uid','$fb_firstname','$fb_lastname','$fb_gender','$fb_email',STR_TO_DATE('$birthday', '%m/%d/%Y'),'$address') ON DUPLICATE KEY UPDATE users fb_id='$fb_uid', fb_first_name = '$fb_firstname', fb_last_name = '$fb_lastname', fb_gender = '$fb_gender', fb_email='$fb_email', birthday=STR_TO_DATE('$birthday', '%m/%d/%Y'), address='$address' where fb_id='$fb_uid'";
    mysqli_query($conn,$query);
 
 
