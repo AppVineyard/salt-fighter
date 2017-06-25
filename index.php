@@ -20,7 +20,7 @@ if(count($_POST)>0) {
 
     <title>ZabSucks</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
-    <link href="index.css" type="text/css" rel="stylesheet"/>
+    <link href="zabSucks.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <div id="controller">
