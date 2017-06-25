@@ -108,7 +108,7 @@ form button:hover {
     color: black;
     background-color: #b7af86;
 }
-@media (max-width: 767px) {
+@media (max-width:1024px) {
     #sideBar {
         text-align: center;
         width: 100vw;
@@ -116,9 +116,6 @@ form button:hover {
     }
     #sideBar .zabSucksImg {
         display: inline-block;
-    }
-    #login {
-        bottom: 0;
     }
     #whatUp {
         width: 100vw;
