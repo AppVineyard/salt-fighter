@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ZabSucks : Home</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
+    <link href="home.css" type="text/css" rel="stylesheet"/>
+</head>
+<body>
+<div id="sideBar" class="fixed-top col-lg-3">
+    <div id="sideTop">
+        <img src="images/zabSucks.png">
+    </div>
+    <div id="addRemovePlayer" class="col-lg-12">
+        <div id="addPlayer"> <h1 id="addPlayerBtn">+</h1> </div>
+        <div id="removePlayer"><h1 id="removePlayerBtn">-</h1></div>
+    </div>
+</div>
+<div id="main" class="col-lg-9">
+    <div id="overallStats" class="row"></div>
+    <div id="players" class="row"></div>
+</div>
+
+
+<script>
+    var players = [
+        {
+            name: "p1",
+            gamesPlayed: 7,
+            wins: {
+                total: 3,
+                vsP2: 1,
+                vsP3: 2
+            },
+            losses: {
+                total: 4,
+                vsP2: 3,
+                vsP3: 1
+            }
+        },
+        {
+            name: "p2",
+            gamesPlayed: 10,
+            wins: {
+                total: 8,
+                vsP1: 3,
+                vsP3: 5
+            },
+            losses: {
+                total: 2,
+                vsP1: 1,
+                vsP3: 1
+            }
+        },
+        {
+            name: "p3",
+            gamesPlayed: 9,
+            wins: {
+                total: 2,
+                vsP1: 1,
+                vsP2: 1
+            },
+            losses: {
+                total: 7,
+                vsP1: 2,
+                vsP2: 5
+            }
+        }
+    ];
+    var addBtn = document.getElementById('addPlayerBtn');
+    var rmvBtn = document.getElementById('removePlayerBtn');
+    var playersHolder = document.getElementById('players');
+
+    addBtn.addEventListener('click', function(){
+        var newName = prompt('name?');
+        var newPlayer = {
+                name : newName
+        }
+        players.push(newPlayer);
+        layoutPlayers();
+    });
+    rmvBtn.addEventListener('click', function(){
+        var newName = prompt('name?');
+        for (i = 0; i < players.length; i++) {
+            if(players[i].name == newName){
+                players.splice(i, 1);
+               break;
+            }
+            if(i == players.length -1){
+                alert('no one matches that name');
+            }
+        }
+        layoutPlayers();
+
+
+    });
+
+    function layoutPlayers() {
+        playersHolder.innerHTML ='';
+        for (i = 0; i < players.length; i++) {
+            var playerDiv = document.createElement('div');
+            playerDiv.className = "playerDiv col-lg-2";
+            playerDiv.innerHTML = "<h1>" + players[i].name + "</h1> " +
+                "<h3>Total Wins: " + players[i].wins.total + "</h3>" +
+                "<h3>Total Losses: " + players[i].losses.total + "</h3>";
+
+
+            playersHolder.appendChild(playerDiv);
+        }
+
+    }
+    layoutPlayers(players);
+</script>
+</body>
+</html>
