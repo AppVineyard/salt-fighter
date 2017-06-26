@@ -12,7 +12,6 @@
 $userName = $_POST['userName'];
 $firstname = $POST['first_name'];
 $lastname = $POST['last_name'];
-$firstname = $POST['first_name'];
 $password = $POST['password'];
 require 'dbconfig.php';
 

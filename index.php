@@ -41,8 +41,8 @@
 
         <div id="register">
             <form name="regUser" method="post" action="register.php">
-                <input type="text" name="first_name" placeholder="First Name" class="register-input"><br>
-                <input type="text" name="last_name" placeholder="Last Name" class="register-input"><br>
+                <input type="text" name="firstname" placeholder="First Name" class="register-input"><br>
+                <input type="text" name="lastname" placeholder="Last Name" class="register-input"><br>
                 <input type="text" name="userName" placeholder="User Name" class="register-input"><br>
                 <input type="password" name="password" placeholder="Password" class="register-input"><br>
                 <button type="submit" name="submit"> Submit</button>
