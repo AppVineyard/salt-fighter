@@ -28,7 +28,7 @@ if (empty($check)) { // if new user . Insert a new record
 
 } else {   // If Returned user . update the user record	
 
-   $query = "UPDATE users SET userName='$userName', firstname = '$firstname', lastname = '$lastname', $password = '$password' where userName='$userName'";
+   $query = "UPDATE users SET firstname = '$firstname', lastname = '$lastname', $password = '$password' where userName='$userName'";
    mysqli_query($conn,$query);
 
 }
