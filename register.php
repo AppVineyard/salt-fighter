@@ -10,9 +10,10 @@
 //$birthday = $_POST['birthday'];
 //$address = $_POST['address'];
 $userName = $_POST['userName'];
-$firstname = $POST['first_name'];
-$lastname = $POST['last_name'];
+$firstname = $POST['firstname'];
+$lastname = $POST['lastname'];
 $password = $POST['password'];
+
 require 'dbconfig.php';
 
 

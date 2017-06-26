@@ -45,7 +45,7 @@
                 <input type="text" name="lastname" placeholder="Last Name" class="register-input"><br>
                 <input type="text" name="userName" placeholder="User Name" class="register-input"><br>
                 <input type="password" name="password" placeholder="Password" class="register-input"><br>
-                <button type="submit" name="submit"> Submit</button>
+                <button type="submit" name="submit" value="Register"> Submit</button>
             </form>
             <p>Already a member?</p>
             <a id="loginBtn">Login</a>
