@@ -9,8 +9,11 @@
 //
 //$birthday = $_POST['birthday'];
 //$address = $_POST['address'];
-
-
+$userName = $_POST['userName'];
+$firstname = $POST['first_name'];
+$lastname = $POST['last_name'];
+$firstname = $POST['first_name'];
+$password = $POST['password'];
 require 'dbconfig.php';
 
 
@@ -20,12 +23,12 @@ $check = mysqli_num_rows($check);
 
 if (empty($check)) { // if new user . Insert a new record
 
-   $query = "INSERT INTO users (userName,first_name,last_name) VALUES ('$userName','$firstname','$lastname')";
+   $query = "INSERT INTO users (userName,first_name,last_name,password) VALUES ('$userName','$firstname','$lastname','$password')";
    mysqli_query($conn,$query);
 
 } else {   // If Returned user . update the user record	
 
-   $query = "UPDATE users SET userName='$userName', first_name = '$firstname', last_name = '$lastname' where userName='$userName'";
+   $query = "UPDATE users SET userName='$userName', first_name = '$firstname', last_name = '$lastname', $password = '$password' where userName='$userName'";
    mysqli_query($conn,$query);
 
 }

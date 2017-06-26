@@ -32,7 +32,7 @@
             <form name="frmUser" method="post" action="">
                 <input type="text" name="userName" placeholder="User Name" class="login-input"><br>
                 <input type="password" name="password" placeholder="Password" class="login-input"><br>
-                <button type="submit" name="submit"> Submit</button>
+                <button type="submit" name="submit" value="Register"> Submit</button>
             </form>
             <p>Not a member?</p>
             <a id="registerBtn">Register</a>
