@@ -77,8 +77,19 @@
 
     addBtn.addEventListener('click', function(){
         var newName = prompt('name?');
-        var newPlayer = {
-                name : newName
+        if(newName == '' || newName == null){
+            alert('k');
+            return;
+        }
+        var newPlayer =  {
+            name: newName,
+            gamesPlayed: 0,
+            wins: {
+                total: 0,
+            },
+            losses: {
+                total: 0,
+            }
         }
         players.push(newPlayer);
         layoutPlayers();
@@ -104,9 +115,9 @@
         for (i = 0; i < players.length; i++) {
             var playerDiv = document.createElement('div');
             playerDiv.className = "playerDiv col-lg-2";
-            playerDiv.innerHTML = "<h1>" + players[i].name + "</h1> " +
-                "<h3>Total Wins: " + players[i].wins.total + "</h3>" +
-                "<h3>Total Losses: " + players[i].losses.total + "</h3>";
+             playerDiv.innerHTML = "<h1>" + players[i].name + "</h1> " +
+                    "<h3>Total Wins: " + players[i].wins.total + "</h3>" +
+                    "<h3>Total Losses: " + players[i].losses.total + "</h3>";
 
 
             playersHolder.appendChild(playerDiv);
