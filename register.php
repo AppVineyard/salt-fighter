@@ -28,9 +28,9 @@ if (empty($check)) { // if new user . Insert a new record
 
 } else {   // If Returned user . update the user record	
 
-   $query = "UPDATE users SET firstname = '$firstname', lastname = '$lastname', $password = '$password' where userName='$userName'";
+   $query = "UPDATE users SET firstname= '$firstname', lastname = '$lastname', password = '$password' where userName='$userName'";
    mysqli_query($conn,$query);
-
+    
 }
 
 
@@ -39,11 +39,11 @@ if (empty($check)) { // if new user . Insert a new record
 //    die('Error: ' . mysql_error());
 //}
 
-//echo "<h2>Congratulation, you have been registered</h2>";
-//echo  "<br>";
-//echo  "redirecting...";
+echo "<h2>Congratulation, you have been registered</h2>";
+echo  "<br>";
+echo  "redirecting...";
 
 header('Refresh: 3; URL=home.html');
  
-//mysql_close($conn);
+mysql_close($conn);
 ?>
