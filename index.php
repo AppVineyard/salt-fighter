@@ -1,16 +1,20 @@
 <?php
-$message="";
-if(count($_POST)>0) {
-	$conn = mysqli_connect("us-cdbr-iron-east-03.cleardb.net","bee6bfe3a31317","789e80c3","heroku_2154a2bf255ffd7");
-	$result = mysqli_query($conn,"SELECT * FROM users WHERE userName='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
-	$count  = mysqli_num_rows($result);
-	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-	if($count==0) {
-		$message = "Invalid Username or Password!";
-	} else {
-		$message = 'Welcome '.$row["displayName"].', '.'You are successfully authenticated!'."</br>".$row["qotd"];
-	}
-}
+
+    require 'dbconfig.php';
+    
+    
+//    $message="";
+//if(count($_POST)>0) {
+//	$conn = mysqli_connect("us-cdbr-iron-east-03.cleardb.net","bee6bfe3a31317","789e80c3","heroku_2154a2bf255ffd7");
+//	$result = mysqli_query($conn,"SELECT * FROM users WHERE userName='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
+//	$count  = mysqli_num_rows($result);
+//	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+//	if($count==0) {
+//		$message = "Invalid Username or Password!";
+//	} else {
+//		$message = 'Welcome '.$row["displayName"].', '.'You are successfully authenticated!'."</br>".$row["qotd"];
+//	}
+//}
 ?>
 <html lang="en">
 <head>
@@ -36,9 +40,9 @@ if(count($_POST)>0) {
 
 
         <div id="register">
-            <form name="regUser" method="post" action="">
-                <input type="text" name="fName" placeholder="First Name" class="register-input"><br>
-                <input type="text" name="lName" placeholder="Last Name" class="register-input"><br>
+            <form name="regUser" method="post" action="register.php">
+                <input type="text" name="first_name" placeholder="First Name" class="register-input"><br>
+                <input type="text" name="last_name" placeholder="Last Name" class="register-input"><br>
                 <input type="text" name="userName" placeholder="User Name" class="login-input"><br>
                 <input type="password" name="password" placeholder="Password" class="login-input"><br>
                 <button type="submit" name="submit"> Submit</button>
