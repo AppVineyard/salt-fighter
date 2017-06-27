@@ -29,7 +29,7 @@
 <div id="shade"><div id="sideBar"><h2 id="topBanner">Create Match</h2>
 
 
-        <div id="register">
+        <div id="match">
             <form name="regUser" method="post" action="create_match.php">
                 <input type="text" name="match_id" placeholder="Match ID" class="register-input"><br>
                 <input type="text" name="win" placeholder="Win" class="register-input"><br>

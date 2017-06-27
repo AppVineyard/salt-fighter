@@ -63,7 +63,13 @@ body {
   margin-top: 3vh;
   font-size: 1.1em;
 }
+
+#match {
+  margin-top: 5vh;
+}
+
 #register {
+  display: none;
   margin-top: 5vh;
 }
 #register p {
