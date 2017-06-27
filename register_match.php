@@ -8,7 +8,7 @@
 //	$conn = mysqli_connect("us-cdbr-iron-east-03.cleardb.net","bee6bfe3a31317","789e80c3","heroku_2154a2bf255ffd7");
 $result = mysqli_query($conn,"SELECT * FROM users WHERE userName='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
 $count  = mysqli_num_rows($result);
-$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+//$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
     
     
@@ -36,7 +36,7 @@ $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
         <div id="match">
             <form name="regUser" method="post" action="create_match.php"><?php
     echo "<select name='userName'>";
-    while ($row = mysqli_fetch_array($result)) {
+    while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
         echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
     }
     echo "</select>";
