@@ -40,7 +40,7 @@ $count  = mysqli_num_rows($result);
     $rows = array();
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
         $rows[] = $row;
-        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+        echo "<option value='" . $row['player_id'] . "'>" . $row['userName'] . "</option>";
     }
     echo "</datalist>";?>
 <br>
@@ -64,6 +64,7 @@ $count  = mysqli_num_rows($result);
     echo "</datalist>";?><br>
                 <input type="text" name="p1_char" placeholder="Player 1 Character" class="register-input"><br>
                 <input type="text" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
+                <input type="hidden" name="p1_userid"><br>
                 <button type="submit" name="submit" value=""> Submit</button>
             </form>
         </div>

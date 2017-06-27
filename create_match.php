@@ -17,6 +17,7 @@ $p1_id = $_POST['p1_id'];
 $p2_id = $_POST['p2_id'];
 $p1_char = $_POST['p1_char'];
 $p2_char = $_POST['p2_char'];
+$p1_userid = $_POST['p1_userid'];
     
 
 require 'dbconfig.php';
