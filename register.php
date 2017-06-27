@@ -23,7 +23,7 @@ $check = mysqli_num_rows($check);
 
 if (empty($check)) { // if new user . Insert a new record
 
-   $query = "INSERT INTO users (userName,firstname,lastname,password) VALUES ('$userName','$firstname','$lastname','$password')";
+   $query = "INSERT INTO users (userName,firstname,lastname,password,player_id) VALUES ('$userName','$firstname','$lastname','$password',UUID())";
    mysqli_query($conn,$query);
 
 } else {   // If Returned user . update the user record	
