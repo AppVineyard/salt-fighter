@@ -40,7 +40,7 @@ $count  = mysqli_num_rows($result);
     $rows = array();
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
         $rows[] = $row;
-        echo "<option value='" . $row['player_id'] . "'>" . $row['userName'] . "</option>";
+        echo "<option value='" . $row['player_id'] . " label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
     echo "</datalist>";?>
 <br>
