@@ -8,7 +8,7 @@
 //	$conn = mysqli_connect("us-cdbr-iron-east-03.cleardb.net","bee6bfe3a31317","789e80c3","heroku_2154a2bf255ffd7");
 $result = mysqli_query($conn,"SELECT * FROM users");
 $count  = mysqli_num_rows($result);
-//$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
     
     
@@ -41,11 +41,6 @@ $count  = mysqli_num_rows($result);
                 <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="p1_id">
                 <br>
                 <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input" list="p2_id">
-                <?php echo "<datalist id='p2_id'>";
-                    while ($row2 = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-                        echo "<option value='" . $row2['userName'] . "'>" . $row2['userName'] . "</option>";
-                    }
-                    echo "</datalist>";?>
                     <br>
                 <input type="text" name="p1_char" placeholder="Player 1 Character" class="register-input"><br>
                 <input type="text" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
@@ -74,7 +69,9 @@ $count  = mysqli_num_rows($result);
 
 
 <script>
-    var loginBtn = document.getElementById('loginBtn');
+
+<?php echo "var data =". $row;?>
+var loginBtn = document.getElementById('loginBtn');
     var regBtn = document.getElementById('registerBtn');
     var login = document.getElementById('login');
     var register = document.getElementById('register');
