@@ -34,18 +34,11 @@ $count  = mysqli_num_rows($result);
 
 
         <div id="match">
-            <form name="regUser" method="post" action="create_match.php"><?php
-    echo "<select name='userName'>";
-    while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
-    }
-    echo "</select>";
-    
-    ?>
+            <form name="regUser" method="post" action="create_match.php">
 
                 <input type="text" name="win" placeholder="Win" class="register-input"><br>
                 <input type="text" name="loss" placeholder="Loss" class="register-input"><br>
-<input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="userName">echo "<datalist id='userName'>";
+<input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="userName"><?php echo "<datalist id='userName'>";
 while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
     echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
 }
