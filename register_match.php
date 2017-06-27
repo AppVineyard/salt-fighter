@@ -35,7 +35,7 @@ $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
         <div id="match">
             <form name="regUser" method="post" action="create_match.php"><?php
-    echo "<select name='PcID'>";
+    echo "<select name='userName'>";
     while ($row = mysqli_fetch_array($result)) {
         echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
     }
