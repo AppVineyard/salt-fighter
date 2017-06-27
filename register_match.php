@@ -6,15 +6,19 @@
 //    $message="";
 //if(count($_POST)>0) {
 //	$conn = mysqli_connect("us-cdbr-iron-east-03.cleardb.net","bee6bfe3a31317","789e80c3","heroku_2154a2bf255ffd7");
-//	$result = mysqli_query($conn,"SELECT * FROM users WHERE userName='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
-//	$count  = mysqli_num_rows($result);
-//	$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-//	if($count==0) {
+$result = mysqli_query($conn,"SELECT * FROM users WHERE userName='" . $_POST["userName"] . "' and password = '". $_POST["password"]."'");
+$count  = mysqli_num_rows($result);
+$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+    
+    
+//if($count==0) {
 //		$message = "Invalid Username or Password!";
 //	} else {
 //		$message = 'Welcome '.$row["displayName"].', '.'You are successfully authenticated!'."</br>".$row["qotd"];
 //	}
 //}
+    
 ?>
 <html lang="en">
 <head>
@@ -30,7 +34,15 @@
 
 
         <div id="match">
-            <form name="regUser" method="post" action="create_match.php">
+            <form name="regUser" method="post" action="create_match.php"><?php
+    echo "<select name='PcID'>";
+    while ($row = mysqli_fetch_array($result)) {
+        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+    }
+    echo "</select>";
+    
+    ?>
+
                 <input type="text" name="win" placeholder="Win" class="register-input"><br>
                 <input type="text" name="loss" placeholder="Loss" class="register-input"><br>
                 <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input"><br>
