@@ -44,20 +44,20 @@ $count  = mysqli_num_rows($result);
     }
     echo "</select>";?>
 <br>
-                <input type="text" name="loss" placeholder="Loser" class="register-input">
 <?php echo "<select name='loss'>";
+    echo "<option selected disabled>Loser</option>";
     foreach ($rows as $row) {
         echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
     echo "</select>";?><br>
-                <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input">
 <?php echo "<select name='p1_id'>";
+    echo "<option selected disabled>Player 1</option>";
     foreach ($rows as $row) {
         echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
     echo "</select>";?><br>
-                <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input">
 <?php echo "<select name='p2_id'>";
+    echo "<option selected disabled>Player 2</option>";
     foreach ($rows as $row) {
         echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
