@@ -10,7 +10,7 @@
 //$birthday = $_POST['birthday'];
 //$address = $_POST['address'];
 //$match_date = $_POST['match_date'];
-$match_id = $_POST['match_id'];
+//$match_id = $_POST['match_id'];
 $win = $_POST['win'];
 $loss = $_POST['loss'];
 $p1_id = $_POST['p1_id'];
@@ -28,7 +28,7 @@ $check = mysqli_num_rows($check);
 
 if (empty($check)) { // if new user . Insert a new record
 
-   $query = "INSERT INTO match_stats (match_date,match_id,win,loss,p1_id,p2_id,p1_char,p2_char) VALUES (UNIX_TIMESTAMP(),'$match_id','$win','$loss','$p1_id','$p2_id','$p1_char','$p2_char')";
+   $query = "INSERT INTO match_stats (match_date,match_id,win,loss,p1_id,p2_id,p1_char,p2_char) VALUES (UNIX_TIMESTAMP(),UUID(),'$win','$loss','$p1_id','$p2_id','$p1_char','$p2_char')";
    mysqli_query($conn,$query);
 
 } else {   // If Returned user . update the user record	
