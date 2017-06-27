@@ -10,7 +10,7 @@
 //$birthday = $_POST['birthday'];
 //$address = $_POST['address'];
 //$match_date = $_POST['match_date'];
-//$match_id = $_POST['match_id'];
+$match_id = $_POST['match_id'];
 $win = $_POST['win'];
 $loss = $_POST['loss'];
 $p1_id = $_POST['p1_id'];
