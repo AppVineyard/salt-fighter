@@ -17,7 +17,6 @@ $p1_id = $_POST['p1_id'];
 $p2_id = $_POST['p2_id'];
 $p1_char = $_POST['p1_char'];
 $p2_char = $_POST['p2_char'];
-$p1_userid = $_POST['p1_userid'];
     
 
 require 'dbconfig.php';
@@ -34,11 +33,11 @@ $query = "INSERT INTO match_stats (match_date,match_id,win,loss,p1_id,p2_id,p1_c
 //    die('Error: ' . mysql_error());
 //}
 
-echo "<h2>Congratulation, you have been registered</h2>";
+echo "<h2>Match Created</h2>";
 echo  "<br>";
 echo  "redirecting...";
 
-header('Refresh: 3; URL=home.html');
+header('Refresh: 3; URL=register_match.php');
  
 mysql_close($conn);
 ?>
