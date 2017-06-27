@@ -35,24 +35,34 @@ $count  = mysqli_num_rows($result);
 
         <div id="match">
             <form name="regUser" method="post" action="create_match.php">
+                <input type="text" name="win" placeholder="Win" class="register-input" list="win"><br>
+<?php echo "<datalist id='win'>";
+    $rows = array();
+    while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+        $rows[] = $row;
+        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+    }
+    echo "</datalist>";?>
+<br>
+                <input type="text" name="loss" placeholder="Loss" class="register-input" list="loss"><br>
+<?php echo "<datalist id='loss'>";
+    foreach ($rows as $row) {
+        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+    }
+    echo "</datalist>";?><br>
+                <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="p1_id"><br>
+<?php echo "<datalist id='p1_id'>";
+    foreach ($rows as $row) {
+        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+    }
+    echo "</datalist>";?><br>
+                <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input" list="p2_id"><br>
+<?php echo "<datalist id='p2_id'>";
+    foreach ($rows as $row) {
+        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+    }
+    echo "</datalist>";?>
 
-                <input type="text" name="win" placeholder="Win" class="register-input"><br>
-                <input type="text" name="loss" placeholder="Loss" class="register-input"><br>
-                <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="p1_id">
-                <?php echo "<datalist id='p1_id'>";
-                    $rows = array();
-                    while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-                        $rows[] = $row;
-                        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
-                    }
-                    echo "</datalist>";?>
-                <br>
-                <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input" list="p2_id">
-                <?php echo "<datalist id='p2_id'>";
-                    foreach ($rows as $row) {
-                        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
-                    }
-                    echo "</datalist>";?>
                     <br>
                 <input type="text" name="p1_char" placeholder="Player 1 Character" class="register-input"><br>
                 <input type="text" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
