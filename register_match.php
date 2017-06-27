@@ -8,7 +8,7 @@
 //	$conn = mysqli_connect("us-cdbr-iron-east-03.cleardb.net","bee6bfe3a31317","789e80c3","heroku_2154a2bf255ffd7");
 $result = mysqli_query($conn,"SELECT * FROM users");
 $count  = mysqli_num_rows($result);
-$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+//$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
     
     
@@ -39,8 +39,20 @@ $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
                 <input type="text" name="win" placeholder="Win" class="register-input"><br>
                 <input type="text" name="loss" placeholder="Loss" class="register-input"><br>
                 <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="p1_id">
+                <?php echo "<datalist id='p1_id'>";
+                    $rows = array();
+                    while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                        $rows[] = $row;
+                        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                    }
+                    echo "</datalist>";?>
                 <br>
                 <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input" list="p2_id">
+                <?php echo "<datalist id='p2_id'>";
+                    foreach ($rows as $row) {
+                        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                    }
+                    echo "</datalist>";?>
                     <br>
                 <input type="text" name="p1_char" placeholder="Player 1 Character" class="register-input"><br>
                 <input type="text" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
@@ -69,9 +81,7 @@ $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
 
 <script>
-
-var data = <?php echo json_encode($row); ?>;
-var loginBtn = document.getElementById('loginBtn');
+    var loginBtn = document.getElementById('loginBtn');
     var regBtn = document.getElementById('registerBtn');
     var login = document.getElementById('login');
     var register = document.getElementById('register');
