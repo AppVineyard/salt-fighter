@@ -36,6 +36,7 @@ $count  = mysqli_num_rows($result);
         <div id="match">
             <form name="regUser" method="post" action="create_match.php">
 <?php echo "<select name='win'>";
+      echo "<option selected disabled>Winner</option>";
     $rows = array();
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
         $rows[] = $row;
@@ -43,27 +44,26 @@ $count  = mysqli_num_rows($result);
     }
     echo "</select>";?>
 <br>
-                <input type="text" name="loss" placeholder="Loss" class="register-input" list="loss">
-<?php echo "<datalist id='loss'>";
+                <input type="text" name="loss" placeholder="Loser" class="register-input">
+<?php echo "<select name='loss'>";
     foreach ($rows as $row) {
-        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+        echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
-    echo "</datalist>";?><br>
-                <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="p1_id">
-<?php echo "<datalist id='p1_id'>";
+    echo "</select>";?><br>
+                <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input">
+<?php echo "<select name='p1_id'>";
     foreach ($rows as $row) {
-        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+        echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
-    echo "</datalist>";?><br>
-                <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input" list="p2_id">
-<?php echo "<datalist id='p2_id'>";
+    echo "</select>";?><br>
+                <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input">
+<?php echo "<select name='p2_id'>";
     foreach ($rows as $row) {
-        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+        echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
-    echo "</datalist>";?><br>
+    echo "</select>";?><br>
                 <input type="text" name="p1_char" placeholder="Player 1 Character" class="register-input"><br>
                 <input type="text" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
-                <input type="hidden" name="p1_userid"><br>
                 <button type="submit" name="submit" value=""> Submit</button>
             </form>
         </div>
