@@ -70,7 +70,7 @@ $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
 <script>
 
-<?php echo "var data =". $row;?>
+<?php echo "var data =". json_encode($row;)?>
 var loginBtn = document.getElementById('loginBtn');
     var regBtn = document.getElementById('registerBtn');
     var login = document.getElementById('login');
