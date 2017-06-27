@@ -37,7 +37,7 @@
                 <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input"><br>
                 <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input"><br>
                 <input type="text" name="p1_char" placeholder="Player 1 Character" class="register-input"><br>
-                <input type="text" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
+                <input type="text" name="p2_char" placeholder="Player 2 ID" class="register-input"><br>
                 <button type="submit" name="submit" value=""> Submit</button>
             </form>
         </div>
@@ -72,7 +72,7 @@
     regBtn.addEventListener('click', function () {
         login.style.display = 'none';
         register.style.display = 'block';
-        topB.innerHTML = 'Register Match';
+        topB.innerHTML = 'Create Match';
 
         console.log(topB);
     });
