@@ -41,14 +41,14 @@ $count  = mysqli_num_rows($result);
                 <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="p1_id">
                 <?php echo "<datalist id='p1_id'>";
                     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-                        echo "<option value='" . $row['player_id'] . "'>" . $row['userName'] . "</option>";
+                        echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                     }
                     echo "</datalist>";?>
                 <br>
                 <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input" list="p2_id">
                 <?php echo "<datalist id='p2_id'>";
-                    while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-                        echo "<option value='" . $row['player_id'] . "'>" . $row['userName'] . "</option>";
+                    while ($row2 = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                        echo "<option value='" . $row2['userName'] . "'>" . $row2['userName'] . "</option>";
                     }
                     echo "</datalist>";?>
                     <br>
