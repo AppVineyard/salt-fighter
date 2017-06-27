@@ -38,15 +38,20 @@ $count  = mysqli_num_rows($result);
 
                 <input type="text" name="win" placeholder="Win" class="register-input"><br>
                 <input type="text" name="loss" placeholder="Loss" class="register-input"><br>
-<input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="userName"><?php echo "<datalist id='userName'>";
-while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
-    echo "<option value='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
-}
-echo "</datalist>";
-
-?>
-</da<br>
-                <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input"><br>
+                <input type="text" name="p1_id" placeholder="Player 1 ID" class="register-input" list="userName">
+                <?php echo "<datalist id='p2_id'>";
+                    while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                        echo "<option value='" . $row['player_id'] . "'>" . $row['userName'] . "</option>";
+                    }
+                    echo "</datalist>";?>
+                <br>
+                <input type="text" name="p2_id" placeholder="Player 2 ID" class="register-input">
+                <?php echo "<datalist id='p2_id'>";
+                    while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
+                        echo "<option value='" . $row['player_id'] . "'>" . $row['userName'] . "</option>";
+                    }
+                    echo "</datalist>";?>
+                    <br>
                 <input type="text" name="p1_char" placeholder="Player 1 Character" class="register-input"><br>
                 <input type="text" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
                 <button type="submit" name="submit" value=""> Submit</button>
