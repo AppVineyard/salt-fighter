@@ -26,17 +26,7 @@
     <link href="index.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
-<div id="shade"><div id="sideBar"><h2 id="topBanner">Login</h2>
-
-        <div id="login">
-            <form name="frmUser" method="post" action="">
-                <input type="text" name="userName" placeholder="User Name" class="login-input"><br>
-                <input type="password" name="password" placeholder="Password" class="login-input"><br>
-                <button type="submit" name="submit" value="Register"> Submit</button>
-            </form>
-            <p>Not a member?</p>
-            <a id="registerBtn">Register</a>
-        </div>
+<div id="shade"><div id="sideBar"><h2 id="topBanner">Create Match</h2>
 
 
         <div id="register">
@@ -50,8 +40,6 @@
                 <input type="text" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
                 <button type="submit" name="submit" value=""> Submit</button>
             </form>
-            <p>Already a member?</p>
-            <a id="loginBtn">Login</a>
         </div>
     </div><!--
     -->
@@ -84,7 +72,7 @@
     regBtn.addEventListener('click', function () {
         login.style.display = 'none';
         register.style.display = 'block';
-        topB.innerHTML = 'Register';
+        topB.innerHTML = 'Register Match';
 
         console.log(topB);
     });
