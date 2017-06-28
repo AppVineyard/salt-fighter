@@ -62,7 +62,7 @@
         <tr>
 			<td><?php echo $row["p1_char"]; ?></td>
 			<td><?php echo $row["p2_char"]; ?></td>
-			<td><?php echo $row["match_date"] = date("F j, Y"); ?></td>
+			<td><?php echo $row["match_date"]?></td>
 
 		</tr>
    <?php
