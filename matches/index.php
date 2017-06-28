@@ -62,7 +62,7 @@
         <tr>
 			<td><?php echo $row["p1_char"]; ?></td>
 			<td><?php echo $row["p2_char"]; ?></td>
-			<td><?php echo date_format($row["match_date"],"F j, Y"); ?></td>
+			<td><?php echo date_format(strtotime($row["match_date"]),"F j, Y"); ?></td>
 
 		</tr>
    <?php
