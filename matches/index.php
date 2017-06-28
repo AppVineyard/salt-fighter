@@ -16,7 +16,7 @@
 			$post_at_todate = strtotime($post_at_to_date);
 		}
 		
-		$queryCondition .= "WHERE match_date >= '$postUnix' AND match_date <= '" . $post_at_todate . "'";
+		$queryCondition .= "WHERE match_date >= '" . $postUnix . "' AND match_date <= '" . $post_at_todate . "'";
 	}
 
 	$sql = "SELECT * from match_stats " . $queryCondition . " ORDER BY match_date desc";
