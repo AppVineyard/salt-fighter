@@ -52,7 +52,7 @@
           <thead>
         <tr>
     
-          <th width="20%"><span>P1 Character</span></th>
+          <th width="20%"><span>Winner</span></th>
           <th width="20%"><span>P1 Character</span></th>
           <th width="20%"><span>P2 Character</span></th>
           <th width="50%"><span>Match Date</span></th>
