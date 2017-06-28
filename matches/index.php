@@ -8,16 +8,15 @@
 	$queryCondition = "";
 	if(!empty($_POST["search"]["match_date"])) {
 		$post_at = $_POST["search"]["match_date"];
-		list($fid,$fim,$fiy) = explode("-",$post_at);
+		$postUnix = strtotime($post_at);
 		
 		$post_at_todate = date('Y-m-d');
 		if(!empty($_POST["search"]["post_at_to_date"])) {
 			$post_at_to_date = $_POST["search"]["post_at_to_date"];
-			list($tid,$tim,$tiy) = explode("-",$_POST["search"]["post_at_to_date"]);
-			$post_at_todate = "$tiy-$tim-$tid";
+			$post_at_todate = strtotime($post_at_to_date);
 		}
 		
-		$queryCondition .= "WHERE match_date BETWEEN '$fiy-$fim-$fid' AND '" . $post_at_todate . "'";
+		$queryCondition .= "WHERE match_date BETWEEN '$postUnix' AND '" . $post_at_todate . "'";
 	}
 
 	$sql = "SELECT * from match_stats " . $queryCondition . " ORDER BY match_date desc";
