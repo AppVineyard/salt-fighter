@@ -55,6 +55,7 @@ body {
   margin-top: 2.5vh;
   max-width: 20vw;
   height: auto;
+  display: none;
 }
 #login {
   margin-top: 5vh;
@@ -139,7 +140,7 @@ form button:hover {
     display: block;
   }
   #sideBar .zabSucksImg {
-    display: inline-block;
+      display: none;
   }
   #login {
     bottom: 0;
@@ -151,5 +152,6 @@ form button:hover {
   }
   .zabSucksImg {
     max-width: 40vw;
+    display: none;
   }
 }
