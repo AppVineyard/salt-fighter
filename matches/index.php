@@ -7,15 +7,15 @@
 	
 	$queryCondition = "";
 	if(!empty($_POST["search"]["match_date"])) {
-		$post_at = $_POST["search"]["match_date"];
+		$post_at = $_POST["search"]["match_date"].;
         echo $post_at;
-        $postUnix = strtotime($post_at);
+        $postUnix = strtotime($post_at ."00:00:00");
 		
 		$post_at_todate = date('Y-m-d');
 		if(!empty($_POST["search"]["post_at_to_date"])) {
 			$post_at_to_date = $_POST["search"]["post_at_to_date"];
             echo $post_at_to_date;
-            $post_at_todate = strtotime($post_at_to_date);
+            $post_at_todate = strtotime($post_at_to_date ."23:59:59");
 		}
 		
 		$queryCondition .= "WHERE match_date >= '$postUnix' AND match_date <= '$post_at_todate'";
