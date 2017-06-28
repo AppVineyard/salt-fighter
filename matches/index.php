@@ -25,7 +25,7 @@
 
 <html>
 	<head>
-    <title>Recent Articles</title>		
+<title>Salt-Figher : Match History</title>
 	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
@@ -38,7 +38,7 @@
 	
 	<body>
     <div class="demo-content">
-		<h2 class="title_with_link">Recent Articles</h2>
+		<h2 class="title_with_link">Recent Matches</h2>
   <form name="frmSearch" method="post" action="">
 	 <p class="search_input">
 		<input type="text" placeholder="From Date" id="match_date" name="search[match_date]"  value="<?php echo $post_at; ?>" class="input-control" />
@@ -50,9 +50,9 @@
           <thead>
         <tr>
                       
-          <th width="30%"><span>Post Title</span></th>
-          <th width="50%"><span>Description</span></th>          
-          <th width="20%"><span>Post Date</span></th>	  
+          <th width="30%"><span>P1 Character</span></th>
+          <th width="50%"><span>P2 Character</span></th>
+          <th width="20%"><span>Match Date</span></th>
         </tr>
       </thead>
     <tbody>
@@ -62,7 +62,7 @@
         <tr>
 			<td><?php echo $row["p1_char"]; ?></td>
 			<td><?php echo $row["p2_char"]; ?></td>
-			<td><?php echo $row["match_date"] = date("F j, Y, g:i a"); ?></td>
+			<td><?php echo $row["match_date"] = date("F j, Y T, g:i a"); ?></td>
 
 		</tr>
    <?php
