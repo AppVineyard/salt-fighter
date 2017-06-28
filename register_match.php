@@ -25,7 +25,7 @@ $count  = mysqli_num_rows($result);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>ZabSucks</title>
+    <title>Salt-Fighter : Create Match</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet"/>
 </head>
