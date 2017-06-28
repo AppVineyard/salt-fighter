@@ -23,6 +23,7 @@
 
 	$sql = "SELECT * FROM match_stats INNER JOIN users ON match_stats.win = users.player_id " . $queryCondition . " ORDER BY match_date desc";
 	$result = mysqli_query($conn,$sql);
+    
 ?>
 
 <html>
@@ -53,6 +54,7 @@
         <tr>
     
           <th width="20%"><span>Winner</span></th>
+          <th width="20%"><span>Loser</span></th>
           <th width="20%"><span>P1 Character</span></th>
           <th width="20%"><span>P2 Character</span></th>
           <th width="50%"><span>Match Date</span></th>
@@ -61,9 +63,13 @@
     <tbody>
 	<?php
 		while($row = mysqli_fetch_array($result)) {
+            $sql2 = "SELECT users.userName FROM users WHERE player_id = '$row[loss]'";
+            $result2 = mysqli_query($conn, $sql2);
+            $row2 = mysqli_fetch_array($result2);
 	?>
         <tr>
 			<td><?php echo $row["userName"]; ?></td>
+            <td><?php echo $row2["userName"]; ?></td>
             <td><?php echo $row["p1_char"]; ?></td>
 			<td><?php echo $row["p2_char"]; ?></td>
 			<td><?php echo date("F j, Y",$row["match_date"]); ?></td>
