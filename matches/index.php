@@ -21,7 +21,7 @@
 		$queryCondition .= "WHERE match_date >= '$postUnix' AND match_date <= '$post_at_todate'";
 	}
 
-	$sql = "SELECT * from match_stats " . $queryCondition . " ORDER BY match_date desc";
+	$sql = "SELECT * FROM match_stats INNER JOIN users ON match_stats.win = users.player_id " . $queryCondition . " ORDER BY match_date desc";
 	$result = mysqli_query($conn,$sql);
 ?>
 
@@ -51,10 +51,11 @@
 <table class="table-content">
           <thead>
         <tr>
-                      
-          <th width="30%"><span>P1 Character</span></th>
-          <th width="50%"><span>P2 Character</span></th>
-          <th width="20%"><span>Match Date</span></th>
+    
+          <th width="20%"><span>P1 Character</span></th>
+          <th width="20%"><span>P1 Character</span></th>
+          <th width="20%"><span>P2 Character</span></th>
+          <th width="50%"><span>Match Date</span></th>
         </tr>
       </thead>
     <tbody>
@@ -62,7 +63,8 @@
 		while($row = mysqli_fetch_array($result)) {
 	?>
         <tr>
-			<td><?php echo $row["p1_char"]; ?></td>
+			<td><?php echo $row["userName"]; ?></td>
+            <td><?php echo $row["p1_char"]; ?></td>
 			<td><?php echo $row["p2_char"]; ?></td>
 			<td><?php echo date("F j, Y g:i a",$row["match_date"]); ?></td>
 
