@@ -6,8 +6,8 @@
 	$post_at_to_date = "";
 	
 	$queryCondition = "";
-	if(!empty($_POST["search"]["post_at"])) {			
-		$post_at = $_POST["search"]["post_at"];
+	if(!empty($_POST["search"]["match_date"])) {
+		$post_at = $_POST["search"]["match_date"];
 		list($fid,$fim,$fiy) = explode("-",$post_at);
 		
 		$post_at_todate = date('Y-m-d');
@@ -17,10 +17,10 @@
 			$post_at_todate = "$tiy-$tim-$tid";
 		}
 		
-		$queryCondition .= "WHERE post_at BETWEEN '$fiy-$fim-$fid' AND '" . $post_at_todate . "'";
+		$queryCondition .= "WHERE match_date BETWEEN '$fiy-$fim-$fid' AND '" . $post_at_todate . "'";
 	}
 
-	$sql = "SELECT * from match_stats " . $queryCondition . " ORDER BY post_at desc";
+	$sql = "SELECT * from match_stats " . $queryCondition . " ORDER BY match_date desc";
 	$result = mysqli_query($conn,$sql);
 ?>
 
@@ -42,7 +42,7 @@
 		<h2 class="title_with_link">Recent Articles</h2>
   <form name="frmSearch" method="post" action="">
 	 <p class="search_input">
-		<input type="text" placeholder="From Date" id="post_at" name="search[post_at]"  value="<?php echo $post_at; ?>" class="input-control" />
+		<input type="text" placeholder="From Date" id="match_date" name="search[match_date]"  value="<?php echo $post_at; ?>" class="input-control" />
 	    <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]" style="margin-left:10px"  value="<?php echo $post_at_to_date; ?>" class="input-control"  />			 
 		<input type="submit" name="go" value="Search" >
 	</p>
@@ -61,9 +61,9 @@
 		while($row = mysqli_fetch_array($result)) {
 	?>
         <tr>
-			<td><?php echo $row["post_title"]; ?></td>
-			<td><?php echo $row["description"]; ?></td>
-			<td><?php echo $row["post_at"]; ?></td>
+			<td><?php echo $row["p1_char"]; ?></td>
+			<td><?php echo $row["p2_char"]; ?></td>
+			<td><?php echo $row["match_date"]; ?></td>
 
 		</tr>
    <?php
@@ -84,7 +84,7 @@ buttonImageOnly: true,
 dateFormat: 'dd-mm-yy'  
 });
 $(function() {
-$("#post_at").datepicker();
+$("#match_date").datepicker();
 $("#post_at_to_date").datepicker();
 });
 </script>
