@@ -62,7 +62,10 @@
         <tr>
 			<td><?php echo $row["p1_char"]; ?></td>
 			<td><?php echo $row["p2_char"]; ?></td>
-			<td><?php echo $row["match_date"] = date("F j, Y T, g:i a"); ?></td>
+			<td><?php
+            $time = strtotime($row["match_date"].' UTC');
+            $dateInLocal = date("Y-m-d H:i:s", $time);
+            echo $dateInLocal; ?></td>
 
 		</tr>
    <?php
