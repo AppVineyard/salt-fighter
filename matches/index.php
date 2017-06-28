@@ -80,7 +80,7 @@ showOn: "button",
 buttonImage: "datepicker.png",
 buttonText: "Date Picker",
 buttonImageOnly: true,
-dateFormat: 'dd-mm-yy'  
+dateFormat: 'mm-dd-yy'  
 });
 $(function() {
 $("#match_date").datepicker();
