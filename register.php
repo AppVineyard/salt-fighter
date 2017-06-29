@@ -47,7 +47,7 @@ echo "<h2>Congratulation, you have been registered</h2>";
 echo  "<br>";
 echo  "redirecting...";
 
-header('Refresh: 3; URL=home.html');
+header('Refresh: 3; URL=register_match.php');
  
 mysql_close($conn);
 ?>
