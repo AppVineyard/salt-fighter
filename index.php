@@ -29,10 +29,10 @@
 <div id="shade"><div id="sideBar"><h2 id="topBanner">Login</h2>
 
         <div id="login">
-            <form name="frmUser" method="post" action="">
+            <form name="frmUser" method="post" action="login.php">
                 <input type="text" name="userName" placeholder="User Name" class="login-input"><br>
                 <input type="password" name="password" placeholder="Password" class="login-input"><br>
-                <button type="submit" name="submit" value="Register"> Submit</button>
+                <button type="submit" name="submit" value=""> Submit</button>
             </form>
             <p>Not a member?</p>
             <a id="registerBtn">Register</a>

@@ -8,7 +8,6 @@
             echo("Access denied!");
             exit();
         }
-        echo("Enter my lord!");
     
 	$post_at = "";
 	$post_at_to_date = "";
