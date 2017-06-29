@@ -9,6 +9,7 @@
         echo  "redirecting to login page....";
         
         header('Refresh: 3; URL=index.php');
+        exit();
     }
 
 //    $message="";
