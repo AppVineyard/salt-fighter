@@ -5,7 +5,7 @@
     session_start();
     if($_SESSION["loggedIn"] != true) {
         echo("Access denied!");
-        echo <br>;
+        echo "<br>";
         echo  "redirecting to login page....";
         
         header('Refresh: 3; URL=index.php');
