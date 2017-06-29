@@ -25,7 +25,7 @@ require 'dbconfig.php';
         $_SESSION["username"] = $userName;
         header('Location: matches/index.php'); //Redirects to the supplied url from the DB
     } else {
-        header('Location: index.php);
+        header('Location: index.php');
     }
 
 
