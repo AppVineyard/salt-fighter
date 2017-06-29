@@ -41,8 +41,8 @@
 <html>
 	<head>
 <title>Salt-Figher : Match History</title>
-	<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 
 	<style>
 	.table-content{border-top:#CCCCCC 4px solid; width:50%;}
@@ -95,7 +95,7 @@
 <?php } ?>
   </form>
   </div>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script>
 $.datepicker.setDefaults({
 showOn: "button",
