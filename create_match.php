@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 //
 //$fb_uid = $_SESSION['fb_id'] ;           
 //$fb_firstname = $_SESSION['firstname'];
@@ -18,6 +18,15 @@ $p2_id = $_POST['p2_id'];
 $p1_char = $_POST['p1_char'];
 $p2_char = $_POST['p2_char'];
     
+    session_start();
+    if($_SESSION["loggedIn"] != true) {
+        echo("Access denied!");
+        echo "<br>";
+        echo  "redirecting to login page....";
+        
+        header('Refresh: 3; URL=index.php');
+        exit();
+    }
 
 require 'dbconfig.php';
 
