@@ -8,7 +8,7 @@
             echo("Access denied!");
             echo  "redirecting to login page....";
             
-            header('Refresh: 3; URL=index.php');
+            header('Refresh: 3; URL=./index.php');
             
             exit();
         }
