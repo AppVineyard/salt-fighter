@@ -1,7 +1,15 @@
 <?php
-	
+    
     require 'dbconfig.php';
 	
+    
+        session_start();
+        if($_SESSION["loggedIn"] != true) {
+            echo("Access denied!");
+            exit();
+        }
+        echo("Enter my lord!");
+    
 	$post_at = "";
 	$post_at_to_date = "";
 	
