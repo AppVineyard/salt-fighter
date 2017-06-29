@@ -1,5 +1,5 @@
 <?php
-//session_start();
+session_start();
 //
 //$fb_uid = $_SESSION['fb_id'] ;           
 //$fb_firstname = $_SESSION['firstname'];
@@ -14,7 +14,11 @@ $firstname = $_POST['firstname'];
 $lastname = $_POST['lastname'];
 $password = $_POST['password'];
 
-require 'dbconfig.php';
+$_SESSION["loggedIn"] = true;
+$_SESSION["username"] = $userName;
+
+
+    require 'dbconfig.php';
 
 
 $check = mysqli_query($conn,"select * from users where userName='$userName'");

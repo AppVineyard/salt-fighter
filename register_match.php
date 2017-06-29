@@ -2,7 +2,15 @@
 
     require 'dbconfig.php';
     
-    
+    session_start();
+    if($_SESSION["loggedIn"] != true) {
+        echo("Access denied!");
+        echo(<br>);
+        echo  "redirecting to login page....";
+        
+        header('Refresh: 3; URL=index.php');
+    }
+
 //    $message="";
 //if(count($_POST)>0) {
 //	$conn = mysqli_connect("us-cdbr-iron-east-03.cleardb.net","bee6bfe3a31317","789e80c3","heroku_2154a2bf255ffd7");
