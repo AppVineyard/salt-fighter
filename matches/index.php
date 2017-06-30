@@ -60,8 +60,9 @@
 	    <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]" style="margin-left:10px"  value="<?php echo $post_at_to_date; ?>" class="input-control"  />			 
 		<input type="submit" name="go" value="Search" >
 	</p>
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
 <?php if(!empty($result))	 { ?>
-<table class="table-content">
+<table id="matches" class="table-content">
           <thead>
         <tr>
     
@@ -108,5 +109,26 @@ $(function() {
 $("#match_date").datepicker();
 $("#post_at_to_date").datepicker();
 });
+
+function myFunction() {
+  // Declare variables 
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("matches");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    } 
+  }
+}
 </script>
 </body></html>
