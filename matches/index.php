@@ -23,7 +23,7 @@
         $post_at_time = $post_at ."00:00:00";
         $postUnix = strtotime($post_at_time);
 		
-		$post_at_todate = date('m-d-Y');
+		$post_at_todate = date('Y-m-d');
 		if(!empty($_POST["search"]["post_at_to_date"])) {
             $post_at_to_date = $_POST["search"]["post_at_to_date"];
             $post_at_to_dateTime = $post_at_to_date ."23:59:59";
