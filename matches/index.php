@@ -43,9 +43,10 @@
 <title>Salt-Figher : Match History</title>
 	<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="match.css">
 
 	<style>
-	.table-content{border-top:#CCCCCC 4px solid; width:50%;}
+	.table-content{border-top:#CCCCCC 4px solid; width:75%;}
 	.table-content th {padding:5px 20px; background: #F0F0F0;vertical-align:top;} 
 	.table-content td {padding:5px 20px; border-bottom: #F0F0F0 1px solid;vertical-align:top;} 
 	</style>
@@ -60,7 +61,7 @@
 	    <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]" style="margin-left:10px"  value="<?php echo $post_at_to_date; ?>" class="input-control"  />			 
 		<input type="submit" name="go" value="Search" >
 	</p>
-	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names..">
+	<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter by Winner Name..">
 <?php if(!empty($result))	 { ?>
 <table id="matches" class="table-content">
           <thead>
