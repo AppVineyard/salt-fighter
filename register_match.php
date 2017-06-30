@@ -45,8 +45,8 @@ $count  = mysqli_num_rows($result);
 
         <div id="match">
             <form name="regUser" method="post" action="create_match.php">
-<?php echo "<select name='win'>";
-      echo "<option value="" selected disabled>Winner</option>";
+<?php echo "<select name='win' required>";
+      echo "<option value='' selected disabled>Winner</option>";
     $rows = array();
     while ($row = mysqli_fetch_array($result,MYSQLI_ASSOC)) {
         $rows[] = $row;
@@ -54,20 +54,20 @@ $count  = mysqli_num_rows($result);
     }
     echo "</select>";?>
 <br>
-<?php echo "<select name='loss'>";
-    echo "<option value="" selected disabled>Loser</option>";
+<?php echo "<select name='loss' required>";
+    echo "<option value='' selected disabled>Loser</option>";
     foreach ($rows as $row) {
         echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
     echo "</select>";?><br>
-<?php echo "<select name='p1_id'>";
-    echo "<option value="" selected disabled>Player 1</option>";
+<?php echo "<select name='p1_id' required>";
+    echo "<option value='' selected disabled>Player 1</option>";
     foreach ($rows as $row) {
         echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
     echo "</select>";?><br>
-<?php echo "<select name='p2_id'>";
-    echo "<option value="" selected disabled>Player 2</option>";
+<?php echo "<select name='p2_id' required>";
+    echo "<option value='' selected disabled>Player 2</option>";
     foreach ($rows as $row) {
         echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
