@@ -23,7 +23,7 @@
         $post_at_time = $post_at ."00:00:00";
         $postUnix = strtotime($post_at_time);
 		
-		$post_at_todate = date('Y-m-d');
+		$post_at_todate = date('m-d-Y');
 		if(!empty($_POST["search"]["post_at_to_date"])) {
             $post_at_to_date = $_POST["search"]["post_at_to_date"];
             $post_at_to_dateTime = $post_at_to_date ."23:59:59";
@@ -102,7 +102,7 @@ showOn: "button",
 buttonImage: "datepicker.png",
 buttonText: "Date Picker",
 buttonImageOnly: true,
-dateFormat: 'dd-mm-yy'  
+dateFormat: 'mm-dd-yy'  
 });
 $(function() {
 $("#match_date").datepicker();
