@@ -71,8 +71,8 @@ $count  = mysqli_num_rows($result);
         echo "<option value='" . $row['player_id'] . "' label='" . $row['userName']. "'>" . $row['userName'] . "</option>";
     }
     echo "</select>";?><br>
-                <input type="text" name="p1_char" placeholder="Player 1 Character" class="register-input"><br>
-                <input type="text" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
+                <input type="text" required="required" name="p1_char" placeholder="Player 1 Character" class="register-input"><br>
+                <input type="text" required="required" name="p2_char" placeholder="Player 2 Character" class="register-input"><br>
                 <button type="submit" name="submit" value=""> Submit</button>
             </form>
         </div>
