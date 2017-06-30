@@ -41,10 +41,10 @@
 
         <div id="register">
             <form name="regUser" method="post" action="register.php">
-                <input type="text" name="firstname" placeholder="First Name" class="register-input"><br>
-                <input type="text" name="lastname" placeholder="Last Name" class="register-input"><br>
-                <input type="text" name="userName" placeholder="User Name" class="register-input"><br>
-                <input type="password" name="password" placeholder="Password" class="register-input"><br>
+                <input type="text" required="required" required title="Please fill out all fields" name="firstname" placeholder="First Name" class="register-input"><br>
+                <input type="text" required="required" required title="Please fill out all fields"name="lastname" placeholder="Last Name" class="register-input"><br>
+                <input type="text" required="required" required title="Please fill out all fields"name="userName" placeholder="User Name" class="register-input"><br>
+                <input type="password" required="required" required title="Please fill out all fields"name="password" placeholder="Password" class="register-input"><br>
                 <button type="submit" name="submit" value=""> Submit</button>
             </form>
             <p>Already a member?</p>
