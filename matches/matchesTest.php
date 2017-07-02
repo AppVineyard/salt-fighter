@@ -131,11 +131,16 @@ $result = mysqli_query($conn, $sql);
         }
     }
 
+
+    var currentP1;
     $('.userName').hover(function(){
         var classes = $(this).attr('class').split(' ');
-        var name = classes[3];
+         currentP1 = classes[3];
 
-        $("."+name).css('background-color', 'green');
+        $("."+currentP1).addClass('currP1');
+
+    }, function(){
+        $("."+currentP1).removeClass('currP1');
 
     });
 </script>
