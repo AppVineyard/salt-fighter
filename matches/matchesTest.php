@@ -133,7 +133,9 @@ $result = mysqli_query($conn, $sql);
 
     $('.userName').hover(function(){
         var classes = $(this).attr('class').split(' ');
-        console.log(classes[1]);
+        var name = classes[3];
+
+        $("."+name).css('background-color', 'green');
 
     });
 </script>
