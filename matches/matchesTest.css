@@ -63,6 +63,7 @@ h2 {
   background-color: #f3f3f3;
   border-bottom: white;
   max-width: 95vw;
+  margin-left: 2vw;
   transition: all .25s;
 }
 .matchRow.currRow {
