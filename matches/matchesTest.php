@@ -142,6 +142,12 @@ $result = mysqli_query($conn, $sql);
         $("."+currentPlayer).removeClass('currP1');
 
     });
+    $('.matchRow').hover(function () {
+        $(this).addClass('currRow');
+    },
+    function(){
+        $(this).removeClass('currRow');
+    });
 </script>
 
 
