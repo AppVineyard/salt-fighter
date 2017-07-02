@@ -131,8 +131,8 @@ $result = mysqli_query($conn, $sql);
         }
     }
 
-    $('.userName').click(function(){
-        console.log('clicked, ', this);
+    $('.userName').hover(function(){
+        console.log('hovered, ', this);
     });
 </script>
 

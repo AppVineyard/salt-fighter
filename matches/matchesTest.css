@@ -36,6 +36,7 @@ input[type="submit"] {
 input[type="submit"]:active {
   box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
   background-color: #8bc58b;
+  outline: none;
 }
 h1 {
   font-family: 'Zilla Slab', serif;
@@ -47,4 +48,11 @@ h2 {
 }
 .ui-datepicker-trigger {
   margin: 0 1em 0 .25em;
+}
+.matchData {
+  font-size: 1.5em;
+  background-color: #919191;
+}
+.matchData:nth-child(odd) {
+  background-color: #494949;
 }
