@@ -41,61 +41,65 @@ $result = mysqli_query($conn, $sql);
 <html>
 <head>
     <title>Salt-Figher : Match History</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="match.css">
 
 </head>
 
 <body>
-<div class="demo-content">
-    <h2 class="title_with_link">Recent Matches</h2>
-    <form name="frmSearch" method="post" action="">
-        <p class="search_input">
-            <input type="text" placeholder="From Date" id="match_date" name="search[match_date]"
-                   value="<?php echo $post_at; ?>" class="input-control"/>
-            <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]"
-                   style="margin-left:10px" value="<?php echo $post_at_to_date; ?>" class="input-control"/>
-            <input type="submit" name="go" value="Search">
-        </p>
-        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter by Winner Name..">
+<h2 class="header">Recent Matches</h2>
 
 
-        <?php if (!empty($result)) { ?>
-            <div id="matches" class="table-content">
-                <div class="row">
 
-                    <div class="topLabel col-lg-12">Winner</div>
-                    <div class="topLabel col-lg-12">Loser</div>
-                    <div class="topLabel col-lg-12">P1 Character</div>
-                    <div class="topLabel col-lg-12">P2 Characte</div>
-                    <div class="topLabel col-lg-12">Match Date></div>
-                </div>
-                <div class="row">
-                    <?php
-                    while ($row = mysqli_fetch_array($result)) {
-                        $sql2 = "SELECT users.userName FROM users WHERE player_id = '$row[loss]'";
-                        $result2 = mysqli_query($conn, $sql2);
-                        $row2 = mysqli_fetch_array($result2);
-                        ?>
-                        <div class="row">
-                            <div class="col-lg-2"><?php echo $row["userName"]; ?></div>
-                            <div class="col-lg-2"><?php echo $row2["userName"]; ?></div>
-                            <div class="col-lg-2"><?php echo $row["p1_char"]; ?></div>
-                            <div class="col-lg-2"><?php echo $row["p2_char"]; ?></div>
-                            <div class="col-lg-2"><?php echo date("F j, Y", $row["match_date"]); ?></div>
-                        </div>
-                        <?php
-                    }
-                    ?>
-                </div>
-                >
+<form name="frmSearch" method="post" action="">
+    <p class="search_input">
+        <input type="text" placeholder="From Date" id="match_date" name="search[match_date]"
+               value="<?php echo $post_at; ?>" class="input-control"/>
+        <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]"
+               style="margin-left:10px" value="<?php echo $post_at_to_date; ?>" class="input-control"/>
+        <input type="submit" name="go" value="Search">
+    </p>
+    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter by Winner Name..">
+
+
+    <?php if (!empty($result)) { ?>
+        <div id="matches" class="table-content">
+            <div class="row">
+
+                <div class="topLabel col-lg-12">Winner</div>
+                <div class="topLabel col-lg-12">Loser</div>
+                <div class="topLabel col-lg-12">P1 Character</div>
+                <div class="topLabel col-lg-12">P2 Characte</div>
+                <div class="topLabel col-lg-12">Match Date></div>
             </div>
-        <?php } ?>
+            <div class="row">
+                <?php
+                while ($row = mysqli_fetch_array($result)) {
+                    $sql2 = "SELECT users.userName FROM users WHERE player_id = '$row[loss]'";
+                    $result2 = mysqli_query($conn, $sql2);
+                    $row2 = mysqli_fetch_array($result2);
+                    ?>
+                    <div class="row">
+                        <div class="col-lg-2"><?php echo $row["userName"]; ?></div>
+                        <div class="col-lg-2"><?php echo $row2["userName"]; ?></div>
+                        <div class="col-lg-2"><?php echo $row["p1_char"]; ?></div>
+                        <div class="col-lg-2"><?php echo $row["p2_char"]; ?></div>
+                        <div class="col-lg-2"><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                    </div>
+                    <?php
+                }
+                ?>
+            </div>
+            >
+        </div>
+    <?php } ?>
 
 
-    </form>
+</form>
 
-</div>
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 
