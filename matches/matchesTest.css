@@ -63,5 +63,7 @@ h2 {
   transition: all .5s;
 }
 .currP1 {
-  background-color: #6c9e6a;
+  background-color: #8bc58b;
+  color: white;
+  border-bottom: solid 1px white;
 }
