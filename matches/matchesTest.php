@@ -77,7 +77,7 @@ $result = mysqli_query($conn, $sql);
                     $result2 = mysqli_query($conn, $sql2);
                     $row2 = mysqli_fetch_array($result2);
                     ?>
-                    <div class="row">
+                    <div class="row matchRow">
                         <div class="matchData userName col-lg-2 <?php echo $row["userName"]; ?> "><?php echo $row["userName"]; ?></div>
                         <div class="matchData userName col-lg-2 <?php echo $row2["userName"]; ?>"><?php echo $row2["userName"]; ?></div>
                         <div class="matchData col-lg-2 <?php echo $row["p1_char"]; ?>"><?php echo $row["p1_char"]; ?></div>
@@ -132,7 +132,9 @@ $result = mysqli_query($conn, $sql);
     }
 
     $('.userName').hover(function(){
-        console.log('hovered, ', this);
+        var classes = $(this).attr('class').split(' ');
+        console.log(classes[1]);
+
     });
 </script>
 
