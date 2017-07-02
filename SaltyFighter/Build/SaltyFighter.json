@@ -1,0 +1,9 @@
+{
+"TOTAL_MEMORY": 268435456,
+"dataUrl": "SaltyFighter.data.unityweb",
+"asmCodeUrl": "SaltyFighter.asm.code.unityweb",
+"asmMemoryUrl": "SaltyFighter.asm.memory.unityweb",
+"asmFrameworkUrl": "SaltyFighter.asm.framework.unityweb",
+"splashScreenStyle": "Dark",
+"backgroundColor": "#222C36"
+}
