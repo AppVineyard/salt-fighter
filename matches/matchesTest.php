@@ -132,15 +132,14 @@ $result = mysqli_query($conn, $sql);
     }
 
 
-    var currentP1;
+    var currentPlayer;
     $('.userName').hover(function(){
         var classes = $(this).attr('class').split(' ');
-         currentP1 = classes[3];
-
-        $("."+currentP1).addClass('currP1');
+         currentPlayer = classes[3];
+        $("."+currentPlayer).addClass('currP1');
 
     }, function(){
-        $("."+currentP1).removeClass('currP1');
+        $("."+currentPlayer).removeClass('currP1');
 
     });
 </script>
