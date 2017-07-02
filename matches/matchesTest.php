@@ -39,13 +39,11 @@ $result = mysqli_query($conn, $sql);
 ?>
 
 <html>
-<head>
-    <title>Salt-Figher : Match History</title>
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="match.css">
+<title>Salt-Figher : Match History</title>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<link rel="stylesheet" type="text/css" href="match.css">
 
 </head>
 
@@ -53,14 +51,11 @@ $result = mysqli_query($conn, $sql);
 <h2 class="header">Recent Matches</h2>
 
 
-
 <form name="frmSearch" method="post" action="">
     <p class="search_input">
-        <input type="text" placeholder="From Date" id="match_date" name="search[match_date]"
-               value="<?php echo $post_at; ?>" class="input-control"/>
-        <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]"
-               style="margin-left:10px" value="<?php echo $post_at_to_date; ?>" class="input-control"/>
-        <input type="submit" name="go" value="Search">
+        <input type="text" placeholder="From Date" id="match_date" name="search[match_date]"  value="<?php echo $post_at; ?>" class="input-control" />
+        <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]" style="margin-left:10px"  value="<?php echo $post_at_to_date; ?>" class="input-control"  />
+        <input type="submit" name="go" value="Search" >
     </p>
     <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter by Winner Name..">
 
@@ -73,7 +68,7 @@ $result = mysqli_query($conn, $sql);
                 <div class="topLabel col-lg-12">Loser</div>
                 <div class="topLabel col-lg-12">P1 Character</div>
                 <div class="topLabel col-lg-12">P2 Characte</div>
-                <div class="topLabel col-lg-12">Match Date></div>
+                <div class="topLabel col-lg-12">Match Date</div>
             </div>
             <div class="row">
                 <?php
@@ -99,9 +94,8 @@ $result = mysqli_query($conn, $sql);
 
 
 </form>
-
-<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 <script>
     $.datepicker.setDefaults({
@@ -122,7 +116,7 @@ $result = mysqli_query($conn, $sql);
         input = document.getElementById("myInput");
         filter = input.value.toUpperCase();
         table = document.getElementById("matches");
-        tr = table.getElementsByTagName("tr");
+        tr = table.getElementsByTagName("div");
 
         // Loop through all table rows, and hide those who don't match the search query
         for (i = 0; i < tr.length; i++) {

@@ -14,55 +14,46 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49166667">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/matches/index.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="388">
-                  <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="44" selection-end-column="100" />
-                  <folding>
-                    <marker date="1499027504409" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-                    <marker date="1499027504409" expanded="true" signature="3124:3187" ph="SELECT users... users" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="matchesTest.php" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="360">
-                  <caret line="64" column="60" lean-forward="false" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
-                  <folding>
-                    <marker date="1499027528121" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-                    <marker date="1499027528121" expanded="true" signature="2817:2880" ph="SELECT users... users" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="matchesTest.php" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="44" column="100" lean-forward="false" selection-start-line="44" selection-start-column="100" selection-end-line="44" selection-end-column="100" />
-                  <folding>
-                    <marker date="1499027528121" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-                    <marker date="1499027528121" expanded="true" signature="2817:2880" ph="SELECT users... users" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matches/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="57" column="2" lean-forward="false" selection-start-line="57" selection-start-column="2" selection-end-line="63" selection-end-column="97" />
+              <folding>
+                <element signature="n#style#0;n#input#1;n#p#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1499027623646" expanded="true" signature="944:1072" ph="SELECT * FRO... match_stats" />
+                <marker date="1499027623646" expanded="true" signature="2799:2862" ph="SELECT users... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="match.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/matches/match.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="162">
+              <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="matchesTest.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="390">
+              <caret line="59" column="97" lean-forward="false" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
+              <folding>
+                <element signature="n#style#0;n#input#1;n#p#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1499028212674" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
+                <marker date="1499028212674" expanded="true" signature="2546:2609" ph="SELECT users... users" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -82,6 +73,8 @@
       <find>createm</find>
       <find>create</find>
       <find>img</find>
+      <find>date</find>
+      <find>datepicker</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -576,12 +569,12 @@
       <workItem from="1498421509627" duration="1844000" />
       <workItem from="1498432306188" duration="8932000" />
       <workItem from="1499025124681" duration="1036000" />
-      <workItem from="1499026410862" duration="1133000" />
+      <workItem from="1499026410862" duration="1806000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20189000" />
+    <option name="totallyTimeSpent" value="20862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -601,7 +594,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1734375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -658,13 +651,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/zabSucks.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1086,24 +1072,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/matches/match.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="5" lean-forward="true" selection-start-line="9" selection-start-column="5" selection-end-line="9" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/matches/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="43" column="4" lean-forward="false" selection-start-line="43" selection-start-column="4" selection-end-line="44" selection-end-column="100" />
+        <state relative-caret-position="300">
+          <caret line="57" column="2" lean-forward="false" selection-start-line="57" selection-start-column="2" selection-end-line="63" selection-end-column="97" />
           <folding>
-            <marker date="1499027504409" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1499027504409" expanded="true" signature="3124:3187" ph="SELECT users... users" />
+            <element signature="n#style#0;n#input#1;n#p#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1499027623646" expanded="true" signature="944:1072" ph="SELECT * FRO... match_stats" />
+            <marker date="1499027623646" expanded="true" signature="2799:2862" ph="SELECT users... users" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="44" column="100" lean-forward="false" selection-start-line="44" selection-start-column="100" selection-end-line="44" selection-end-column="100" />
+        <state relative-caret-position="390">
+          <caret line="59" column="97" lean-forward="false" selection-start-line="59" selection-start-column="97" selection-end-line="59" selection-end-column="97" />
           <folding>
-            <marker date="1499027528121" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1499027528121" expanded="true" signature="2817:2880" ph="SELECT users... users" />
+            <element signature="n#style#0;n#input#1;n#p#0;n#form#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1499028212674" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
+            <marker date="1499028212674" expanded="true" signature="2546:2609" ph="SELECT users... users" />
           </folding>
         </state>
       </provider>
