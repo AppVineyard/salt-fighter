@@ -130,7 +130,7 @@ $result = mysqli_query($conn, $sql);
         }
     }
 
-    $('.userName').on('hover', function(){
+    $('.userName').bind('hover', function(){
         console.log(this);
     });
 </script>
