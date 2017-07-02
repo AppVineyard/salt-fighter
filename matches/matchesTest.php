@@ -43,12 +43,13 @@ $result = mysqli_query($conn, $sql);
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="matchesTest.css">
 
 </head>
 
 <body>
-<h2 class="header">Recent Matches</h2>
+<h1 class="header">Recent Matches</h1>
 
 
 <form name="frmSearch" method="post" action="">
@@ -63,11 +64,11 @@ $result = mysqli_query($conn, $sql);
     <?php if (!empty($result)) { ?>
         <div id="matches" class="table-content">
             <div class="row">
-                <div class="topLabel col-lg-2">Winner</div>
-                <div class="topLabel col-lg-2">Loser</div>
-                <div class="topLabel col-lg-2">P1 Character</div>
-                <div class="topLabel col-lg-2">P2 Characte</div>
-                <div class="topLabel col-lg-2">Match Date</div>
+                <div class="topLabel col-lg-2"><h2>Winner</h2></div>
+                <div class="topLabel col-lg-2"><h2>Loser</h2></div>
+                <div class="topLabel col-lg-2"><h2>P1 Character</h2></div>
+                <div class="topLabel col-lg-2"><h2>P2 Character</h2></div>
+                <div class="topLabel col-lg-2"><h2>Match Date</h2></div>
             </div>
             <div class="row">
                 <?php
@@ -130,8 +131,8 @@ $result = mysqli_query($conn, $sql);
         }
     }
 
-    $('.userName').bind('hover', function(){
-        console.log(this);
+    $('.userName').click(function(){
+        console.log('clicked, ', this);
     });
 </script>
 
