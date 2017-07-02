@@ -41,28 +41,9 @@ $result = mysqli_query($conn, $sql);
 <html>
 <head>
     <title>Salt-Figher : Match History</title>
-    <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="match.css">
 
-    <style>
-        .table-content {
-            border-top: #CCCCCC 4px solid;
-            width: 75%;
-        }
-
-        .table-content th {
-            padding: 5px 20px;
-            background: #F0F0F0;
-            vertical-align: top;
-        }
-
-        .table-content td {
-            padding: 5px 20px;
-            border-bottom: #F0F0F0 1px solid;
-            vertical-align: top;
-        }
-    </style>
 </head>
 
 <body>
@@ -116,6 +97,8 @@ $result = mysqli_query($conn, $sql);
 
 </div>
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+
 <script>
     $.datepicker.setDefaults({
         showOn: "button",
