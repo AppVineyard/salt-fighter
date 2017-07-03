@@ -64,11 +64,9 @@ $result = mysqli_query($conn, $sql);
     <?php if (!empty($result)) { ?>
         <div id="matches" class="table-content">
             <div class="topLabelHolder row">
-                <div class="topLabel col-lg-2"><h2>Winner</h2></div>
-                <div class="topLabel col-lg-2"><h2>Loser</h2></div>
-                <div class="topLabel col-lg-2"><h2>P1 Character</h2></div>
-                <div class="topLabel col-lg-2"><h2>P2 Character</h2></div>
-                <div class="topLabel col-lg-2"><h2>Match Date</h2></div>
+                <div class="topLabel col-lg-4"><h2>Winner</h2></div>
+                <div class="topLabel col-lg-4"><h2>Loser</h2></div>
+                <div class="topLabel col-lg-4"><h2>Match Date</h2></div>
             </div>
             <div class="row">
                 <?php
@@ -78,9 +76,9 @@ $result = mysqli_query($conn, $sql);
                     $row2 = mysqli_fetch_array($result2);
                     ?>
                     <div class="row matchRow ">
-                        <div class="matchData userName col-lg-2 <?php echo $row["userName"]; ?> "> <?php echo $row["userName"]; ?>, <?php echo $row["p1_char"]; ?> </div>
-                        <div class="matchData userName col-lg-2 <?php echo $row2["userName"]; ?>"> <?php echo $row2["userName"]; ?>, <?php echo $row["p2_char"]; ?> </div>
-                        <div class="matchData col-lg-2 "><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                        <div class="matchData userName col-lg-4 <?php echo $row["userName"]; ?> "> <?php echo $row["userName"]; ?>, <?php echo $row["p1_char"]; ?> </div>
+                        <div class="matchData userName col-lg-4 <?php echo $row2["userName"]; ?>"> <?php echo $row2["userName"]; ?>, <?php echo $row["p2_char"]; ?> </div>
+                        <div class="matchData col-lg-4 "><?php echo date("F j, Y", $row["match_date"]); ?></div>
                     </div>
                     <?php
                 }
