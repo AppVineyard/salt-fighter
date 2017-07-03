@@ -18,8 +18,8 @@ require 'dbconfig.php';
 
         
         // Strings must be escaped to prevent SQL injection attack.
-        $name = mysqli_real_escape_string($_GET['name'], $conn);
-        $score = mysqli_real_escape_string($_GET['score'], $conn);
+        $name = mysqli_real_escape_string('Hello', $conn);
+        $score = mysqli_real_escape_string('10000', $conn);
         $hash = $_GET['hash'];
         
         $secretKey="salty"; # Change this value to match the value stored in the client javascript below
