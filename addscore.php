@@ -26,7 +26,7 @@ require 'dbconfig.php';
         
         $real_hash = md5($name . $score . $secretKey);
         if($real_hash == $hash) {
-             Send variables for the MySQL database class.
+
             $query = "insert into scores values (NULL, '$name', '$score');";
             $result = mysqli_query($conn,$query) or die('Query failed: ' . mysqli_error());
         }
