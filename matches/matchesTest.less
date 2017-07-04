@@ -83,9 +83,12 @@ h2{
 }
 
 .matchRow{
+  h1{
+    margin:0;
+  }
   text-align: center;
   font-size: 1.5em;
-  padding:.35em;
+  padding: 0 .35em;
   background-color: #f3f3f3;
   border-bottom: black;
   transition: all .25s;
@@ -110,7 +113,9 @@ h2{
 }
 
 .userName{
-  transition: all .5s;
+  margin: .25em 0;
+  font-size: 1.1em;
+  transition: all .2s;
   &.currP1{
     background-color: @prettyGreen;
     color:white;

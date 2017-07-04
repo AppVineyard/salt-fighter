@@ -79,10 +79,13 @@ h2 {
 .matchRow {
   text-align: center;
   font-size: 1.5em;
-  padding: .35em;
+  padding: 0 .35em;
   background-color: #f3f3f3;
   border-bottom: black;
   transition: all .25s;
+}
+.matchRow h1 {
+  margin: 0;
 }
 .matchRow.currentRowHover {
   margin-bottom: 6px;
@@ -106,7 +109,9 @@ h2 {
   border-radius: 5px;
 }
 .userName {
-  transition: all .5s;
+  margin: .25em 0;
+  font-size: 1.1em;
+  transition: all .2s;
 }
 .userName.currP1 {
   background-color: #8bc58b;
