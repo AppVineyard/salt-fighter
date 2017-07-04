@@ -68,11 +68,9 @@ $result = mysqli_query($conn, $sql);
         <?php if (!empty($result)) { ?>
             <div id="matches" class="table-content">
                 <div class="topLabelHolder row">
-                    <div class="topLabel col-lg-2"><h2>Winner</h2></div>
-                    <div class="topLabel col-lg-2"><h2>Loser</h2></div>
-                    <div class="topLabel col-lg-2"><h2>P1 Character</h2></div>
-                    <div class="topLabel col-lg-2"><h2>P2 Character</h2></div>
-                    <div class="topLabel col-lg-2"><h2>Match Date</h2></div>
+                    <div class="topLabel col-lg-3"><h2>Winner</h2></div>
+                    <div class="topLabel col-lg-3"><h1>Vs</h1></div>
+                    <div class="topLabel col-lg-3"><h2>Loser</h2></div>
                 </div>
                 <div class="row">
                     <?php
