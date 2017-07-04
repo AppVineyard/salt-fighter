@@ -59,6 +59,12 @@ h2 {
     width: 100vw;
   }
 }
+.header {
+  margin: 1vh auto;
+}
+.topLabelHolder {
+  margin: .25em 0;
+}
 .topLabel {
   text-align: center;
 }
@@ -88,10 +94,10 @@ h2 {
   margin-bottom: 6px;
   color: white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-  background-color: #8bc58b;
+  background-color: #7caf7c;
 }
 .matchRow.currentRowClick .currP1 {
-  background-color: #C5B075;
+  background-color: #8bc58b;
   color: white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }

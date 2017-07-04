@@ -50,8 +50,9 @@ $result = mysqli_query($conn, $sql);
 </head>
 
 <body>
-<h1 class="header">Recent Matches</h1>
-
+<div class="header">
+<h1>Recent Matches</h1>
+</div>
 <div id="mainHolder">
     <form name="frmSearch" method="post" action="">
         <p class="search_input">
