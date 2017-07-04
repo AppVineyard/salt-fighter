@@ -84,6 +84,8 @@ h2 {
   color: white;
 }
 .matchRow {
+  border-left: solid 1px black;
+  border-right: solid 1px black;
   text-align: center;
   font-size: 1.5em;
   padding: 0 .35em;
@@ -96,7 +98,7 @@ h2 {
 }
 .matchRow.currentRowHover {
   color: white;
-  background-color: #408dec;
+  background-color: #336db9;
 }
 .matchRow.currentRowClick {
   color: white;
