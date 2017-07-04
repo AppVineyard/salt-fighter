@@ -155,9 +155,10 @@ $result = mysqli_query($conn, $sql);
             $(this).removeClass('currentRowHover');
         });
     $('.matchRow').click(function () {
-        if(currentRow.removeClass('currentRowClick'));
+        currentRow ? currentRow.removeClass('currentRowClick') : null;
         currentRow = $(this);
         currentRow.addClass('currentRowClick');
+
     });
 
 </script>
