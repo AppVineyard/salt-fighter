@@ -42,7 +42,8 @@ $result = mysqli_query($conn, $sql);
 <title>Salt-Figher : Match History</title>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="matchesTest.css">
 
@@ -51,45 +52,52 @@ $result = mysqli_query($conn, $sql);
 <body>
 <h1 class="header">Recent Matches</h1>
 
+<div id="mainHolder">
+    <form name="frmSearch" method="post" action="">
+        <p class="search_input">
+            <input type="text" placeholder="From Date" id="match_date" name="search[match_date]"
+                   value="<?php echo $post_at; ?>" class="input-control"/>
+            <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]"
+                   style="margin-left:10px" value="<?php echo $post_at_to_date; ?>" class="input-control"/>
+            <input type="submit" name="go" value="Search">
+        </p>
+        <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter by Winner Name..">
 
-<form name="frmSearch" method="post" action="">
-    <p class="search_input">
-        <input type="text" placeholder="From Date" id="match_date" name="search[match_date]"  value="<?php echo $post_at; ?>" class="input-control" />
-        <input type="text" placeholder="To Date" id="post_at_to_date" name="search[post_at_to_date]" style="margin-left:10px"  value="<?php echo $post_at_to_date; ?>" class="input-control"  />
-        <input type="submit" name="go" value="Search" >
-    </p>
-    <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Filter by Winner Name..">
 
-
-    <?php if (!empty($result)) { ?>
-        <div id="matches" class="table-content">
-            <div class="topLabelHolder row">
-                <div class="topLabel col-lg-4"><h2>Winner</h2></div>
-                <div class="topLabel col-lg-4"><h2>Loser</h2></div>
-                <div class="topLabel col-lg-4"><h2>Match Date</h2></div>
-            </div>
-            <div class="row">
-                <?php
-                while ($row = mysqli_fetch_array($result)) {
-                    $sql2 = "SELECT users.userName FROM users WHERE player_id = '$row[loss]'";
-                    $result2 = mysqli_query($conn, $sql2);
-                    $row2 = mysqli_fetch_array($result2);
-                    ?>
-                    <div class="row matchRow ">
-                        <div class="matchData userName col-lg-4 <?php echo $row["userName"]; ?> "> <?php echo $row["userName"]; ?>, <?php echo $row["p1_char"]; ?> </div>
-                        <div class="matchData userName col-lg-4 <?php echo $row2["userName"]; ?>"> <?php echo $row2["userName"]; ?>, <?php echo $row["p2_char"]; ?> </div>
-                        <div class="matchData col-lg-4 "><?php echo date("F j, Y", $row["match_date"]); ?></div>
-                    </div>
+        <?php if (!empty($result)) { ?>
+            <div id="matches" class="table-content">
+                <div class="topLabelHolder row">
+                    <div class="topLabel col-lg-2"><h2>Winner</h2></div>
+                    <div class="topLabel col-lg-2"><h2>Loser</h2></div>
+                    <div class="topLabel col-lg-2"><h2>P1 Character</h2></div>
+                    <div class="topLabel col-lg-2"><h2>P2 Character</h2></div>
+                    <div class="topLabel col-lg-2"><h2>Match Date</h2></div>
+                </div>
+                <div class="row">
                     <?php
-                }
-                ?>
+                    while ($row = mysqli_fetch_array($result)) {
+                        $sql2 = "SELECT users.userName FROM users WHERE player_id = '$row[loss]'";
+                        $result2 = mysqli_query($conn, $sql2);
+                        $row2 = mysqli_fetch_array($result2);
+                        ?>
+                        <div class="row matchRow ">
+                            <div class="matchData userName col-lg-2 <?php echo $row["userName"]; ?> "><?php echo $row["userName"]; ?></div>
+                            <div class="matchData userName col-lg-2 <?php echo $row2["userName"]; ?>"><?php echo $row2["userName"]; ?></div>
+                            <div class="matchData col-lg-2 <?php echo $row["p1_char"]; ?>"><?php echo $row["p1_char"]; ?></div>
+                            <div class="matchData col-lg-2 <?php echo $row["p2_char"]; ?>"><?php echo $row["p2_char"]; ?></div>
+                            <div class="matchData col-lg-2 "><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                        </div>
+                        <?php
+                    }
+                    ?>
+                </div>
+                >
             </div>
-            >
-        </div>
-    <?php } ?>
+        <?php } ?>
 
 
-</form>
+    </form>
+</div>
 <script src="https://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="https://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
@@ -129,26 +137,25 @@ $result = mysqli_query($conn, $sql);
 
 
     var currentPlayer;
-    $('.userName').hover(function(){
+    $('.userName').hover(function () {
         var classes = $(this).attr('class').split(' ');
-         currentPlayer = classes[3];
-        $("."+currentPlayer).addClass('currP1');
+        currentPlayer = classes[3];
+        $("." + currentPlayer).addClass('currP1');
 
-    }, function(){
-        $("."+currentPlayer).removeClass('currP1');
+    }, function () {
+        $("." + currentPlayer).removeClass('currP1');
 
     });
     $('.matchRow').hover(function () {
-        $(this).addClass('currRow');
-    },
-    function(){
-        $(this).removeClass('currRow');
-    });
+            $(this).addClass('currRow');
+        },
+        function () {
+            $(this).removeClass('currRow');
+        });
 </script>
 
 
 <script>
-
 
 
 </script>
