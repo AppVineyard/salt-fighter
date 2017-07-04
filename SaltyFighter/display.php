@@ -16,22 +16,20 @@
 
 require 'dbconfig.php';
 
-        
-        // Strings must be escaped to prevent SQL injection attack.
-        $name = mysqli_real_escape_string($conn,$_GET['name']);
-        $score = mysqli_real_escape_string($conn,$_GET['score']);
-        $hash = $_GET['hash'];
-        
-        $secretKey="salty"; # Change this value to match the value stored in the client javascript below
-        
-        $real_hash = md5($name . $score . $secretKey);
-        if($real_hash == $hash) {
-
-            $query = "insert into scores values (NULL, '$name', '$score');";
-            $result = mysqli_query($conn,$query) or die('Query failed: ' . mysqli_error());
-        }
-
     
+
+    // Send variables for the MySQL database class.
+    
+    $query = "SELECT * FROM `scores` ORDER by `score` DESC LIMIT 5";
+    $result = mysqli_query($conn,$query) or die('Query failed: ' . mysqli_error());
+    
+    $num_results = mysqli_num_rows($result);
+    
+    for($i = 0; $i < $num_results; $i++)
+    {
+        $row = mysqli_fetch_array($result);
+        echo $row['name'] . "\t" . $row['score'] . "\n";
+    }
     
 
 
