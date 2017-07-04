@@ -25,6 +25,7 @@ body{
 
 input[type='text']{
   font-size: 1.2em;
+  margin-bottom: 1vh;
   height: 1.6em;
   background-color: rgba(222, 222, 222, 0.61);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -49,6 +50,7 @@ input[type="submit"]:active{
 h1{
   font-family: 'Zilla Slab', serif;
   font-weight: 600;
+  margin:0;
 }
 h2{
   font-family: 'Zilla Slab', serif;
@@ -64,10 +66,17 @@ h2{
   }
 }
 .header{
-  margin:1vh auto;
+  text-align: center;
+  width: 20vw;
+  margin: 2.5vh auto 5vh auto;
 }
 .topLabelHolder{
-  margin: .25em 0;
+  padding: .5em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  border-right: solid 1px black;
 }
 .topLabel{
   text-align: center;
@@ -77,9 +86,7 @@ h2{
 }
 
 .currRow{
-  margin-bottom: 6px;
   color:white;
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .matchRow{
