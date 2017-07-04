@@ -81,18 +81,26 @@ $result = mysqli_query($conn, $sql);
                         $result2 = mysqli_query($conn, $sql2);
                         $row2 = mysqli_fetch_array($result2);
                         ?>
+
                         <div class="row matchRow ">
-                            <div class="matchData userName col-lg-2 <?php echo $row["userName"]; ?> "><?php echo $row["userName"]; ?></div>
-                            <div class="matchData userName col-lg-2 <?php echo $row2["userName"]; ?>"><?php echo $row2["userName"]; ?></div>
-                            <div class="matchData col-lg-2 <?php echo $row["p1_char"]; ?>"><?php echo $row["p1_char"]; ?></div>
-                            <div class="matchData col-lg-2 <?php echo $row["p2_char"]; ?>"><?php echo $row["p2_char"]; ?></div>
-                            <div class="matchData col-lg-2 "><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                            <div class="matchData userName col-lg-3">
+                                <?php echo $row["userName"]; ?> "><?php echo $row["userName"]; ?>
+                                <br> <?php echo $row["p1_char"]; ?>"><?php echo $row["p1_char"]; ?>
+                            </div>
+                            <div class="matchData vs col-lg-3">
+                                <div id="vs"></div>
+                                <div id="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                            </div>
+                            <div class="matchData userName col-lg-3">
+                                <?php echo $row2["userName"]; ?>"><?php echo $row2["userName"]; ?>
+                                <br> <?php echo $row["p2_char"]; ?>"><?php echo $row["p2_char"]; ?>
+                            </div>
                         </div>
+
                         <?php
                     }
                     ?>
                 </div>
-                >
             </div>
         <?php } ?>
 
