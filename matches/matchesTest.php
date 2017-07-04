@@ -155,7 +155,7 @@ $result = mysqli_query($conn, $sql);
         $("." + currentPlayer).removeClass('currP1');
     });
     $('.userName').click(function () {
-        currentPlayerClicked ? currentPlayerClicked.removeClass('currentRowClick') : null;
+        currentPlayerClicked ? currentPlayerClicked.removeClass('currentPlayerClicked') : null;
         currentPlayerClicked = $(this);
         currentPlayerClicked.addClass('currentPlayerClicked');
     });
