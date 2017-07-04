@@ -157,7 +157,7 @@ $result = mysqli_query($conn, $sql);
     $('.userName').click(function () {
         currentPlayerClicked ? currentPlayerClicked.removeClass('currentPlayerClicked') : null;
         currentPlayerClicked = $(this);
-        currentPlayerClicked.addClass('currentPlayerClicked');
+        currentPlayerClicked.removeClass('currP1').addClass('currentPlayerClicked');
     });
 
 

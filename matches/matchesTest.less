@@ -125,14 +125,15 @@ h2{
 .userName{
   margin: .25em 0;
   font-size: 1.1em;
+  transition: background-color .25s;
   &.currP1{
     background-color: @prettyGreen;
     color:white;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
   }
-&.currentPlayerClicked{
+  &.currentPlayerClicked{
   background-color: #c4a67e;
   color:white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
+  }
 }

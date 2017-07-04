@@ -116,6 +116,7 @@ h2 {
 .userName {
   margin: .25em 0;
   font-size: 1.1em;
+  transition: background-color 0.25s;
 }
 .userName.currP1 {
   background-color: #8bc58b;
