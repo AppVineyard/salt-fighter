@@ -50,8 +50,9 @@ $result = mysqli_query($conn, $sql);
 </head>
 
 <body>
-<h1 class="header">Recent Matches</h1>
-
+<div class="header">
+<h1>Recent Matches</h1>
+</div>
 <div id="mainHolder">
     <form name="frmSearch" method="post" action="">
         <p class="search_input">
@@ -67,11 +68,9 @@ $result = mysqli_query($conn, $sql);
         <?php if (!empty($result)) { ?>
             <div id="matches" class="table-content">
                 <div class="topLabelHolder row">
-                    <div class="topLabel col-lg-2"><h2>Winner</h2></div>
-                    <div class="topLabel col-lg-2"><h2>Loser</h2></div>
-                    <div class="topLabel col-lg-2"><h2>P1 Character</h2></div>
-                    <div class="topLabel col-lg-2"><h2>P2 Character</h2></div>
-                    <div class="topLabel col-lg-2"><h2>Match Date</h2></div>
+                    <div class="topLabel col-lg-4"><h1>Winner</h1></div>
+                    <div class="topLabel col-lg-4"><h1>Vs</h1></div>
+                    <div class="topLabel col-lg-4"><h1>Loser</h1></div>
                 </div>
                 <div class="row">
                     <?php
@@ -80,18 +79,26 @@ $result = mysqli_query($conn, $sql);
                         $result2 = mysqli_query($conn, $sql2);
                         $row2 = mysqli_fetch_array($result2);
                         ?>
+
                         <div class="row matchRow ">
-                            <div class="matchData userName col-lg-2 <?php echo $row["userName"]; ?> "><?php echo $row["userName"]; ?></div>
-                            <div class="matchData userName col-lg-2 <?php echo $row2["userName"]; ?>"><?php echo $row2["userName"]; ?></div>
-                            <div class="matchData col-lg-2 <?php echo $row["p1_char"]; ?>"><?php echo $row["p1_char"]; ?></div>
-                            <div class="matchData col-lg-2 <?php echo $row["p2_char"]; ?>"><?php echo $row["p2_char"]; ?></div>
-                            <div class="matchData col-lg-2 "><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                            <div class="matchData userName col-lg-4 <?php echo $row["userName"]; ?>">
+                                 <?php echo $row["userName"]; ?>
+                                <br> <?php echo $row["p1_char"]; ?>
+                            </div>
+                            <div class="matchData vs col-lg-4">
+                                <div id="vs"><h1>VS</h1></div>
+                                <div id="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                            </div>
+                            <div class="matchData userName col-lg-4 <?php echo $row2["userName"]; ?>">
+                                <?php echo $row2["userName"]; ?>
+                                <br> <?php echo $row["p2_char"]; ?>
+                            </div>
                         </div>
+
                         <?php
                     }
                     ?>
                 </div>
-                >
             </div>
         <?php } ?>
 
@@ -137,6 +144,8 @@ $result = mysqli_query($conn, $sql);
 
 
     var currentPlayer;
+    var currentRow;
+    var currentPlayerClicked;
     $('.userName').hover(function () {
         var classes = $(this).attr('class').split(' ');
         currentPlayer = classes[3];
@@ -144,14 +153,28 @@ $result = mysqli_query($conn, $sql);
 
     }, function () {
         $("." + currentPlayer).removeClass('currP1');
-
     });
+    $('.userName').click(function () {
+        currentPlayerClicked ? currentPlayerClicked.removeClass('currentPlayerClicked') : null;
+        var classes = $(this).attr('class').split(' ');
+        currentPlayer = classes[3];
+        currentPlayerClicked = $("." + currentPlayer);
+        currentPlayerClicked.removeClass('currP1').addClass('currentPlayerClicked');
+    });
+
+
     $('.matchRow').hover(function () {
-            $(this).addClass('currRow');
+            $(this).addClass('currentRowHover');
         },
         function () {
-            $(this).removeClass('currRow');
+            $(this).removeClass('currentRowHover');
         });
+    $('.matchRow').click(function () {
+        currentRow ? currentRow.removeClass('currentRowClick') : null;
+        currentRow = $(this);
+        currentRow.addClass('currentRowClick');
+    });
+
 </script>
 
 

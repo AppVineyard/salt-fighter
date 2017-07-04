@@ -21,6 +21,7 @@ body {
 }
 input[type='text'] {
   font-size: 1.2em;
+  margin-bottom: 1vh;
   height: 1.6em;
   background-color: rgba(222, 222, 222, 0.61);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
@@ -44,6 +45,7 @@ input[type="submit"]:active {
 h1 {
   font-family: 'Zilla Slab', serif;
   font-weight: 600;
+  margin: 0;
 }
 h2 {
   font-family: 'Zilla Slab', serif;
@@ -59,9 +61,18 @@ h2 {
     width: 100vw;
   }
 }
+.header {
+  text-align: center;
+  width: 20vw;
+  margin: 2.5vh auto 5vh auto;
+}
 .topLabelHolder {
-  max-width: 95vw;
-  margin-left: 2vw;
+  padding: .5em;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-top: solid 2px #b3b3b3;
+  border-left: solid 2px #b3b3b3;
+  border-right: solid 2px #b3b3b3;
 }
 .topLabel {
   text-align: center;
@@ -69,17 +80,32 @@ h2 {
 .ui-datepicker-trigger {
   margin: 0 1em 0 .25em;
 }
+.currRow {
+  color: white;
+}
 .matchRow {
+  border-left: solid 2px #b3b3b3;
+  border-right: solid 2px #b3b3b3;
   text-align: center;
   font-size: 1.5em;
-  padding: .35em;
+  padding: 0 .35em;
   background-color: #f3f3f3;
   border-bottom: black;
   transition: all .25s;
 }
-.matchRow.currRow {
-  margin-bottom: 6px;
-  background-color: #2d72ff;
+.matchRow h1 {
+  margin: 0;
+}
+.matchRow.currentRowHover {
+  color: white;
+  background-color: #336db9;
+}
+.matchRow.currentRowClick {
+  color: white;
+  background-color: #7caf7c;
+}
+.matchRow.currentRowClick .currP1 {
+  background-color: #8bc58b;
   color: white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
@@ -88,10 +114,17 @@ h2 {
   border-radius: 5px;
 }
 .userName {
-  transition: all .5s;
+  margin: .25em 0;
+  font-size: 1.1em;
+  transition: background-color 0.25s;
 }
 .userName.currP1 {
   background-color: #8bc58b;
+  color: white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.userName.currentPlayerClicked {
+  background-color: #c4a67e;
   color: white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
