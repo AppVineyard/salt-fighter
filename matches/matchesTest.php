@@ -68,9 +68,9 @@ $result = mysqli_query($conn, $sql);
         <?php if (!empty($result)) { ?>
             <div id="matches" class="table-content">
                 <div class="topLabelHolder row">
-                    <div class="topLabel col-lg-3"><h2>Winner</h2></div>
+                    <div class="topLabel col-lg-3"><h1>Winner</h1></div>
                     <div class="topLabel col-lg-3"><h1>Vs</h1></div>
-                    <div class="topLabel col-lg-3"><h2>Loser</h2></div>
+                    <div class="topLabel col-lg-3"><h1>Loser</h1></div>
                 </div>
                 <div class="row">
                     <?php
@@ -81,17 +81,17 @@ $result = mysqli_query($conn, $sql);
                         ?>
 
                         <div class="row matchRow ">
-                            <div class="matchData userName col-lg-3">
-                                <?php echo $row["userName"]; ?> "><?php echo $row["userName"]; ?>
-                                <br> <?php echo $row["p1_char"]; ?>"><?php echo $row["p1_char"]; ?>
+                            <div class="matchData userName col-lg-3 <?php echo $row["userName"]; ?>">
+                                 <?php echo $row["userName"]; ?>
+                                <br> <?php echo $row["p1_char"]; ?>
                             </div>
                             <div class="matchData vs col-lg-3">
-                                <div id="vs"></div>
+                                <div id="vs"><h1>VS</h1></div>
                                 <div id="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
                             </div>
-                            <div class="matchData userName col-lg-3">
-                                <?php echo $row2["userName"]; ?>"><?php echo $row2["userName"]; ?>
-                                <br> <?php echo $row["p2_char"]; ?>"><?php echo $row["p2_char"]; ?>
+                            <div class="matchData userName col-lg-3 <?php echo $row2["userName"]; ?>">
+                                <?php echo $row2["userName"]; ?>
+                                <br> <?php echo $row["p2_char"]; ?>
                             </div>
                         </div>
 
