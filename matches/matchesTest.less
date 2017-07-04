@@ -63,10 +63,7 @@ h2{
   }
 }
 
-.topLabelHolder{
-  max-width:95vw;
-  margin-left: 2vw;
-}
+
 .topLabel{
   text-align: center;
 }
@@ -74,6 +71,11 @@ h2{
   margin: 0 1em 0 .25em;
 }
 
+.currRow{
+  margin-bottom: 6px;
+  color:white;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
 
 .matchRow{
   text-align: center;
@@ -82,11 +84,19 @@ h2{
   background-color: #f3f3f3;
   border-bottom: black;
   transition: all .25s;
-  &.currRow{
-    margin-bottom: 6px;
-    background-color: #2d72ff;
-    color:white;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+
+  &.currentRowHover{
+    .currRow;
+    background-color: #408dec;
+  }
+  &.currentRowClick{
+    .currRow;
+    background-color: @prettyGreen;
+    .currP1{
+      background-color: #C5B075;
+      color:white;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
   }
 }
 .matchData{

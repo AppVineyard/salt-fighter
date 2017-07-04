@@ -137,6 +137,8 @@ $result = mysqli_query($conn, $sql);
 
 
     var currentPlayer;
+    var currentRow;
+
     $('.userName').hover(function () {
         var classes = $(this).attr('class').split(' ');
         currentPlayer = classes[3];
@@ -147,11 +149,17 @@ $result = mysqli_query($conn, $sql);
 
     });
     $('.matchRow').hover(function () {
-            $(this).addClass('currRow');
+            $(this).addClass('currentRowHover');
         },
         function () {
-            $(this).removeClass('currRow');
+            $(this).removeClass('currentRowHover');
         });
+    $('.matchRow').click(function () {
+        if(currentRow.removeClass('currentRowClick'));
+        currentRow = $(this);
+        currentRow.addClass('currentRowClick');
+    });
+
 </script>
 
 
