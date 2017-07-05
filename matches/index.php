@@ -77,13 +77,13 @@
     <tbody>
 	<?php
 		while($row = mysqli_fetch_array($result)) {
-            $sql2 = "SELECT users.userName FROM users WHERE player_id = '$row[loss]'";
+            $sql2 = "SELECT users.userName, users.player_id FROM users WHERE player_id = '$row[loss]'";
             $result2 = mysqli_query($conn, $sql2);
             $row2 = mysqli_fetch_array($result2);
 	?>
         <tr>
             <td><?php echo $row["userName"] . "\n"; if($row["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?></td>
-            <td><?php echo $row2["userName"]; ?></td>
+            <td><?php echo $row2["userName"]. "\n"; if($row2["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];}; ?></td>
             <td><?php echo $row["p1_char"]; ?></td>
 			<td><?php echo $row["p2_char"]; ?></td>
 			<td><?php echo date("F j, Y",$row["match_date"]); ?></td>
