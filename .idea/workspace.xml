@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d0dece3a-47d1-4621-acd7-382818c6725d" name="Default" comment="" />
+    <list default="true" id="d0dece3a-47d1-4621-acd7-382818c6725d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matches/matchesTest.php" afterPath="$PROJECT_DIR$/matches/matchesTest.php" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,12 +17,12 @@
       <file leaf-file-name="matchesTest.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="207">
-              <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+            <state relative-caret-position="313">
+              <caret line="90" column="32" lean-forward="false" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
               <folding>
-                <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1499220825000" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-                <marker date="1499220825000" expanded="true" signature="2971:3034" ph="SELECT users... users" />
+                <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1499221229000" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
+                <marker date="1499221229000" expanded="true" signature="2971:3034" ph="SELECT users... users" />
               </folding>
             </state>
           </provider>
@@ -559,12 +561,12 @@
       <workItem from="1498327755762" duration="23000" />
       <workItem from="1498327799255" duration="2641000" />
       <workItem from="1499101243780" duration="1357000" />
-      <workItem from="1499218290657" duration="940000" />
+      <workItem from="1499218290657" duration="1336000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8398000" />
+    <option name="totallyTimeSpent" value="8794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -616,9 +618,9 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1499220825000" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1499220825000" expanded="true" signature="2971:3034" ph="SELECT users... users" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1499221229000" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
+            <marker date="1499221229000" expanded="true" signature="2971:3034" ph="SELECT users... users" />
           </folding>
         </state>
       </provider>
@@ -894,12 +896,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="88" column="42" lean-forward="false" selection-start-line="88" selection-start-column="42" selection-end-line="88" selection-end-column="42" />
+        <state relative-caret-position="313">
+          <caret line="90" column="32" lean-forward="false" selection-start-line="90" selection-start-column="32" selection-end-line="90" selection-end-column="32" />
           <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1499220825000" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1499220825000" expanded="true" signature="2971:3034" ph="SELECT users... users" />
+            <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#form#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1499221229000" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
+            <marker date="1499221229000" expanded="true" signature="2971:3034" ph="SELECT users... users" />
           </folding>
         </state>
       </provider>
