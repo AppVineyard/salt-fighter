@@ -87,7 +87,6 @@ $result = mysqli_query($conn, $sql);
                             </div>
                             <div class="matchData vs col-lg-4 col-md-4 col-sm-4 col-xs-4>
                                 <div id="vs"><h1 style="display: inline">VS</h1></div>
-                                <div id="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
                             </div>
                             <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                 <?php echo $row2["userName"]; ?>
