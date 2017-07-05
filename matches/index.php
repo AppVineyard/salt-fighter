@@ -82,7 +82,7 @@
             $row2 = mysqli_fetch_array($result2);
 	?>
         <tr>
-            <td><?php echo $row["userName"] . "/n"; if{$row["player_id"] == $row["p1_id"]){ echo $row["p1_char"]; else { echo $row["p2_char"];} ?></td>
+            <td><?php echo $row["userName"] . "/n"; if{$row["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?></td>
             <td><?php echo $row2["userName"]; ?></td>
             <td><?php echo $row["p1_char"]; ?></td>
 			<td><?php echo $row["p2_char"]; ?></td>
