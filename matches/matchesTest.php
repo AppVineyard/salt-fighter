@@ -68,9 +68,9 @@ $result = mysqli_query($conn, $sql);
         <?php if (!empty($result)) { ?>
             <div id="matches" class="table-content">
                 <div class="topLabelHolder row">
-                    <div class="topLabel col-lg-4"><h1>Winner</h1></div>
-                    <div class="topLabel col-lg-4"><h1>Vs</h1></div>
-                    <div class="topLabel col-lg-4"><h1>Loser</h1></div>
+                    <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Winner</h1></div>
+                    <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Vs</h1></div>
+                    <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Loser</h1></div>
                 </div>
                 <div class="row">
                     <?php
@@ -81,15 +81,15 @@ $result = mysqli_query($conn, $sql);
                         ?>
 
                         <div class="row matchRow ">
-                            <div class="matchData userName col-lg-4 <?php echo $row["userName"]; ?>">
+                            <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                  <?php echo $row["userName"]; ?>
                                 <br> <?php echo $row["p1_char"]; ?>
                             </div>
-                            <div class="matchData vs col-lg-4">
+                            <div class="matchData vs col-lg-4 col-md-4 col-sm-4 col-xs-4>
                                 <div id="vs"><h1>VS</h1></div>
                                 <div id="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
                             </div>
-                            <div class="matchData userName col-lg-4 <?php echo $row2["userName"]; ?>">
+                            <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                 <?php echo $row2["userName"]; ?>
                                 <br> <?php echo $row["p2_char"]; ?>
                             </div>
@@ -148,7 +148,7 @@ $result = mysqli_query($conn, $sql);
     var currentPlayerClicked;
     $('.userName').hover(function () {
         var classes = $(this).attr('class').split(' ');
-        currentPlayer = classes[3];
+        currentPlayer = classes[2];
         $("." + currentPlayer).addClass('currP1');
 
     }, function () {
@@ -157,7 +157,7 @@ $result = mysqli_query($conn, $sql);
     $('.userName').click(function () {
         currentPlayerClicked ? currentPlayerClicked.removeClass('currentPlayerClicked') : null;
         var classes = $(this).attr('class').split(' ');
-        currentPlayer = classes[3];
+        currentPlayer = classes[2];
         currentPlayerClicked = $("." + currentPlayer);
         currentPlayerClicked.removeClass('currP1').addClass('currentPlayerClicked');
     });
