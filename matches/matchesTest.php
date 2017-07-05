@@ -80,14 +80,14 @@ $result = mysqli_query($conn, $sql);
                         $row2 = mysqli_fetch_array($result2);
                         ?>
 
-                        <div class="row matchRow ">
+                        <span class="row matchRow ">
                             <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                  <?php echo $row["userName"]; ?>
                                 <br> <?php echo $row["p1_char"]; ?>
                             </div>
                             <div class="matchData vs col-lg-4 col-md-4 col-sm-4 col-xs-4>
-                                <div id="vs"><h1>VS</h1></div>
-                                <div id="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                                <span id="vs"><h1 style="display: inline">VS</h1></span>
+                                <span id="date"><?php echo date("F j, Y", $row["match_date"]); ?></span>
                             </div>
                             <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                 <?php echo $row2["userName"]; ?>
