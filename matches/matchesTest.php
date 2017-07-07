@@ -75,7 +75,7 @@ $result = mysqli_query($conn, $sql);
                 <div class="row">
                     <?php
                     while ($row = mysqli_fetch_array($result)) {
-                        $sql2 = "SELECT users.userName FROM users WHERE player_id = '$row[loss]'";
+                        $sql2 = "SELECT users.userName, users.player_id FROM users WHERE player_id = '$row[loss]'";
                         $result2 = mysqli_query($conn, $sql2);
                         $row2 = mysqli_fetch_array($result2);
                         ?>
@@ -83,7 +83,7 @@ $result = mysqli_query($conn, $sql);
                         <div class="row matchRow ">
                             <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                  <?php echo $row["userName"]; ?>
-                                <br> <?php echo $row["p1_char"]; ?>
+                                <br> <?php if($row["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
                             </div>
                             <div class="matchData vs col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                 <div id="vs"><h1 style="display: inline">VS</h1></div>
@@ -91,7 +91,7 @@ $result = mysqli_query($conn, $sql);
                             </div>
                             <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                 <?php echo $row2["userName"]; ?>
-                                <br> <?php echo $row["p2_char"]; ?>
+                                <br> <?php if($row2["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
                             </div>
                         </div>
 
