@@ -4,7 +4,6 @@
     <list default="true" id="d0dece3a-47d1-4621-acd7-382818c6725d" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matches/matchesTest.css" afterPath="$PROJECT_DIR$/matches/matchesTest.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matches/matchesTest.less" afterPath="$PROJECT_DIR$/matches/matchesTest.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matches/matchesTest.php" afterPath="$PROJECT_DIR$/matches/matchesTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,8 +32,8 @@
       <file leaf-file-name="matchesTest.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matches/matchesTest.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="157" column="12" lean-forward="true" selection-start-line="157" selection-start-column="12" selection-end-line="157" selection-end-column="12" />
+            <state relative-caret-position="252">
+              <caret line="106" column="35" lean-forward="true" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -59,6 +58,7 @@
       <find>767</find>
       <find>meta</find>
       <find>indicat</find>
+      <find>match</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -583,12 +583,12 @@
       <workItem from="1499101243780" duration="1357000" />
       <workItem from="1499218290657" duration="2485000" />
       <workItem from="1499481498053" duration="2459000" />
-      <workItem from="1499537890985" duration="1027000" />
+      <workItem from="1499537890985" duration="1405000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13429000" />
+    <option name="totallyTimeSpent" value="13807000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -957,8 +957,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/matches/matchesTest.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="157" column="12" lean-forward="true" selection-start-line="157" selection-start-column="12" selection-end-line="157" selection-end-column="12" />
+        <state relative-caret-position="252">
+          <caret line="106" column="35" lean-forward="true" selection-start-line="106" selection-start-column="35" selection-end-line="106" selection-end-column="35" />
           <folding />
         </state>
       </provider>
