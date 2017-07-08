@@ -85,7 +85,7 @@ $result = mysqli_query($conn, $sql);
                             <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if($row["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
                                  <?php echo $row["userName"]; ?>
                                 <br> <?php if($row["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
-                                <div class="indicator">
+                                <div class="indicator hidden-lg hidden-md">
                                     Winner
                                 </div>
                             </div>
@@ -96,8 +96,8 @@ $result = mysqli_query($conn, $sql);
                             <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-8 col-xs-8 <?php if($row2["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
                                 <?php echo $row2["userName"]; ?>
                                 <br> <?php if($row2["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
-                                <div class="indicator">
-                                    Loser
+                                <div class="indicator hidden-lg hidden-md">
+                                Loser
                                 </div>
                             </div>
 
