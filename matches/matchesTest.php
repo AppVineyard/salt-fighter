@@ -68,7 +68,7 @@ $result = mysqli_query($conn, $sql);
 
         <?php if (!empty($result)) { ?>
             <div id="matches" class="table-content">
-                <div class="topLabelHolder row hidden-sm-down">
+                <div class="topLabelHolder row hidden-sm hidden-xs">
                     <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Winner</h1></div>
                     <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Vs</h1></div>
                     <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Loser</h1></div>
@@ -85,6 +85,9 @@ $result = mysqli_query($conn, $sql);
                             <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if($row["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
                                  <?php echo $row["userName"]; ?>
                                 <br> <?php if($row["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
+                                <div class="indicator">
+                                    Winner
+                                </div>
                             </div>
                             <div class="matchData vs col-lg-4 col-md-4 col-sm-4 col-xs-4">
                                 <div id="vs"><h1 style="display: inline">VS</h1></div>
@@ -93,7 +96,11 @@ $result = mysqli_query($conn, $sql);
                             <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-8 col-xs-8 <?php if($row2["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
                                 <?php echo $row2["userName"]; ?>
                                 <br> <?php if($row2["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
+                                <div class="indicator">
+                                    Loser
+                                </div>
                             </div>
+
                         </div>
 
                         <?php
