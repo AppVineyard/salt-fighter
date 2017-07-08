@@ -81,7 +81,7 @@ $result = mysqli_query($conn, $sql);
                         ?>
 
                         <div class="row matchRow ">
-                            <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-4 col-xs-4" style="background-image: url(SFPics/featured-<?php if($row["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>.jpg)";>
+                            <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-4 col-xs-4 <?php if($row["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
                                  <?php echo $row["userName"]; ?>
                                 <br> <?php if($row["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
                             </div>

@@ -112,9 +112,6 @@ h2 {
 .matchData {
   padding: .2em;
   border-radius: 5px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 .userName {
   margin: .25em 0;
@@ -130,4 +127,27 @@ h2 {
   background-color: #c4a67e;
   color: white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+.toonBg {
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+.ken {
+  background-image: url("../images/SFBGpics/ken.png");
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+.akuma {
+  background-image: url("../images/SFBGpics/akuma.png");
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+.nash {
+  background-image: url("../images/SFBGpics/nash.png");
+  color: white;
+  background-size: cover;
+  background-position: center;
 }
