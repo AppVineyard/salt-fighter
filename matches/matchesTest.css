@@ -91,7 +91,6 @@ h2 {
   font-size: 1.5em;
   padding: 0 .35em;
   background-color: #c5c5c5;
-  border-bottom: black;
   transition: all .25s;
 }
 .matchRow h1 {
