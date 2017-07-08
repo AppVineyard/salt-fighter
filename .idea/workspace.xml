@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0dece3a-47d1-4621-acd7-382818c6725d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matches/matchesTest.php" afterPath="$PROJECT_DIR$/matches/matchesTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matches/matchesTest.css" afterPath="$PROJECT_DIR$/matches/matchesTest.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/matches/matchesTest.less" afterPath="$PROJECT_DIR$/matches/matchesTest.less" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +15,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="matchesTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="matchesTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="446">
-              <caret line="91" column="230" lean-forward="false" selection-start-line="91" selection-start-column="230" selection-end-line="91" selection-end-column="230" />
+            <state relative-caret-position="1390">
+              <caret line="93" column="139" lean-forward="true" selection-start-line="93" selection-start-column="139" selection-end-line="93" selection-end-column="139" />
               <folding>
                 <marker date="1499482813000" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
                 <marker date="1499482813000" expanded="true" signature="2971:2992" ph="SELECT users... users" />
@@ -28,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="matchesTest.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="matchesTest.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/matches/matchesTest.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="156" column="10" lean-forward="false" selection-start-line="156" selection-start-column="10" selection-end-line="156" selection-end-column="10" />
+            <state relative-caret-position="342">
+              <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -52,6 +53,7 @@
     <findStrings>
       <find>body</find>
       <find>margin</find>
+      <find>matchro</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -70,8 +72,8 @@
         <option value="$PROJECT_DIR$/test.less" />
         <option value="$PROJECT_DIR$/hammer.js" />
         <option value="$PROJECT_DIR$/home.php" />
-        <option value="$PROJECT_DIR$/matches/matchesTest.less" />
         <option value="$PROJECT_DIR$/matches/matchesTest.php" />
+        <option value="$PROJECT_DIR$/matches/matchesTest.less" />
       </list>
     </option>
   </component>
@@ -575,12 +577,12 @@
       <workItem from="1498327799255" duration="2641000" />
       <workItem from="1499101243780" duration="1357000" />
       <workItem from="1499218290657" duration="2485000" />
-      <workItem from="1499481498053" duration="1026000" />
+      <workItem from="1499481498053" duration="1396000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10969000" />
+    <option name="totallyTimeSpent" value="11339000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -894,23 +896,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matches/matchesTest.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="156" column="10" lean-forward="false" selection-start-line="156" selection-start-column="10" selection-end-line="156" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="91" column="230" lean-forward="false" selection-start-line="91" selection-start-column="230" selection-end-line="91" selection-end-column="230" />
+        <state relative-caret-position="1390">
+          <caret line="93" column="139" lean-forward="true" selection-start-line="93" selection-start-column="139" selection-end-line="93" selection-end-column="139" />
           <folding>
             <marker date="1499482813000" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
             <marker date="1499482813000" expanded="true" signature="2971:2992" ph="SELECT users... users" />
             <marker date="1499482813000" expanded="true" signature="2971:3051" ph="SELECT users... users" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/matches/matchesTest.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="103" column="27" lean-forward="false" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="27" />
+          <folding />
         </state>
       </provider>
     </entry>
