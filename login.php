@@ -23,7 +23,7 @@ require 'dbconfig.php';
     if($check==1 ) {
         $_SESSION["loggedIn"] = true;
         $_SESSION["username"] = $userName;
-        header('Location: matches/index.php'); //Redirects to the supplied url from the DB
+        header('Location: register_match.php'); //Redirects to the supplied url from the DB
     } else {
         header('Location: index.php');
     }
