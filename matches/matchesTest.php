@@ -82,9 +82,9 @@ $result = mysqli_query($conn, $sql);
                         ?>
 
                         <div class="row matchRow ">
-                            <div class="hidden-lg hidden-md col-sm-12 col-xs-12">
-                                <h1>Match!</h1>
-                                <div class="date hidden-sm hidden-xs"><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                            <div class="matchAnnounce hidden-lg hidden-md col-sm-12 col-xs-12">
+                                <h1>Match</h1>
+                                <div class="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
                             </div>
                             <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if($row["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
                                  <?php echo $row["userName"]; ?>
