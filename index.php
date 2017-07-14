@@ -55,17 +55,7 @@
     <div id="whatUp">
         <img class="zabSucksImg" src="images/zabSucks.png"/>
 
-        <p>fixie brooklyn. Bushwick cray migas fanny pack pok pok. Church-key brooklyn pabst, chambray cloud bread
-            aesthetic green juice air plant hashtag cornhole try-hard activated charcoal. 90's bitters pinterest etsy,
-            hell of succulents
-            <br>Thundercats williamsburg DIY, polaroid ugh XOXO try-hard chia kitsch hell of mustache. Cronut helvetica
-            artisan whatever irony bespoke lyft narwhal humblebrag banjo actually. Tbh sriracha mixtape sartorial
-            flexitarian tumblr ennui freegan cray +1 raclette air plant. 90's pok pok wayfarers cornhole.
-            <br>
-            <br>Tattooed shabby chic church-key, air plant mlkshk etsy brooklyn shaman direct trade glossier biodiesel.
-            Messenger bag yuccie polaroid tumeric tofu letterpress aesthetic hoodie
-
-
+        <p><h2>Ledger Rules</h2><br>1. "Ledger" Matches will only count in the "2 out of 3" match format.<br>2. Iniating a ledger match must be decided before match play and both players must agree on said terms.
         </p>
     </div>
 </div>
