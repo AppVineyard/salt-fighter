@@ -85,17 +85,21 @@ h2 {
 }
 .matchAnnounce {
   background-color: black;
+  color: white;
+  border-radius: 10px;
 }
 .matchAnnounce h1 {
   color: white;
 }
 .matchRow {
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.51);
   border: solid 2px #b3b3b3;
   border-radius: 10px;
   text-align: center;
   font-size: 1.5em;
-  padding: 0 .35em;
-  background-color: #b3b3b3;
+  margin-bottom: .5em;
+  padding: .35em .5em;
+  background-color: #101010;
   transition: all .25s;
 }
 .matchRow h1 {
@@ -117,6 +121,12 @@ h2 {
 }
 .matchRow:nth-child(even) {
   background-color: #4a4a4a;
+  color: white;
+}
+@media (max-width: 767px) {
+  .matchRow:nth-child(even) {
+    background-color: black;
+  }
 }
 .matchRow:nth-child(even) h1 {
   color: white;
@@ -145,9 +155,9 @@ h2 {
   left: .2em;
   bottom: 0;
   color: #e4e5dc;
-  font-size: 2.5em;
+  font-size: 1.5em;
   font-weight: 400;
-  opacity: .5;
+  opacity: .75;
 }
 .toonBg {
   color: white;
