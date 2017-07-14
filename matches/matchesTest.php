@@ -154,38 +154,38 @@ $result = mysqli_query($conn, $sql);
         }
     }
 
-
-    var currentPlayer;
-    var currentRow;
-    var currentPlayerClicked;
-    $('.userName').hover(function () {
-        var classes = $(this).attr('class').split(' ');
-        currentPlayer = classes[2];
-        $("." + currentPlayer).addClass('currP1');
-
-    }, function () {
-        $("." + currentPlayer).removeClass('currP1');
-    });
-    $('.userName').click(function () {
-        currentPlayerClicked ? currentPlayerClicked.removeClass('currentPlayerClicked') : null;
-        var classes = $(this).attr('class').split(' ');
-        currentPlayer = classes[2];
-        currentPlayerClicked = $("." + currentPlayer);
-        currentPlayerClicked.removeClass('currP1').addClass('currentPlayerClicked');
-    });
-
-
-    $('.matchRow').hover(function () {
-            $(this).addClass('currentRowHover');
-        },
-        function () {
-            $(this).removeClass('currentRowHover');
-        });
-    $('.matchRow').click(function () {
-        currentRow ? currentRow.removeClass('currentRowClick') : null;
-        currentRow = $(this);
-        currentRow.addClass('currentRowClick');
-    });
+//finna chill on this for a min, might come back to it though.
+//    var currentPlayer;
+//    var currentRow;
+//    var currentPlayerClicked;
+//    $('.userName').hover(function () {
+//        var classes = $(this).attr('class').split(' ');
+//        currentPlayer = classes[2];
+//        $("." + currentPlayer).addClass('currP1');
+//
+//    }, function () {
+//        $("." + currentPlayer).removeClass('currP1');
+//    });
+//    $('.userName').click(function () {
+//        currentPlayerClicked ? currentPlayerClicked.removeClass('currentPlayerClicked') : null;
+//        var classes = $(this).attr('class').split(' ');
+//        currentPlayer = classes[2];
+//        currentPlayerClicked = $("." + currentPlayer);
+//        currentPlayerClicked.removeClass('currP1').addClass('currentPlayerClicked');
+//    });
+//
+//
+//    $('.matchRow').hover(function () {
+//            $(this).addClass('currentRowHover');
+//        },
+//        function () {
+//            $(this).removeClass('currentRowHover');
+//        });
+//    $('.matchRow').click(function () {
+//        currentRow ? currentRow.removeClass('currentRowClick') : null;
+//        currentRow = $(this);
+//        currentRow.addClass('currentRowClick');
+//    });
 
 </script>
 
