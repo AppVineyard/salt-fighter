@@ -61,7 +61,12 @@ $result = mysqli_query($conn, $sql);
 
     <title>Salt-Fighter : Home</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="matchesTest.css">
+
 </head>
 <body>
 <div id="shade">
@@ -107,8 +112,11 @@ $result = mysqli_query($conn, $sql);
         </div>
 
         <h2>Ledger Rules</h2>
-        <p><br>1. "Ledger" Matches will only count in the "2 out of 3" match format.<br>2. Iniating a "ledger match" must be decided before match play and both players must agree on said terms.<br>3. Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.
-        </p>
+        <ul>
+            <li>"Ledger" Matches will only count in the "2 out of 3" match format.</li>
+            <li>Initiating a "ledger match" must be decided before match play and both players must agree on said terms.</li>
+            <li>Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.</li>
+        </ul>
     </div><!--
     -->
     <div id="whatUp">
