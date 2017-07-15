@@ -19,6 +19,14 @@ $result = mysqli_query($conn, "SELECT * FROM users");
 $count = mysqli_num_rows($result);
 //$row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
+//Top 5 Query
+$t5sql = "SELECT users.userName, COUNT(*) FROM users, match_stats WHERE users.player_id = match_stats.win GROUP BY users.userName ORDER BY COUNT(*) DESC";
+$top5 = mysqli_query($conn, $t5sql);
+
+$t5rows = array();
+while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC)) {
+$t5rows[] = $t5row;
+ echo $t5row['userName'] . $t5row["Count(*)"]:
 
 //if($count==0) {
 //		$message = "Invalid Username or Password!";
@@ -52,7 +60,6 @@ if (!empty($_POST["search"]["match_date"])) {
 $sql = "SELECT * FROM match_stats INNER JOIN users ON match_stats.win = users.player_id " . $queryCondition . " ORDER BY match_date desc";
 $result2 = mysqli_query($conn, $sql);
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
