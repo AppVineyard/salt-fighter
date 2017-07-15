@@ -27,7 +27,7 @@ $t5rows = array();
 while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC)) {
 $t5rows[] = $t5row;
  echo $t5row['userName'] . $t5row["Count(*)"]:
-
+}
 //if($count==0) {
 //		$message = "Invalid Username or Password!";
 //	} else {
