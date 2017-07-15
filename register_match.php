@@ -121,7 +121,7 @@ $result2 = mysqli_query($conn, $sql);
             <li>Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.</li>
         </ol>
 		<h2>Most Wins</h2>
-		<ol type ="1">
+		<ol id="top5" type ="1">
 		<?php	$t5rows = array();
 			while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC)) 
 			{
