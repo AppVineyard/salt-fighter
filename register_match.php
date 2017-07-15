@@ -23,11 +23,7 @@ $count = mysqli_num_rows($result);
 $t5sql = "SELECT users.userName, COUNT(*) FROM users, match_stats WHERE users.player_id = match_stats.win GROUP BY users.userName ORDER BY COUNT(*) DESC";
 $top5 = mysqli_query($conn, $t5sql);
 
-$t5rows = array();
-while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC)) {
-$t5rows[] = $t5row;
- echo $t5row['userName'] . $t5row['COUNT(*)'];
-}
+
 //if($count==0) {
 //		$message = "Invalid Username or Password!";
 //	} else {
@@ -124,6 +120,16 @@ $result2 = mysqli_query($conn, $sql);
             <li>Initiating a "ledger match" must be decided before match play and both players must agree on said terms.</li>
             <li>Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.</li>
         </ol>
+		<h2>Most Wins</h2>
+		<ol type ="1">
+		<?php	$t5rows = array();
+			while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC)) 
+			{
+					$t5rows[] = $t5row;
+					echo "<li>" . $t5row['userName'] . "\t" . $t5row['COUNT(*)'] . "</li>";
+			}
+		?>
+		</ol>
     </div><!--
     -->
     <div id="whatUp">
