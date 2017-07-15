@@ -27,7 +27,35 @@ $count  = mysqli_num_rows($result);
 //		$message = 'Welcome '.$row["displayName"].', '.'You are successfully authenticated!'."</br>".$row["qotd"];
 //	}
 //}
-    
+
+
+
+
+
+//matches stuff
+
+$post_at = "";
+$post_at_to_date = "";
+
+$queryCondition = "";
+if (!empty($_POST["search"]["match_date"])) {
+    $post_at = $_POST["search"]["match_date"];
+    $post_at_time = $post_at . "00:00:00";
+    $postUnix = strtotime($post_at_time);
+
+    $post_at_todate = date('Y-m-d');
+    if (!empty($_POST["search"]["post_at_to_date"])) {
+        $post_at_to_date = $_POST["search"]["post_at_to_date"];
+        $post_at_to_dateTime = $post_at_to_date . "23:59:59";
+        $post_at_todate = strtotime($post_at_to_dateTime);
+    }
+
+    $queryCondition .= "WHERE match_date >= '$postUnix' AND match_date <= '$post_at_todate'";
+}
+
+$sql = "SELECT * FROM match_stats INNER JOIN users ON match_stats.win = users.player_id " . $queryCondition . " ORDER BY match_date desc";
+$result = mysqli_query($conn, $sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -35,7 +63,7 @@ $count  = mysqli_num_rows($result);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Salt-Fighter : Create Match</title>
+    <title>Salt-Fighter : Home</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet"/>
 </head>
@@ -80,7 +108,7 @@ $count  = mysqli_num_rows($result);
     </div><!--
     -->
     <div id="whatUp">
-        <img class="zabSucksImg" src="images/zabSucks.png"/>
+        <img class="zabSucksImg" src="images/saltFighter.png"/>
 
         <h2>Ledger Rules</h2>
         <p><br>1. "Ledger" Matches will only count in the "2 out of 3" match format.<br>2. Iniating a "ledger match" must be decided before match play and both players must agree on said terms.<br>3. Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.

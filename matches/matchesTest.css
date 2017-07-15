@@ -99,7 +99,7 @@ h2 {
   font-size: 1.5em;
   margin-bottom: .5em;
   padding: .35em .5em;
-  background-color: #101010;
+  background-color: #c5c5c5;
   transition: all .25s;
 }
 .matchRow h1 {
@@ -118,6 +118,11 @@ h2 {
   color: white;
   border: solid 3px white;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 767px) {
+  .matchRow {
+    background-color: black;
+  }
 }
 .matchRow:nth-child(even) {
   background-color: #4a4a4a;
