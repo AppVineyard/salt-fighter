@@ -55,13 +55,15 @@ $result = mysqli_query($conn, $sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salt-Figher : Match History</title>
+<script src="https://code.jquery.com/jquery-1.9.1.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="matchesTest.css">
 
-    <title>Salt-Fighter : Home</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
-    <link href="index.css" type="text/css" rel="stylesheet"/>
 </head>
 <body>
 <div id="shade">
