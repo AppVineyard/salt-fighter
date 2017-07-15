@@ -112,7 +112,7 @@ $result = mysqli_query($conn, $sql);
         </div>
 
         <h2>Ledger Rules</h2>
-        <ol>
+        <ol  type="1">
             <li>"Ledger" Matches will only count in the "2 out of 3" match format.</li>
             <li>Initiating a "ledger match" must be decided before match play and both players must agree on said terms.</li>
             <li>Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.</li>
@@ -120,6 +120,7 @@ $result = mysqli_query($conn, $sql);
     </div><!--
     -->
     <div id="whatUp">
+        <img  class="zabSucksImg" src="images/saltFighter.png"/>
         <?php if (!empty($result)) { ?>
             <div id="matches" class="table-content">
                 <div class="topLabelHolder row hidden-sm hidden-xs">

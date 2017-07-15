@@ -78,6 +78,16 @@ body {
   font-size: 1.2em;
   cursor: pointer;
 }
+.basicInputStyling {
+  width: 60%;
+  height: 1.5em;
+  color: #1d1d1d;
+  font-size: 1.2em;
+  margin-bottom: 2.5vh;
+  padding: .75em .5em;
+  border: solid 1px white;
+  border-radius: 4px;
+}
 form input[type="text"],
 form input[type="password"] {
   width: 60%;
@@ -90,7 +100,14 @@ form input[type="password"] {
   border-radius: 4px;
 }
 form select {
-  height: 2em;
+  width: 60%;
+  height: 1.5em;
+  color: #1d1d1d;
+  font-size: 1.2em;
+  margin-bottom: 2.5vh;
+  padding: .75em .5em;
+  border: solid 1px white;
+  border-radius: 4px;
 }
 form select option {
   color: #767676;

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0dece3a-47d1-4621-acd7-382818c6725d" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.css" afterPath="$PROJECT_DIR$/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.less" afterPath="$PROJECT_DIR$/index.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register_match.php" afterPath="$PROJECT_DIR$/register_match.php" />
@@ -16,25 +17,25 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="register_match.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register_match.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/register_match.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="115" column="82" lean-forward="false" selection-start-line="115" selection-start-column="82" selection-end-line="115" selection-end-column="82" />
+            <state relative-caret-position="208">
+              <caret line="122" column="32" lean-forward="false" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
               <folding>
-                <marker date="1500085480720" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
-                <marker date="1500085480720" expanded="true" signature="1378:1506" ph="SELECT * FRO... match_stats" />
-                <marker date="1500085480720" expanded="true" signature="5600:5680" ph="SELECT users... users" />
+                <marker date="1500086046750" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
+                <marker date="1500086046750" expanded="true" signature="1378:1506" ph="SELECT * FRO... match_stats" />
+                <marker date="1500086046750" expanded="true" signature="5675:5755" ph="SELECT users... users" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="92" column="14" lean-forward="true" selection-start-line="92" selection-start-column="14" selection-end-line="92" selection-end-column="14" />
+            <state relative-caret-position="404">
+              <caret line="106" column="21" lean-forward="false" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -46,12 +47,14 @@
             <state relative-caret-position="72">
               <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
-                <marker date="1500085815802" expanded="true" signature="1625:1647" ph="{...}" />
-                <marker date="1500085815802" expanded="true" signature="1660:1943" ph="{...}" />
-                <marker date="1500085815802" expanded="true" signature="1962:2010" ph="{...}" />
-                <marker date="1500085815802" expanded="true" signature="2045:2088" ph="{...}" />
-                <marker date="1500085815802" expanded="true" signature="2100:2196" ph="{...}" />
-                <marker date="1500085815802" expanded="true" signature="2263:2283" ph="{...}" />
+                <marker date="1500085902940" expanded="true" signature="2300:2348" ph="{...}" />
+                <marker date="1500085902940" expanded="true" signature="2376:2738" ph="{...}" />
+                <marker date="1500085902940" expanded="true" signature="2383:2426" ph="{...}" />
+                <marker date="1500085902940" expanded="true" signature="2438:2534" ph="{...}" />
+                <marker date="1500085902940" expanded="true" signature="2559:2591" ph="{...}" />
+                <marker date="1500085902940" expanded="true" signature="2601:2621" ph="{...}" />
+                <marker date="1500085902940" expanded="true" signature="2632:2694" ph="{...}" />
+                <marker date="1500085902940" expanded="true" signature="2710:2736" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -150,8 +153,8 @@
         <option value="$PROJECT_DIR$/matches/matchesTest.php" />
         <option value="$PROJECT_DIR$/matches/matchesTest.less" />
         <option value="$PROJECT_DIR$/matches/losTests.php" />
-        <option value="$PROJECT_DIR$/register_match.php" />
         <option value="$PROJECT_DIR$/index.less" />
+        <option value="$PROJECT_DIR$/register_match.php" />
       </list>
     </option>
   </component>
@@ -640,12 +643,12 @@
       <workItem from="1499481498053" duration="2459000" />
       <workItem from="1499537890985" duration="1872000" />
       <workItem from="1500054223414" duration="1833000" />
-      <workItem from="1500075083806" duration="6915000" />
+      <workItem from="1500075083806" duration="7147000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23022000" />
+    <option name="totallyTimeSpent" value="23254000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3" y="8" width="1913" height="1050" extended-state="0" />
@@ -1027,38 +1030,40 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register_match.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="115" column="82" lean-forward="false" selection-start-line="115" selection-start-column="82" selection-end-line="115" selection-end-column="82" />
-          <folding>
-            <marker date="1500085480720" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
-            <marker date="1500085480720" expanded="true" signature="1378:1506" ph="SELECT * FRO... match_stats" />
-            <marker date="1500085480720" expanded="true" signature="5600:5680" ph="SELECT users... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding>
-            <marker date="1500085815802" expanded="true" signature="1625:1647" ph="{...}" />
-            <marker date="1500085815802" expanded="true" signature="1660:1943" ph="{...}" />
-            <marker date="1500085815802" expanded="true" signature="1962:2010" ph="{...}" />
-            <marker date="1500085815802" expanded="true" signature="2045:2088" ph="{...}" />
-            <marker date="1500085815802" expanded="true" signature="2100:2196" ph="{...}" />
-            <marker date="1500085815802" expanded="true" signature="2263:2283" ph="{...}" />
+            <marker date="1500085902940" expanded="true" signature="2300:2348" ph="{...}" />
+            <marker date="1500085902940" expanded="true" signature="2376:2738" ph="{...}" />
+            <marker date="1500085902940" expanded="true" signature="2383:2426" ph="{...}" />
+            <marker date="1500085902940" expanded="true" signature="2438:2534" ph="{...}" />
+            <marker date="1500085902940" expanded="true" signature="2559:2591" ph="{...}" />
+            <marker date="1500085902940" expanded="true" signature="2601:2621" ph="{...}" />
+            <marker date="1500085902940" expanded="true" signature="2632:2694" ph="{...}" />
+            <marker date="1500085902940" expanded="true" signature="2710:2736" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="92" column="14" lean-forward="true" selection-start-line="92" selection-start-column="14" selection-end-line="92" selection-end-column="14" />
+        <state relative-caret-position="404">
+          <caret line="106" column="21" lean-forward="false" selection-start-line="106" selection-start-column="21" selection-end-line="106" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register_match.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="122" column="32" lean-forward="false" selection-start-line="122" selection-start-column="32" selection-end-line="122" selection-end-column="32" />
+          <folding>
+            <marker date="1500086046750" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
+            <marker date="1500086046750" expanded="true" signature="1378:1506" ph="SELECT * FRO... match_stats" />
+            <marker date="1500086046750" expanded="true" signature="5675:5755" ph="SELECT users... users" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -87,20 +87,22 @@ body {
   cursor: pointer;
 }
 
-
+.basicInputStyling{
+  width:60%;
+  height:1.5em;
+  color: #1d1d1d;
+  font-size: 1.2em;
+  margin-bottom:2.5vh;
+  padding: .75em .5em;
+  border: solid 1px white;
+  border-radius: 4px;
+}
 form{
   input[type="text"], input[type="password"]{
-    width:60%;
-    height:1.5em;
-    color: #1d1d1d;
-    font-size: 1.2em;
-    margin-bottom:2.5vh;
-    padding: .75em .5em;
-    border: solid 1px white;
-    border-radius: 4px;
+.basicInputStyling;
   }
   select{
-    height: 2em;
+    .basicInputStyling;
     option{
       color: #767676;
     }
@@ -128,7 +130,9 @@ form{
     background-color: #b7af86;
   }
 }
+ol{
 
+}
 @media (max-width: 1000px) {
   h2{
     margin: 0;
