@@ -50,7 +50,7 @@ if (!empty($_POST["search"]["match_date"])) {
 }
 
 $sql = "SELECT * FROM match_stats INNER JOIN users ON match_stats.win = users.player_id " . $queryCondition . " ORDER BY match_date desc";
-$result = mysqli_query($conn, $sql);
+$result2 = mysqli_query($conn, $sql);
 
 ?>
 <!DOCTYPE html>
@@ -81,7 +81,7 @@ $result = mysqli_query($conn, $sql);
                 $rows = array();
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                     $rows[] = $row;
-                    echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>"  . "</option>";
+                    echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
                 echo "</select>"; ?>
                 <br>
