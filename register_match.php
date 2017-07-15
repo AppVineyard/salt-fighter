@@ -175,26 +175,7 @@ $result2 = mysqli_query($conn, $sql);
 
 
 <script>
-    var loginBtn = document.getElementById('loginBtn');
-    var regBtn = document.getElementById('registerBtn');
-    var login = document.getElementById('login');
-    var register = document.getElementById('register');
-    var topB = document.getElementById('topBanner');
-
-    regBtn.addEventListener('click', function () {
-        login.style.display = 'none';
-        register.style.display = 'block';
-        topB.innerHTML = 'Create Match';
-
-        console.log(topB);
-    });
-    loginBtn.addEventListener('click', function () {
-        register.style.display = 'none';
-        login.style.display = 'block';
-        topB.innerHTML = 'Login';
-
-    });
-
+    
 
 </script>
 </body>
