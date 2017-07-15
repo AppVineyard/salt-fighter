@@ -31,37 +31,12 @@ body {
   text-align: center;
 }
 
-#sideBar{
-  margin-left: -2em;
-  text-align: center;
-  display: inline-block;
-  height:auto;
-  min-height:100vh;
-  width:29vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  border-right:solid 1px white;
 
-  .zabSucksImg{
-    display: none;
-  }
-}
-#whatUp{
-  display: inline-block;
 
-  vertical-align: top;
-  width:69vw;
-  height:100%;
-
-  p{
-    width:80%;
-    margin:2vh auto;
-  }
-
-}
 .zabSucksImg{
   margin-top: 2.5vh;
-  max-width:20vw;
-  height:auto;
+  height:10vh;
+  width:auto;
 }
 #login{
   margin-top: 5vh;
@@ -70,9 +45,7 @@ body {
     font-size: 1.1em;
   }
 }
-#topBanner{
 
-}
 #register{
   display:none;
   margin-top: 5vh;
@@ -87,79 +60,6 @@ body {
   cursor: pointer;
 }
 
-.basicInputStyling{
-  width:60%;
-  height:1.5em;
-  color: #1d1d1d;
-  font-size: 1.2em;
-  margin-bottom:2.5vh;
-  padding: .75em .5em;
-  border: solid 1px white;
-  border-radius: 4px;
-}
-form{
-  input[type="text"], input[type="password"]{
-.basicInputStyling;
-  }
-  select{
-    .basicInputStyling;
-    option{
-      color: #767676;
-    }
-  }
-  input::placeholder{
-    font-size: .9em;
-  }
-  button{
-    color: #e7e7e7;
-    border-radius: 5px;
-    margin-top: 1vh;
-    font-size: 1.25em;
-    height:1.5em;
-    width:30%;
-    background-color: #6c9e6a;
-
-    -webkit-transition: all .45s;
-    -moz-transition: all .25s;
-    -ms-transition: all .25s;
-    -o-transition: all .25s;
-    transition: all .45s;
-  }
-  button:hover{
-    color: black;
-    background-color: #b7af86;
-  }
-}
 ol{
-
-}
-@media (max-width: 1000px) {
-  h2{
-    margin: 0;
-    padding-top: 15vh;
-  }
-  #sideBar{
-    margin:0;
-    text-align: center;
-    width:100%;
-    border: 0;
-    display:block;
-
-    .zabSucksImg {
-      display: inline-block;
-    }
-  }
-  #login{
-    bottom:0;
-  }
-  #whatUp{
-    width:100vw;
-    height:100vh;
-    display:block;
-  }
-
-  .zabSucksImg {
-    max-width:40vw;
-  }
 
 }
