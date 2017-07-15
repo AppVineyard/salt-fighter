@@ -10,7 +10,8 @@
 h2 {
   margin-top: 5vh;
   font-weight: 200;
-  font-size: 2em;
+  font-size: 3em;
+  font-family: 'Zilla Slab', serif;
 }
 #shade {
   position: absolute;
@@ -39,7 +40,7 @@ body {
   border-right: solid 1px white;
 }
 #sideBar .zabSucksImg {
-  display: inline-block;
+  display: none;
 }
 #whatUp {
   display: inline-block;
@@ -63,11 +64,6 @@ body {
   margin-top: 3vh;
   font-size: 1.1em;
 }
-
-#match {
-  margin-top: 5vh;
-}
-
 #register {
   display: none;
   margin-top: 5vh;
@@ -82,28 +78,22 @@ body {
   font-size: 1.2em;
   cursor: pointer;
 }
-
-select {
-    width: 60%;
-    height: 1.5em;
-    color: #1d1d1d;
-    font-size: 1em;
-    margin-bottom: 2.5vh;
-    padding: .2em;
-    border: solid 1px white;
-    border-radius: 4px;
-}
-
 form input[type="text"],
 form input[type="password"] {
   width: 60%;
   height: 1.5em;
   color: #1d1d1d;
-  font-size: 1em;
+  font-size: 1.2em;
   margin-bottom: 2.5vh;
-  padding: .2em;
+  padding: .75em .5em;
   border: solid 1px white;
   border-radius: 4px;
+}
+form select {
+  height: 2em;
+}
+form select option {
+  color: #767676;
 }
 form input::placeholder {
   font-size: .9em;
@@ -139,7 +129,7 @@ form button:hover {
     display: block;
   }
   #sideBar .zabSucksImg {
-      display: none;
+    display: inline-block;
   }
   #login {
     bottom: 0;

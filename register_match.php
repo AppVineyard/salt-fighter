@@ -112,11 +112,11 @@ $result = mysqli_query($conn, $sql);
         </div>
 
         <h2>Ledger Rules</h2>
-        <ul>
+        <ol>
             <li>"Ledger" Matches will only count in the "2 out of 3" match format.</li>
             <li>Initiating a "ledger match" must be decided before match play and both players must agree on said terms.</li>
             <li>Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.</li>
-        </ul>
+        </ol>
     </div><!--
     -->
     <div id="whatUp">
