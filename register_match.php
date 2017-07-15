@@ -130,10 +130,10 @@ $result2 = mysqli_query($conn, $sql);
                 </div>
                 <div class="row">
                     <?php
-                    while ($row = mysqli_fetch_array($result)) {
+                    while ($row = mysqli_fetch_array($result2)) {
                         $sql2 = "SELECT users.userName, users.player_id FROM users WHERE player_id = '$row[loss]'";
-                        $result2 = mysqli_query($conn, $sql2);
-                        $row2 = mysqli_fetch_array($result2);
+                        $result3 = mysqli_query($conn, $sql2);
+                        $row2 = mysqli_fetch_array($result3);
                         ?>
 
                         <div class="row matchRow ">
