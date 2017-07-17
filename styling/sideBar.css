@@ -83,12 +83,11 @@
   font-size: 200%;
 }
 @media (max-width: 1000px) {
-  margin: 0;
-  text-align: center;
-  width: 100%;
-  border: 0;
-  display: block;
-  .zabSucksImg {
-    display: inline-block;
+  #sideBar {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+    border: 0;
+    display: none;
   }
 }

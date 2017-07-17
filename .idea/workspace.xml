@@ -2,14 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0dece3a-47d1-4621-acd7-382818c6725d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/rework.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styling/mainArea.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styling/mainArea.less" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styling/sideBar.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/styling/sideBar.less" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/buttons/addPlayerBtn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/buttons/addTourneyBtn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/buttons/removePlayerBtn.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.css" afterPath="$PROJECT_DIR$/index.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.less" afterPath="$PROJECT_DIR$/index.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/sideBar.css" afterPath="$PROJECT_DIR$/styling/sideBar.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/sideBar.less" afterPath="$PROJECT_DIR$/styling/sideBar.less" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -24,8 +23,8 @@
       <file leaf-file-name="rework.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rework.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+            <state relative-caret-position="195">
+              <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -37,18 +36,18 @@
       <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="118">
-              <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+            <state relative-caret-position="-339">
+              <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sideBar.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sideBar.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styling/sideBar.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state relative-caret-position="298">
+              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -57,18 +56,18 @@
       <file leaf-file-name="matchesTest.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matches/matchesTest.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="774">
-              <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+            <state relative-caret-position="-1776">
+              <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="mainArea.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="mainArea.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styling/mainArea.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+            <state relative-caret-position="240">
+              <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -77,30 +76,11 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
+            <state relative-caret-position="60">
               <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
               <folding>
-                <marker date="1500123632347" expanded="true" signature="587:642" ph="{...}" />
-                <marker date="1500123632347" expanded="true" signature="650:672" ph="{...}" />
-                <marker date="1500123632347" expanded="true" signature="682:724" ph="{...}" />
-                <marker date="1500123632347" expanded="true" signature="735:774" ph="{...}" />
-                <marker date="1500123632347" expanded="true" signature="787:829" ph="{...}" />
-                <marker date="1500123632347" expanded="true" signature="854:914" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="losTests.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/matches/losTests.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="918">
-              <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="30" />
-              <folding>
-                <element signature="n#style#0;n#h1#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1500083994360" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
-                <marker date="1500083994360" expanded="true" signature="1378:1506" ph="SELECT * FRO... match_stats" />
-                <marker date="1500083994360" expanded="true" signature="5604:5684" ph="SELECT users... users" />
+                <marker date="1500127954000" expanded="true" signature="144:198" ph="{...}" />
+                <marker date="1500127954000" expanded="true" signature="912:914" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -109,12 +89,9 @@
       <file leaf-file-name="matchesTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
+            <state relative-caret-position="675">
               <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="48" selection-end-column="62" />
-              <folding>
-                <marker date="1500074948793" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-                <marker date="1500074948793" expanded="true" signature="3060:3140" ph="SELECT users... users" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -186,8 +163,8 @@
         <option value="$PROJECT_DIR$/register_match.php" />
         <option value="$PROJECT_DIR$/index.less" />
         <option value="$PROJECT_DIR$/rework.html" />
-        <option value="$PROJECT_DIR$/styling/sideBar.less" />
         <option value="$PROJECT_DIR$/styling/mainArea.less" />
+        <option value="$PROJECT_DIR$/styling/sideBar.less" />
       </list>
     </option>
   </component>
@@ -202,10 +179,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="709" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -222,9 +198,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -536,9 +512,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
-      <method />
-    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
@@ -604,19 +577,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <working-directory />
-      <pass-parent-env>true</pass-parent-env>
-      <envs />
-      <ui />
-      <extra-mocha-options />
-      <test-kind>DIRECTORY</test-kind>
-      <test-directory />
-      <recursive>false</recursive>
-      <method />
-    </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
@@ -650,14 +610,15 @@
       <workItem from="1499537890985" duration="1872000" />
       <workItem from="1500054223414" duration="1833000" />
       <workItem from="1500075083806" duration="14043000" />
+      <workItem from="1500135431225" duration="1436000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30150000" />
+    <option name="totallyTimeSpent" value="31586000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="709" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -666,7 +627,7 @@
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3273906" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32875264" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -674,11 +635,11 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29479167" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2996769" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -700,15 +661,32 @@
     <breakpoint-manager />
     <watches-manager />
   </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="48" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styling/mainArea.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500074948793" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1500074948793" expanded="true" signature="3060:3140" ph="SELECT users... users" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -724,10 +702,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="98" column="75" lean-forward="false" selection-start-line="98" selection-start-column="75" selection-end-line="98" selection-end-column="75" />
-          <folding>
-            <marker date="1500074948793" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1500074948793" expanded="true" signature="3060:3140" ph="SELECT users... users" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -743,10 +718,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500074948793" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1500074948793" expanded="true" signature="3060:3140" ph="SELECT users... users" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -770,10 +742,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500074948793" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1500074948793" expanded="true" signature="3060:3140" ph="SELECT users... users" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -781,10 +750,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1500074948793" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1500074948793" expanded="true" signature="3060:3140" ph="SELECT users... users" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
           <caret line="57" column="28" lean-forward="false" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,45 +965,25 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1331">
           <caret line="124" column="18" lean-forward="false" selection-start-line="124" selection-start-column="18" selection-end-line="124" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/matches/losTests.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="29" selection-end-line="51" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1500083994360" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
-            <marker date="1500083994360" expanded="true" signature="1378:1506" ph="SELECT * FRO... match_stats" />
-            <marker date="1500083994360" expanded="true" signature="5604:5684" ph="SELECT users... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/matches/losTests.php" />
     <entry file="file://$PROJECT_DIR$/matches/matchesTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
+        <state relative-caret-position="675">
           <caret line="45" column="0" lean-forward="false" selection-start-line="45" selection-start-column="0" selection-end-line="48" selection-end-column="62" />
-          <folding>
-            <marker date="1500074948793" expanded="true" signature="864:992" ph="SELECT * FRO... match_stats" />
-            <marker date="1500074948793" expanded="true" signature="3060:3140" ph="SELECT users... users" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
+        <state relative-caret-position="60">
           <caret line="4" column="30" lean-forward="false" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
           <folding>
-            <marker date="1500123632347" expanded="true" signature="587:642" ph="{...}" />
-            <marker date="1500123632347" expanded="true" signature="650:672" ph="{...}" />
-            <marker date="1500123632347" expanded="true" signature="682:724" ph="{...}" />
-            <marker date="1500123632347" expanded="true" signature="735:774" ph="{...}" />
-            <marker date="1500123632347" expanded="true" signature="787:829" ph="{...}" />
-            <marker date="1500123632347" expanded="true" signature="854:914" ph="{...}" />
+            <marker date="1500127954000" expanded="true" signature="144:198" ph="{...}" />
+            <marker date="1500127954000" expanded="true" signature="912:914" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1047,28 +992,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="194" column="7" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="194" selection-end-column="7" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#div#0;n#div#2;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1500122243198" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
-            <marker date="1500122243198" expanded="true" signature="555:697" ph="SELECT users... users" />
-            <marker date="1500122243198" expanded="true" signature="1585:1713" ph="SELECT * FRO... match_stats" />
-            <marker date="1500122243198" expanded="true" signature="6152:6232" ph="SELECT users... users" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.less">
+    <entry file="file://$PROJECT_DIR$/styling/mainArea.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="118">
-          <caret line="23" column="6" lean-forward="true" selection-start-line="23" selection-start-column="6" selection-end-line="23" selection-end-column="6" />
+        <state relative-caret-position="240">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/rework.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="11" column="61" lean-forward="false" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+        <state relative-caret-position="195">
+          <caret line="63" column="14" lean-forward="true" selection-start-line="63" selection-start-column="14" selection-end-line="63" selection-end-column="14" />
           <folding>
             <element signature="n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#h1#0;n#div#0;n#div#1;n#div#1;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1076,26 +1015,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-339">
+          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/matches/matchesTest.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="774">
-          <caret line="76" column="1" lean-forward="true" selection-start-line="76" selection-start-column="1" selection-end-line="76" selection-end-column="1" />
+        <state relative-caret-position="-1776">
+          <caret line="18" column="6" lean-forward="true" selection-start-line="18" selection-start-column="6" selection-end-line="18" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/styling/sideBar.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="7" column="14" lean-forward="true" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/styling/mainArea.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="18" lean-forward="true" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+        <state relative-caret-position="298">
+          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
           <folding />
         </state>
       </provider>
