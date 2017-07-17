@@ -23,6 +23,7 @@
 
     <title>Salt-Fighter</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="styling/mainArea.css">
     <link rel="stylesheet" type="text/css" href="styling/sideBar.css">
@@ -55,7 +56,7 @@
     </div><!--
     -->
     <div id="whatUp">
-        <img class="zabSucksImg" src="images/zabSucks.png"/>
+        <img class="zabSucksImg" src="images/saltFighter.png.png"/>
         <h2>Ledger Rules</h2>
         <p><br>1. "Ledger" Matches will only count in the "2 out of 3" match format.<br>2. Iniating a "ledger match" must be decided before match play and both players must agree on said terms.<br>3. Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.
         </p>
