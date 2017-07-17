@@ -47,6 +47,9 @@ $result = mysqli_query($conn, $sql);
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="matchesTest.css">
+<link rel="stylesheet" type="text/css" href="../styling/sideBar.css"/>
+<link rel="stylesheet" type="text/css" href="../styling/mainArea.css"/>
+
 
 </head>
 
