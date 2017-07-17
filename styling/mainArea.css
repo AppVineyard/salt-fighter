@@ -24,6 +24,7 @@
 }
 #whatUp #matches {
   height: 90vh;
+  overflow: scroll;
 }
 #whatUp p {
   width: 80%;
