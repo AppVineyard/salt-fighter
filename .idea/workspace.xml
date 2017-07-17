@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0dece3a-47d1-4621-acd7-382818c6725d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/mainArea.css" afterPath="$PROJECT_DIR$/styling/mainArea.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/mainArea.less" afterPath="$PROJECT_DIR$/styling/mainArea.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/sideBar.css" afterPath="$PROJECT_DIR$/styling/sideBar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/sideBar.less" afterPath="$PROJECT_DIR$/styling/sideBar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,11 +24,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sideBar.less" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sideBar.less" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styling/sideBar.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+            <state relative-caret-position="285">
+              <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -74,8 +80,8 @@
       <file leaf-file-name="register_match.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/register_match.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="72" column="68" lean-forward="false" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="68" />
+            <state relative-caret-position="126">
+              <caret line="71" column="4" lean-forward="false" selection-start-line="71" selection-start-column="4" selection-end-line="72" selection-end-column="70" />
               <folding>
                 <marker date="1500314256000" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
                 <marker date="1500314256000" expanded="true" signature="555:697" ph="SELECT users... users" />
@@ -143,7 +149,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/zabSucks.css" />
-        <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/test.less" />
         <option value="$PROJECT_DIR$/hammer.js" />
         <option value="$PROJECT_DIR$/home.php" />
@@ -155,6 +160,7 @@
         <option value="$PROJECT_DIR$/register_match.php" />
         <option value="$PROJECT_DIR$/styling/mainArea.less" />
         <option value="$PROJECT_DIR$/styling/sideBar.less" />
+        <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
   </component>
@@ -601,12 +607,12 @@
       <workItem from="1500054223414" duration="1833000" />
       <workItem from="1500075083806" duration="14043000" />
       <workItem from="1500135431225" duration="1436000" />
-      <workItem from="1500300619405" duration="1257000" />
+      <workItem from="1500300619405" duration="1555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32843000" />
+    <option name="totallyTimeSpent" value="33141000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -962,14 +968,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-872">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/idea.jar!/resources/html5-schema/html5/common.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1331">
@@ -986,14 +984,6 @@
             <marker date="1500127954000" expanded="true" signature="144:198" ph="{...}" />
             <marker date="1500127954000" expanded="true" signature="912:914" ph="{...}" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,19 +1009,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/register_match.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="72" column="68" lean-forward="false" selection-start-line="72" selection-start-column="68" selection-end-line="72" selection-end-column="68" />
-          <folding>
-            <marker date="1500314256000" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
-            <marker date="1500314256000" expanded="true" signature="555:697" ph="SELECT users... users" />
-            <marker date="1500314256000" expanded="true" signature="1585:1713" ph="SELECT * FRO... match_stats" />
-            <marker date="1500314256000" expanded="true" signature="6295:6375" ph="SELECT users... users" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/matches/matchesTest.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -1050,8 +1027,37 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/styling/sideBar.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="5" lean-forward="false" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        <state relative-caret-position="285">
+          <caret line="19" column="14" lean-forward="true" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/register_match.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="71" column="4" lean-forward="false" selection-start-line="71" selection-start-column="4" selection-end-line="72" selection-end-column="70" />
+          <folding>
+            <marker date="1500314256000" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
+            <marker date="1500314256000" expanded="true" signature="555:697" ph="SELECT users... users" />
+            <marker date="1500314256000" expanded="true" signature="1585:1713" ph="SELECT * FRO... match_stats" />
+            <marker date="1500314256000" expanded="true" signature="6295:6375" ph="SELECT users... users" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="6" lean-forward="false" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="27" column="70" lean-forward="false" selection-start-line="27" selection-start-column="70" selection-end-line="27" selection-end-column="70" />
           <folding />
         </state>
       </provider>

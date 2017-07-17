@@ -24,6 +24,8 @@
     <title>Salt-Fighter</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="styling/mainArea.css">
+    <link rel="stylesheet" type="text/css" href="styling/sideBar.css">
 </head>
 <body>
 <div id="shade"><div id="sideBar"><h2 id="topBanner">Login</h2>
