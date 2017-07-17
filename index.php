@@ -56,7 +56,7 @@
     </div><!--
     -->
     <div id="whatUp">
-        <img class="zabSucksImg" src="images/saltFighter.png.png"/>
+        <img class="zabSucksImg" src="images/saltFighter.png"/>
         <h2>Ledger Rules</h2>
         <p><br>1. "Ledger" Matches will only count in the "2 out of 3" match format.<br>2. Iniating a "ledger match" must be decided before match play and both players must agree on said terms.<br>3. Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.
         </p>
