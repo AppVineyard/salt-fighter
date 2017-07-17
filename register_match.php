@@ -69,6 +69,8 @@ $result2 = mysqli_query($conn, $sql);
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
     <link href="index.css" type="text/css" rel="stylesheet"/>
     <link rel="stylesheet" type="text/css" href="matches/matchesTest.css">
+    <link rel="stylesheet" type="text/css" href="styling/mainArea.css">
+    <link rel="stylesheet" type="text/css" href="styling/sideBar.css">
 
 </head>
 <body>

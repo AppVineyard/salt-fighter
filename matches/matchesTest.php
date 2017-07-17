@@ -47,15 +47,13 @@ $result = mysqli_query($conn, $sql);
       integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="matchesTest.css">
-<link rel="stylesheet" type="text/css" href="../styling/sideBar.css"/>
-<link rel="stylesheet" type="text/css" href="../styling/mainArea.css"/>
-
-
+<link rel="stylesheet" type="text/css" href="/styling/sideBar.css"/>
+<link rel="stylesheet" type="text/css" href="/styling/mainArea.css"/>
 </head>
 
 <body>
 <div class="header">
-<h1>Recent Matches</h1>
+    <h1>Recent Matches</h1>
 </div>
 <div id="mainHolder">
     <form name="frmSearch" method="post" action="">
@@ -89,9 +87,17 @@ $result = mysqli_query($conn, $sql);
                                 <h1>Match</h1>
                                 <div class="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
                             </div>
-                            <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if($row["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
-                                 <?php echo $row["userName"]; ?>
-                                <br> <?php if($row["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
+                            <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if ($row["player_id"] == $row["p1_id"]) {
+                                echo strtolower($row["p1_char"]);
+                            } else {
+                                echo strtolower($row["p2_char"]);
+                            } ?>">
+                                <?php echo $row["userName"]; ?>
+                                <br> <?php if ($row["player_id"] == $row["p1_id"]) {
+                                    echo $row["p1_char"];
+                                } else {
+                                    echo $row["p2_char"];
+                                } ?>
                                 <div class="indicator hidden-lg hidden-md">
                                     Winner
                                 </div>
@@ -100,11 +106,19 @@ $result = mysqli_query($conn, $sql);
                                 <div id="vs"><h1 style="display: inline">VS</h1></div>
                                 <div class="date hidden-sm hidden-xs"><?php echo date("F j, Y", $row["match_date"]); ?></div>
                             </div>
-                            <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if($row2["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
+                            <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if ($row2["player_id"] == $row["p1_id"]) {
+                                echo strtolower($row["p1_char"]);
+                            } else {
+                                echo strtolower($row["p2_char"]);
+                            } ?>">
                                 <?php echo $row2["userName"]; ?>
-                                <br> <?php if($row2["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
+                                <br> <?php if ($row2["player_id"] == $row["p1_id"]) {
+                                    echo $row["p1_char"];
+                                } else {
+                                    echo $row["p2_char"];
+                                } ?>
                                 <div class="indicator hidden-lg hidden-md">
-                                Loser
+                                    Loser
                                 </div>
                             </div>
 
@@ -157,38 +171,38 @@ $result = mysqli_query($conn, $sql);
         }
     }
 
-//finna chill on this for a min, might come back to it though.
-//    var currentPlayer;
-//    var currentRow;
-//    var currentPlayerClicked;
-//    $('.userName').hover(function () {
-//        var classes = $(this).attr('class').split(' ');
-//        currentPlayer = classes[2];
-//        $("." + currentPlayer).addClass('currP1');
-//
-//    }, function () {
-//        $("." + currentPlayer).removeClass('currP1');
-//    });
-//    $('.userName').click(function () {
-//        currentPlayerClicked ? currentPlayerClicked.removeClass('currentPlayerClicked') : null;
-//        var classes = $(this).attr('class').split(' ');
-//        currentPlayer = classes[2];
-//        currentPlayerClicked = $("." + currentPlayer);
-//        currentPlayerClicked.removeClass('currP1').addClass('currentPlayerClicked');
-//    });
-//
-//
-//    $('.matchRow').hover(function () {
-//            $(this).addClass('currentRowHover');
-//        },
-//        function () {
-//            $(this).removeClass('currentRowHover');
-//        });
-//    $('.matchRow').click(function () {
-//        currentRow ? currentRow.removeClass('currentRowClick') : null;
-//        currentRow = $(this);
-//        currentRow.addClass('currentRowClick');
-//    });
+    //finna chill on this for a min, might come back to it though.
+    //    var currentPlayer;
+    //    var currentRow;
+    //    var currentPlayerClicked;
+    //    $('.userName').hover(function () {
+    //        var classes = $(this).attr('class').split(' ');
+    //        currentPlayer = classes[2];
+    //        $("." + currentPlayer).addClass('currP1');
+    //
+    //    }, function () {
+    //        $("." + currentPlayer).removeClass('currP1');
+    //    });
+    //    $('.userName').click(function () {
+    //        currentPlayerClicked ? currentPlayerClicked.removeClass('currentPlayerClicked') : null;
+    //        var classes = $(this).attr('class').split(' ');
+    //        currentPlayer = classes[2];
+    //        currentPlayerClicked = $("." + currentPlayer);
+    //        currentPlayerClicked.removeClass('currP1').addClass('currentPlayerClicked');
+    //    });
+    //
+    //
+    //    $('.matchRow').hover(function () {
+    //            $(this).addClass('currentRowHover');
+    //        },
+    //        function () {
+    //            $(this).removeClass('currentRowHover');
+    //        });
+    //    $('.matchRow').click(function () {
+    //        currentRow ? currentRow.removeClass('currentRowClick') : null;
+    //        currentRow = $(this);
+    //        currentRow.addClass('currentRowClick');
+    //    });
 
 </script>
 
