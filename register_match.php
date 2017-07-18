@@ -136,14 +136,13 @@ $result2 = mysqli_query($conn, $sql);
     </div><!--
     -->
     <div id="whatUp">
-        <img  class="zabSucksImg" src="images/saltFighter.png"/>
         <?php if (!empty($result)) { ?>
+            <div class="topLabelHolder row hidden-sm hidden-xs">
+                <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Winner</h1></div>
+                <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Vs</h1></div>
+                <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Loser</h1></div>
+            </div>
             <div id="matches" class="table-content">
-                <div class="topLabelHolder row hidden-sm hidden-xs">
-                    <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Winner</h1></div>
-                    <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Vs</h1></div>
-                    <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Loser</h1></div>
-                </div>
                 <div class="row">
                     <?php
                     while ($row = mysqli_fetch_array($result2)) {

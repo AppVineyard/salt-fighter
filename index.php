@@ -22,68 +22,84 @@ require 'dbconfig.php';
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Salt-Fighter</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
-    <link href="index.css" rel="stylesheet" type="text/css" />
-
+    <link rel="stylesheet" type="text/css" href="index.css"/>
 </head>
 <body>
 <div id="shade">
-    <div id="sideBar" class="row"><h2 id="topBanner">Login</h2>
-
+    <div class="row">
+        <h2 id="topBanner">Login</h2>
         <div id="login">
-            <form name="frmUser" method="post" action="login.php">
-                <input type="text" name="userName" placeholder="User Name" class="login-input"><br>
-                <input type="password" name="password" placeholder="Password" class="login-input"><br>
-                <button type="submit" name="submit" value=""> Submit</button>
-            </form>
+            <div class="formHolder">
+                <form name="frmUser" method="post" action="login.php">
+                    <input type="text" name="userName" placeholder="User Name" class="login-input"><br>
+                    <input type="password" name="password" placeholder="Password" class="login-input"><br>
+                    <button type="submit" name="submit" value=""> Submit</button>
+                </form>
+            </div>
             <p>Not a member?</p>
-            <a id="registerBtn">Register</a>
+            <a id="registerBtn" class="formChanger">Register</a>
         </div>
 
-
         <div id="register">
-            <form name="regUser" method="post" action="register.php">
-                <input type="text" required="required" name="firstname" placeholder="First Name" class="register-input"><br>
-                <input type="text" required="required" name="lastname" placeholder="Last Name"
-                       class="register-input"><br>
-                <input type="text" required="required" name="userName" placeholder="User Name"
-                       class="register-input"><br>
-                <input type="password" required="required" required title="Please fill out all fields" name="password"
-                       placeholder="Password" class="register-input"><br>
-                <button type="submit" name="submit" value=""> Submit</button>
-            </form>
+            <div class="formHolder">
+                <form name="regUser" method="post" action="register.php">
+                    <input type="text" required="required" name="firstname" placeholder="First Name"
+                           class="register-input"><br>
+                    <input type="text" required="required" name="lastname" placeholder="Last Name"
+                           class="register-input"><br>
+                    <input type="text" required="required" name="userName" placeholder="User Name"
+                           class="register-input"><br>
+                    <input type="password" required="required" required title="Please fill out all fields"
+                           name="password"
+                           placeholder="Password" class="register-input"><br>
+                    <button type="submit" name="submit" value=""> Submit</button>
+                </form>
+            </div>
             <p>Already a member?</p>
-            <a id="loginBtn">Login</a>
+            <a id="loginBtn" class="formChanger">Login</a>
+        </div>
+
+        <span id="whatIs">What's Salt Fighter?</span>
+    </div>
+
+    <div id="modalBg">
+        <div id="modalWindow">
+
         </div>
     </div>
 </div>
 
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script>
     var loginBtn = document.getElementById('loginBtn');
     var regBtn = document.getElementById('registerBtn');
     var login = document.getElementById('login');
     var register = document.getElementById('register');
     var topB = document.getElementById('topBanner');
+    var whatIs = document.getElementById('whatIs');
 
     regBtn.addEventListener('click', function () {
         login.style.display = 'none';
         register.style.display = 'block';
         topB.innerHTML = 'Register';
-
-        console.log(topB);
     });
     loginBtn.addEventListener('click', function () {
         register.style.display = 'none';
         login.style.display = 'block';
         topB.innerHTML = 'Login';
-
     });
+    whatIs.addEventListener('click', function(){handleModal(true);});
+    $('#modalBg').click(function(){handleModal(false);});
 
-
+    function handleModal(open){
+        if(open){
+            $('#modalBg, #modalWindow').css('display', 'block');
+        }else {
+            $('#modalBg, #modalWindow').css('display', 'none');
+        }
+    }
 </script>
 
 <script type="text/javascript">
@@ -99,4 +115,6 @@ require 'dbconfig.php';
 </script>
 </body>
 </html>
+
+
 
