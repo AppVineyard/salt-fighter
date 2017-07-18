@@ -1,100 +1,143 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Salt-Fighter</title>
+    <title>Salt-Fighter : Home</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,200" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Zilla+Slab:400,600" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="index.css"/>
+    <link href="index.css" type="text/css" rel="stylesheet"/>
+    <link rel="stylesheet" type="text/css" href="matches/matchesTest.css">
+    <link rel="stylesheet" type="text/css" href="styling/mainArea.css">
+    <link rel="stylesheet" type="text/css" href="styling/sideBar.css">
+    <link rel="stylesheet" type="text/css" href="styling/register_match.css">
+
 </head>
 <body>
 <div id="shade">
-    <div class="row">
-        <h2 id="topBanner">Login</h2>
-        <div id="login">
-            <div class="formHolder">
-                <form name="frmUser" method="post" action="login.php">
-                    <input type="text" name="userName" placeholder="User Name" class="login-input"><br>
-                    <input type="password" name="password" placeholder="Password" class="login-input"><br>
-                    <button type="submit" name="submit" value=""> Submit</button>
-                </form>
+    <div id="sideBar">
+        <h2 id="topBanner">Create Match</h2>
+
+
+        <div id="match">
+            <form name="regUser" method="post" action="create_match.php">
+                <?php echo "<select name='win' required>";
+                echo "<option value='' selected disabled>Winner</option>";
+                $rows = array();
+                while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+                $rows[] = $row;
+                echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                }
+                echo "</select>"; ?>
+                <br>
+                <?php echo "<select name='loss' required>";
+                echo "<option value='' selected disabled>Loser</option>";
+                foreach ($rows as $row) {
+                echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                }
+                echo "</select>"; ?><br>
+                <?php echo "<select name='p1_id' required>";
+                echo "<option value='' selected disabled>Player 1</option>";
+                foreach ($rows as $row) {
+                echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                }
+                echo "</select>"; ?><br>
+                <?php echo "<select name='p2_id' required>";
+                echo "<option value='' selected disabled>Player 2</option>";
+                foreach ($rows as $row) {
+                echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                }
+                echo "</select>"; ?><br>
+                <input type="text" required="required" name="p1_char" placeholder="Player 1 Character"
+                       class="register-input"><br>
+                <input type="text" required="required" name="p2_char" placeholder="Player 2 Character"
+                       class="register-input"><br>
+                <button type="submit" name="submit" value=""> Submit</button>
+            </form>
+        </div>
+
+        <h2>Ledger Rules</h2>
+        <ol  type="1">
+            <li>"Ledger" Matches will only count in the "2 out of 3" match format.</li>
+            <li>Initiating a "ledger match" must be decided before match play and both players must agree on said terms.</li>
+            <li>Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.</li>
+        </ol>
+        <h2>Most Wins</h2>
+        <ol id="top5" type ="1">
+            <?php	$t5rows = array();
+			while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC))
+			{
+					$t5rows[] = $t5row;
+					echo "<li>" . $t5row['userName'] . "\t" . $t5row['COUNT(*)'] . "</li>";
+            }
+            ?>
+        </ol>
+    </div><!--
+    -->
+    <div id="whatUp">
+        <div id="menuBtn">
+
+        </div>
+        <?php if (!empty($result)) { ?>
+        <div class="topLabelHolder row hidden-sm hidden-xs">
+            <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Winner</h1></div>
+            <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Vs</h1></div>
+            <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Loser</h1></div>
+        </div>
+        <div id="matches" class="table-content">
+            <div class="row">
+                <?php
+                    while ($row = mysqli_fetch_array($result2)) {
+                        $sql2 = "SELECT users.userName, users.player_id FROM users WHERE player_id = '$row[loss]'";
+                        $result3 = mysqli_query($conn, $sql2);
+                        $row2 = mysqli_fetch_array($result3);
+                        ?>
+
+                <div class="row matchRow ">
+                    <div class="matchAnnounce hidden-lg hidden-md col-sm-12 col-xs-12">
+                        <h1>Match</h1>
+                        <div class="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                    </div>
+                    <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if($row["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
+                    <?php echo $row["userName"]; ?>
+                    <br> <?php if($row["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
+                    <div class="indicator hidden-lg hidden-md">
+                        Winner
+                    </div>
+                </div>
+                <div class="matchData vs col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                    <div id="vs"><h1 style="display: inline">VS</h1></div>
+                    <div class="date hidden-sm hidden-xs"><?php echo date("F j, Y", $row["match_date"]); ?></div>
+                </div>
+                <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if($row2["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
+                <?php echo $row2["userName"]; ?>
+                <br> <?php if($row2["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
+                <div class="indicator hidden-lg hidden-md">
+                    Loser
+                </div>
             </div>
-            <p>Not a member?</p>
-            <a id="registerBtn" class="formChanger">Register</a>
-        </div>
-
-        <div id="register">
-            <div class="formHolder">
-                <form name="regUser" method="post" action="register.php">
-                    <input type="text" required="required" name="firstname" placeholder="First Name"
-                           class="register-input"><br>
-                    <input type="text" required="required" name="lastname" placeholder="Last Name"
-                           class="register-input"><br>
-                    <input type="text" required="required" name="userName" placeholder="User Name"
-                           class="register-input"><br>
-                    <input type="password" required="required" required title="Please fill out all fields"
-                           name="password"
-                           placeholder="Password" class="register-input"><br>
-                    <button type="submit" name="submit" value=""> Submit</button>
-                </form>
-            </div>
-            <p>Already a member?</p>
-            <a id="loginBtn" class="formChanger">Login</a>
-        </div>
-
-        <span id="whatIs">What's Salt Fighter?</span>
-    </div>
-
-    <div id="modalBg">
-        <div id="modalWindow">
 
         </div>
+
+        <?php
+                    }
+                    ?>
     </div>
 </div>
+<?php } ?>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
+</div>
+</div>
+
+
 <script>
-    var loginBtn = document.getElementById('loginBtn');
-    var regBtn = document.getElementById('registerBtn');
-    var login = document.getElementById('login');
-    var register = document.getElementById('register');
-    var topB = document.getElementById('topBanner');
-    var whatIs = document.getElementById('whatIs');
 
-    regBtn.addEventListener('click', function () {
-        login.style.display = 'none';
-        register.style.display = 'block';
-        topB.innerHTML = 'Register';
-    });
-    loginBtn.addEventListener('click', function () {
-        register.style.display = 'none';
-        login.style.display = 'block';
-        topB.innerHTML = 'Login';
-    });
-    whatIs.addEventListener('click', function(){handleModal(true);});
-    $('#modalBg').click(function(){handleModal(false);});
 
-    function handleModal(open){
-        if(open){
-            $('#modalBg, #modalWindow').css('display', 'block');
-        }else {
-            $('#modalBg, #modalWindow').css('display', 'none');
-        }
-    }
-</script>
-
-<script type="text/javascript">
-    if (window.addEventListener) {
-        var state = 0, konami = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-        window.addEventListener("keydown", function (e) {
-            if (e.keyCode == konami[state]) state++;
-            else state = 0;
-            if (state == 10)
-                window.location = "https://salt-fighter.herokuapp.com/SaltyFighter/index.html";  //you can write your own code here
-        }, true);
-    }
 </script>
 </body>
 </html>
-

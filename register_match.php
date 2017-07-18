@@ -72,7 +72,7 @@ $result2 = mysqli_query($conn, $sql);
     <link rel="stylesheet" type="text/css" href="matches/matchesTest.css">
     <link rel="stylesheet" type="text/css" href="styling/mainArea.css">
     <link rel="stylesheet" type="text/css" href="styling/sideBar.css">
-
+    <link rel="stylesheet" type="text/css" href="styling/register_match.css">
 </head>
 <body>
 <div id="shade">
@@ -126,7 +126,7 @@ $result2 = mysqli_query($conn, $sql);
 		<h2>Most Wins</h2>
 		<ol id="top5" type ="1">
 		<?php	$t5rows = array();
-			while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC)) 
+			while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC))
 			{
 					$t5rows[] = $t5row;
 					echo "<li>" . $t5row['userName'] . "\t" . $t5row['COUNT(*)'] . "</li>";
@@ -136,6 +136,9 @@ $result2 = mysqli_query($conn, $sql);
     </div><!--
     -->
     <div id="whatUp">
+        <div id="menuBtn">
+
+        </div>
         <?php if (!empty($result)) { ?>
             <div class="topLabelHolder row hidden-sm hidden-xs">
                 <div class="topLabel col-lg-4 col-md-4 col-sm-4 col-xs-4"><h1>Winner</h1></div>
@@ -190,7 +193,7 @@ $result2 = mysqli_query($conn, $sql);
 
 
 <script>
-    
+
 
 </script>
 </body>
