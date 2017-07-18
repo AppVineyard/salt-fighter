@@ -43,7 +43,7 @@ body {
   color: white;
   font-size: 2em;
   padding: .25em;
-  z-index: 51;
+  z-index: 101;
 }
 #modalBg {
   background-color: rgba(0, 0, 0, 0.51);

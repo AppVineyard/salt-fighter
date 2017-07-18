@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0dece3a-47d1-4621-acd7-382818c6725d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/register_match.php" afterPath="$PROJECT_DIR$/register_match.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rework.html" afterPath="$PROJECT_DIR$/rework.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/register_match.css" afterPath="$PROJECT_DIR$/styling/register_match.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/register_match.less" afterPath="$PROJECT_DIR$/styling/register_match.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/sideBar.css" afterPath="$PROJECT_DIR$/styling/sideBar.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styling/sideBar.less" afterPath="$PROJECT_DIR$/styling/sideBar.less" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,11 +45,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register_match.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="register_match.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/register_match.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="538">
-              <caret line="245" column="7" lean-forward="false" selection-start-line="245" selection-start-column="7" selection-end-line="245" selection-end-column="7" />
+            <state relative-caret-position="223">
+              <caret line="230" column="38" lean-forward="false" selection-start-line="230" selection-start-column="38" selection-end-line="230" selection-end-column="38" />
               <folding>
                 <marker date="1500373316000" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
                 <marker date="1500373316000" expanded="true" signature="555:697" ph="SELECT users... users" />
@@ -75,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register_match.less" pinned="false" current-in-tab="false">
+      <file leaf-file-name="register_match.less" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/styling/register_match.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
+            <state relative-caret-position="420">
+              <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -154,9 +149,9 @@
         <option value="$PROJECT_DIR$/matches/matchesTest.less" />
         <option value="$PROJECT_DIR$/styling/register_match.php.less" />
         <option value="$PROJECT_DIR$/styling/sideBar.less" />
-        <option value="$PROJECT_DIR$/styling/register_match.less" />
         <option value="$PROJECT_DIR$/rework.html" />
         <option value="$PROJECT_DIR$/register_match.php" />
+        <option value="$PROJECT_DIR$/styling/register_match.less" />
       </list>
     </option>
   </component>
@@ -667,12 +662,12 @@
       <workItem from="1500075083806" duration="14043000" />
       <workItem from="1500135431225" duration="1436000" />
       <workItem from="1500300619405" duration="2190000" />
-      <workItem from="1500336448570" duration="8739000" />
+      <workItem from="1500336448570" duration="9226000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42515000" />
+    <option name="totallyTimeSpent" value="43002000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="709" extended-state="6" />
@@ -1065,14 +1060,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styling/register_match.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="14" lean-forward="false" selection-start-line="27" selection-start-column="14" selection-end-line="27" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/rework.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1099,14 +1086,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/register_match.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="245" column="7" lean-forward="false" selection-start-line="245" selection-start-column="7" selection-end-line="245" selection-end-column="7" />
+        <state relative-caret-position="223">
+          <caret line="230" column="38" lean-forward="false" selection-start-line="230" selection-start-column="38" selection-end-line="230" selection-end-column="38" />
           <folding>
             <marker date="1500373316000" expanded="true" signature="420:439" ph="SELECT * FRO... users" />
             <marker date="1500373316000" expanded="true" signature="555:697" ph="SELECT users... users" />
             <marker date="1500373316000" expanded="true" signature="1585:1713" ph="SELECT * FRO... match_stats" />
             <marker date="1500373316000" expanded="true" signature="6895:6975" ph="SELECT users... users" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styling/register_match.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="12" lean-forward="false" selection-start-line="28" selection-start-column="12" selection-end-line="28" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
