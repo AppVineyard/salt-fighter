@@ -1,57 +1,258 @@
+body {
+  padding-top: 10vh;
+  background-color: #2b2b2b;
+}
 * {
+  font-family: 'Zilla Slab', serif;
+  text-align: center;
   padding: 0;
   margin: 0;
   border: none;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
   max-width: 100%;
   color: #c5c5c5;
 }
+.row {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+}
 h2 {
-  margin-top: 5vh;
-  font-weight: 200;
-  font-size: 3em;
-  font-family: 'Zilla Slab', serif;
+  font-size: 2em;
+  color: #deded2;
+  margin-bottom: 5vh;
 }
-#shade {
-  position: absolute;
-  background-color: rgba(40, 40, 40, 0.83);
-  height: auto;
-  min-height: 100vh;
-  width: 100vw;
+h3 {
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: .5em;
 }
-body {
-  height: 100vh;
-  width: 100vw;
-  background-attachment: fixed;
-  background-image: url("images/controller.jpg");
-  background-position: center;
-  background-size: cover;
+.formHolder {
+  height: 35vh;
+}
+@media (max-width: 1000px) {
+  .formHolder {
+    width: 100vw;
+  }
+}
+.inputs {
+  font-size: 1.2em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+  border: 0;
+}
+.form {
   text-align: center;
+  width: 70vw;
+  margin: 0 auto;
+  height: 50vh;
 }
-.zabSucksImg {
-  margin-top: 2.5vh;
-  height: 10vh;
-  width: auto;
+.form input[type="text"],
+.form input[type="password"] {
+  font-size: 1.2em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+  border: 0;
+  padding: .2em .25em;
+  width: 35vw;
+  color: black;
+}
+.form button {
+  font-size: 1.2em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+  border: 0;
+  padding: .35em .5em;
+  background-color: #6c9e6a;
+  transition: all .25s;
+  color: white;
+  cursor: pointer;
+}
+.form button:hover {
+  background-color: #c4a67e;
+}
+@media (max-width: 1000px) {
+  .form {
+    width: 100vw;
+  }
+  .form input[type="text"],
+  .form input[type="password"] {
+    width: 60vw;
+  }
+  .form button {
+    width: 30vw;
+  }
+}
+@media (max-width: 767px) {
+  .form input[type="text"],
+  .form input[type="password"] {
+    width: 80vw;
+  }
+  .form button {
+    width: 50vw;
+  }
+}
+p {
+  font-size: 1.1em;
+  color: #deded2;
+  margin: 0;
 }
 #login {
-  margin-top: 5vh;
+  text-align: center;
+  width: 70vw;
+  margin: 0 auto;
+  height: 50vh;
 }
-#login p {
-  margin-top: 3vh;
-  font-size: 1.1em;
+#login input[type="text"],
+#login input[type="password"] {
+  font-size: 1.2em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+  border: 0;
+  padding: .2em .25em;
+  width: 35vw;
+  color: black;
+}
+#login button {
+  font-size: 1.2em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+  border: 0;
+  padding: .35em .5em;
+  background-color: #6c9e6a;
+  transition: all .25s;
+  color: white;
+  cursor: pointer;
+}
+#login button:hover {
+  background-color: #c4a67e;
+}
+@media (max-width: 1000px) {
+  #login {
+    width: 100vw;
+  }
+  #login input[type="text"],
+  #login input[type="password"] {
+    width: 60vw;
+  }
+  #login button {
+    width: 30vw;
+  }
+}
+@media (max-width: 767px) {
+  #login input[type="text"],
+  #login input[type="password"] {
+    width: 80vw;
+  }
+  #login button {
+    width: 50vw;
+  }
 }
 #register {
+  text-align: center;
+  width: 70vw;
+  margin: 0 auto;
+  height: 50vh;
   display: none;
-  margin-top: 5vh;
 }
-#register p {
-  margin-top: 3vh;
-  font-size: 1.1em;
-}
-#registerBtn,
-#loginBtn {
-  color: #bf8389;
+#register input[type="text"],
+#register input[type="password"] {
   font-size: 1.2em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+  border: 0;
+  padding: .2em .25em;
+  width: 35vw;
+  color: black;
+}
+#register button {
+  font-size: 1.2em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+  border: 0;
+  padding: .35em .5em;
+  background-color: #6c9e6a;
+  transition: all .25s;
+  color: white;
   cursor: pointer;
+}
+#register button:hover {
+  background-color: #c4a67e;
+}
+@media (max-width: 1000px) {
+  #register {
+    width: 100vw;
+  }
+  #register input[type="text"],
+  #register input[type="password"] {
+    width: 60vw;
+  }
+  #register button {
+    width: 30vw;
+  }
+}
+@media (max-width: 767px) {
+  #register input[type="text"],
+  #register input[type="password"] {
+    width: 80vw;
+  }
+  #register button {
+    width: 50vw;
+  }
+}
+.formChanger {
+  font-size: 1.5em;
+  cursor: pointer;
+  color: #6c9e6a;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+.formChanger:hover {
+  color: #c4a67e;
+}
+#whatIs {
+  font-size: 1.2em;
+  color: #c4877d;
+  cursor: pointer;
+}
+#modalBg {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+#modalWindow {
+  display: none;
+  position: absolute;
+  height: 60vh;
+  top: 20vh;
+  width: 50vw;
+  padding: .5em;
+  left: 25vw;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  border: solid 3px #c5c5c5;
+  z-index: 21;
+  color: #c5c5c5;
+  text-align: center;
+}
+@media (max-width: 767px) {
+  #modalWindow {
+    height: 80vh;
+    top: 7.5vh;
+    width: 80vw;
+    left: 7.5vw;
+  }
 }

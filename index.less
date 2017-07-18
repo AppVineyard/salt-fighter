@@ -1,65 +1,159 @@
-*{
-  padding: 0;
-  margin: 0;
-  border: none;
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  max-width:100%;
-  color: #c5c5c5;
-
-}
-h2{
-  margin-top: 5vh;
-  font-weight: 200;
-  font-size: 3em;
-  font-family: 'Zilla Slab', serif;
-}
-#shade{
-  position:absolute;
-  background-color: rgba(40, 40, 40, 0.83);
-  height:auto;
-  min-height:100vh;
-  width:100vw;
-}
 body {
-  height:100vh;
-  width:100vw;
-  background-attachment: fixed;
-  background-image: url("images/controller.jpg");
-  background-position: center;
-  background-size: cover;
+  padding-top: 10vh;
+  background-color: #2b2b2b;
+}
+* {
+  font-family: 'Zilla Slab', serif;
   text-align: center;
+    padding: 0;
+    margin: 0;
+    border: none;
+    max-width:100%;
+    color: #c5c5c5;
+  }
+.row {
+  //less and bootstrap necessitate this stupidity
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+
 }
-
-
-
-.zabSucksImg{
-  margin-top: 2.5vh;
-  height:10vh;
-  width:auto;
+h2 {
+font-size: 2em;
+  color: #deded2;
+  margin-bottom: 5vh;
 }
-#login{
-  margin-top: 5vh;
-  p{
-    margin-top: 3vh;
-    font-size: 1.1em;
+h3{
+  color:black;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+@prettyGreen: #6c9e6a;
+@prettyBeige: #c4a67e;
+@prettyRed: #c4877d;
+
+
+.formHolder {
+  height: 35vh;
+  @media (max-width: 1000px) {
+  width:100vw;
   }
 }
 
-#register{
-  display:none;
-  margin-top: 5vh;
-  p{
-    margin-top: 3vh;
-    font-size: 1.1em;
-  }
-}
-#registerBtn, #loginBtn{
-  color: #bf8389;
+.inputs{
   font-size: 1.2em;
+  margin-bottom: .5em;
+  border-radius: 5px;
+  border: 0;
+}
+.form {
+  text-align: center;
+  width: 70vw;
+  margin: 0 auto;
+  height: 50vh;
+  input[type="text"], input[type="password"] {
+    .inputs;
+    padding: .2em .25em;
+    width: 35vw;
+    color:black;
+  }
+  button {
+    .inputs;
+    padding: .35em .5em;
+    background-color: @prettyGreen;
+    transition: all .25s;
+    color: white;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #c4a67e;
+  }
+  @media (max-width: 1000px) {
+    width: 100vw;
+    input[type="text"], input[type="password"] {
+      width: 60vw;
+    }
+
+    button {
+      width: 30vw;
+    }
+  }
+  @media (max-width: 767px) {
+    input[type="text"], input[type="password"] {
+      width: 80vw;
+    }
+
+    button {
+      width: 50vw;
+    }
+  }
+}
+p{
+  font-size: 1.1em;
+  color: #deded2;
+  margin: 0;
+}
+#login {
+  .form;
+}
+
+#register {
+  .form;
+  display: none;
+}
+.formChanger{
+  font-size: 1.5em;
+  cursor: pointer;
+  color: @prettyGreen;
+  -webkit-transition: color .25s;
+  -moz-transition: color .25s;
+  -ms-transition: color .25s;
+  -o-transition: color .25s;
+  transition: color .25s;
+}
+.formChanger:hover{
+  color: @prettyBeige;
+}
+
+#whatIs{
+  font-size: 1.2em;
+  color: @prettyRed;
   cursor: pointer;
 }
-
-ol{
-
+#modalBg{
+  display: none;
+  height:100vh;
+  width:100vw;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.63);
+}
+#modalWindow{
+  display: none;
+  position:absolute;
+  height:60vh;
+  top:20vh;
+  width:50vw;
+  padding:.5em;
+  left:25vw;
+  border-radius: 10px;
+  background-color: #2b2b2b;
+  border:solid 3px #c5c5c5;
+  z-index:21;
+  color: #c5c5c5;
+  text-align: center;
+  @media(max-width:767px){
+    height:80vh;
+    top:7.5vh;
+  width:80vw;
+left:7.5vw;
+  }
 }
