@@ -1,7 +1,7 @@
 body{
   padding:0;
 }
-#menuBtn{
+.mobileMenuButtons{
   display: none;
   position: fixed;
   height:60px;
@@ -11,8 +11,28 @@ body{
   background-color: #6c9e6a;
   border:solid 2px white;
   z-index:10;
+}
+#menuBtn{
+.mobileMenuButtons;
 
   @media(max-width:1000px){
     display: block;
   }
+}
+#closeModal{
+  .mobileMenuButtons;
+  right:0;
+  background-color: black;
+  color: white;
+  font-size: 2em;
+  padding: .25em;
+  z-index:51;
+}
+
+#modalBg{
+background-color: rgba(0, 0, 0, 0.51);
+  position: absolute;
+  height:100vh;
+  width:100vw;
+  z-index:50;
 }

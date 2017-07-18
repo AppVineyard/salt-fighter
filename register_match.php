@@ -73,6 +73,7 @@ $result2 = mysqli_query($conn, $sql);
     <link rel="stylesheet" type="text/css" href="styling/mainArea.css">
     <link rel="stylesheet" type="text/css" href="styling/sideBar.css">
     <link rel="stylesheet" type="text/css" href="styling/register_match.css">
+
 </head>
 <body>
 <div id="shade">
@@ -83,30 +84,46 @@ $result2 = mysqli_query($conn, $sql);
         <div id="match">
             <form name="regUser" method="post" action="create_match.php">
                 <?php echo "<select name='win' required>";
-                echo "<option value='' selected disabled>Winner</option>";
+                echo "
+                <option value='' selected disabled>Winner</option>
+                ";
                 $rows = array();
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                     $rows[] = $row;
-                    echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                    echo "
+                <option value='" . $row[' player_id
+                '] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
                 echo "</select>"; ?>
                 <br>
                 <?php echo "<select name='loss' required>";
-                echo "<option value='' selected disabled>Loser</option>";
+                echo "
+                <option value='' selected disabled>Loser</option>
+                ";
                 foreach ($rows as $row) {
-                    echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                    echo "
+                <option value='" . $row[' player_id
+                '] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
                 echo "</select>"; ?><br>
                 <?php echo "<select name='p1_id' required>";
-                echo "<option value='' selected disabled>Player 1</option>";
+                echo "
+                <option value='' selected disabled>Player 1</option>
+                ";
                 foreach ($rows as $row) {
-                    echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                    echo "
+                <option value='" . $row[' player_id
+                '] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
                 echo "</select>"; ?><br>
                 <?php echo "<select name='p2_id' required>";
-                echo "<option value='' selected disabled>Player 2</option>";
+                echo "
+                <option value='' selected disabled>Player 2</option>
+                ";
                 foreach ($rows as $row) {
-                    echo "<option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                    echo "
+                <option value='" . $row[' player_id
+                '] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
                 echo "</select>"; ?><br>
                 <input type="text" required="required" name="p1_char" placeholder="Player 1 Character"
@@ -118,26 +135,32 @@ $result2 = mysqli_query($conn, $sql);
         </div>
 
         <h2>Ledger Rules</h2>
-        <ol  type="1">
+        <ol type="1">
             <li>"Ledger" Matches will only count in the "2 out of 3" match format.</li>
-            <li>Initiating a "ledger match" must be decided before match play and both players must agree on said terms.</li>
-            <li>Winner and Loser must give up the controller and cannot play consecutive matches if other ledger contestants are present.</li>
+            <li>Initiating a "ledger match" must be decided before match play and both players must agree on said
+                terms.
+            </li>
+            <li>Winner and Loser must give up the controller and cannot play consecutive matches if other ledger
+                contestants are present.
+            </li>
         </ol>
-		<h2>Most Wins</h2>
-		<ol id="top5" type ="1">
-		<?php	$t5rows = array();
-			while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC))
-			{
-					$t5rows[] = $t5row;
-					echo "<li>" . $t5row['userName'] . "\t" . $t5row['COUNT(*)'] . "</li>";
-			}
-		?>
-		</ol>
+        <h2>Most Wins</h2>
+        <ol id="top5" type="1">
+            <?php	$t5rows = array();
+            while ($t5row = mysqli_fetch_array($top5, MYSQLI_ASSOC))
+            {
+                $t5rows[] = $t5row;
+                echo "<li>" . $t5row['userName'] . "\t" . $t5row['COUNT(*)'] . "</li>";
+            }
+            ?>
+        </ol>
     </div><!--
     -->
     <div id="whatUp">
         <div id="menuBtn">
-
+        </div>
+        <div id="closeModal">
+            X
         </div>
         <?php if (!empty($result)) { ?>
             <div class="topLabelHolder row hidden-sm hidden-xs">
@@ -159,7 +182,10 @@ $result2 = mysqli_query($conn, $sql);
                                 <h1>Match</h1>
                                 <div class="date"><?php echo date("F j, Y", $row["match_date"]); ?></div>
                             </div>
-                            <div class="matchData userName <?php echo $row["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if($row["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
+                            <div class="matchData userName <?php echo $row[" userName
+                    "]; ?> col-lg-4 col-md-4 col-sm-12
+                    col-xs-12 <?php if($row["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>
+                    ">
                                 <?php echo $row["userName"]; ?>
                                 <br> <?php if($row["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
                                 <div class="indicator hidden-lg hidden-md">
@@ -170,7 +196,10 @@ $result2 = mysqli_query($conn, $sql);
                                 <div id="vs"><h1 style="display: inline">VS</h1></div>
                                 <div class="date hidden-sm hidden-xs"><?php echo date("F j, Y", $row["match_date"]); ?></div>
                             </div>
-                            <div class="matchData userName <?php echo $row2["userName"]; ?> col-lg-4 col-md-4 col-sm-12 col-xs-12 <?php if($row2["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>">
+                            <div class="matchData userName <?php echo $row2[" userName
+                "]; ?> col-lg-4 col-md-4 col-sm-12
+                col-xs-12 <?php if($row2["player_id"] == $row["p1_id"]){ echo strtolower($row["p1_char"]);} else { echo strtolower($row["p2_char"]);} ?>
+                ">
                                 <?php echo $row2["userName"]; ?>
                                 <br> <?php if($row2["player_id"] == $row["p1_id"]){ echo $row["p1_char"];} else { echo $row["p2_char"];} ?>
                                 <div class="indicator hidden-lg hidden-md">
@@ -190,11 +219,28 @@ $result2 = mysqli_query($conn, $sql);
 
     </div>
 </div>
-
+<div id="modalBg">
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 
 <script>
+    $('#menuBtn').click(function () {
+        $('#sideBar, #modalBg, #closeModal').css('display', 'block');
+        $('#menuBtn').css('display', 'none');
+    });
+    $('#modalBg, #closeModal').click(function () {
+        $('#sideBar, #modalBg, #closeModal').css('display', 'none');
+        $('#menuBtn').css('display', 'block');
 
+    });
 
+    $( window ).resize(function() {
+        if($(window).width() >= 1000){
+            $('#sideBar').css('display', 'block');
+        }else{
+            $('#sideBar, modalBg').css('display', 'none');
+        }
+    });
 </script>
 </body>
 </html>
