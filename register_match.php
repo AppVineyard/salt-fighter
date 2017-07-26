@@ -91,8 +91,7 @@ $result2 = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
                     $rows[] = $row;
                     echo "
-                <option value='" . $row[' player_id
-                '] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                <option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
                 echo "</select>"; ?>
                 <br>
@@ -102,8 +101,7 @@ $result2 = mysqli_query($conn, $sql);
                 ";
                 foreach ($rows as $row) {
                     echo "
-                <option value='" . $row[' player_id
-                '] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                <option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
                 echo "</select>"; ?><br>
                 <?php echo "<select name='p1_id' required>";
@@ -112,8 +110,7 @@ $result2 = mysqli_query($conn, $sql);
                 ";
                 foreach ($rows as $row) {
                     echo "
-                <option value='" . $row[' player_id
-                '] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                <option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
                 echo "</select>"; ?><br>
                 <?php echo "<select name='p2_id' required>";
@@ -122,8 +119,7 @@ $result2 = mysqli_query($conn, $sql);
                 ";
                 foreach ($rows as $row) {
                     echo "
-                <option value='" . $row[' player_id
-                '] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
+                <option value='" . $row['player_id'] . "' label='" . $row['userName'] . "'>" . $row['userName'] . "</option>";
                 }
                 echo "</select>"; ?><br>
                 <input type="text" required="required" name="p1_char" placeholder="Player 1 Character"
