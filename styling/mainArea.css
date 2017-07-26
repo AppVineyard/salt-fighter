@@ -206,6 +206,14 @@
   background-size: cover;
   background-position: center;
 }
+
+#whatUp .dhalsim {
+  background-image: url("../images/SFBGpics/dhalsim.png");
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
 @media (max-width: 1000px) {
   #whatUp {
     width: 100vw;
