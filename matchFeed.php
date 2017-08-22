@@ -8,16 +8,7 @@
     $data = array();
     
     while ($row = mysqli_fetch_array($result2)) {
-        $data = array(
-        $row['userName'],
-        $row['match_date'],
-        $row['match_date'],
-        $row['win'],
-        $row['loss'],
-        $row['p1_id'],
-        $row['p2_id'],
-        $row['p1_char'],
-        $row['p2_char']);
+        $data[] = $row;
     }
 
     echo json_encode($data);
