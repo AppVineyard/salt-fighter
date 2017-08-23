@@ -28,7 +28,7 @@ require 'dbconfig.php';
     for($i = 0; $i < $num_results; $i++)
     {
         $row = mysqli_fetch_array($result);
-        echo $i = $i+1 . ". " . $row['name'] . "\t" . $row['score'] . "\n";
+        echo $i = $i+1 . ". " . $row['name'] . "\t" . $row['firm'] . "\t" . $row['score'] . "\n";
     }
     
 

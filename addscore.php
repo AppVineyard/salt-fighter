@@ -20,14 +20,15 @@ require 'dbconfig.php';
         // Strings must be escaped to prevent SQL injection attack.
         $name = mysqli_real_escape_string($conn,$_GET['name']);
         $score = mysqli_real_escape_string($conn,$_GET['score']);
+		$firm = mysqli_real_escape_string($conn,$_GET['firm']);
         $hash = $_GET['hash'];
         
         $secretKey="salty"; # Change this value to match the value stored in the client javascript below
         
-        $real_hash = md5($name . $score . $secretKey);
+        $real_hash = md5($name . $score . $firm . $secretKey);
         if($real_hash == $hash) {
 
-            $query = "insert into scoresEA values (NULL, '$name', '$score');";
+            $query = "insert into scoresEA values (NULL, '$name', '$score', '$firm');";
             $result = mysqli_query($conn,$query) or die('Query failed: ' . mysqli_error());
         }
 
