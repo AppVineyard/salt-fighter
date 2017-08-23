@@ -20,7 +20,7 @@ require 'dbconfig.php';
 
     // Send variables for the MySQL database class.
     
-    $query = "SELECT * FROM `scores` ORDER by `score` DESC LIMIT 5";
+    $query = "SELECT * FROM `scoresEA` ORDER by `score` DESC LIMIT 5";
     $result = mysqli_query($conn,$query) or die('Query failed: ' . mysqli_error());
     
     $num_results = mysqli_num_rows($result);
