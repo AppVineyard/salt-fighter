@@ -25,10 +25,10 @@ require 'dbconfig.php';
         
         $secretKey="salty"; # Change this value to match the value stored in the client javascript below
         
-        $real_hash = md5($name . $score . $firm . $secretKey);
+        $real_hash = md5($name . $firm . $score . $secretKey);
         if($real_hash == $hash) {
 
-            $query = "insert into scoresEA values (NULL, '$name', '$score', '$firm');";
+            $query = "insert into scoresEA values (NULL, '$name', '$firm', '$score');";
             $result = mysqli_query($conn,$query) or die('Query failed: ' . mysqli_error());
         }
 
