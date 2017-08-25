@@ -7,7 +7,7 @@
 
     $data = array();
     
-    while ($row = mysqli_fetch_array($result2)) {
+    while ($row = mysqli_fetch_assoc($result2)) {
         $data[] = $row;
     }
 
