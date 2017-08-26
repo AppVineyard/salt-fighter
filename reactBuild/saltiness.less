@@ -1,0 +1,224 @@
+///usr/local/bin/lessc
+/// C:\Users\Ruben\AppData\Roaming\npm\lessc.cmd
+* {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Zilla Slab', serif;
+}
+
+@prettyGreen: #8bc58b;
+@darkerPrettyGreen: #7caf7c;
+@borderColor: #b3b3b3;
+
+body {
+  background-color: #d0d0d0;
+}
+
+.row {
+  //less and bootstrap necessitate this stupidity
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+
+input[type='text'] {
+  font-size: 1.2em;
+  margin-bottom: 1vh;
+  height: 1.6em;
+  background-color: rgba(222, 222, 222, 0.61);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding-left: .25em;
+}
+
+input[type="submit"] {
+  font-size: 1.2em;
+  height: 1.6em;
+  padding: 0 .5em;
+  border-radius: 5px;
+  background-color: #93d293;
+  color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5)
+}
+
+input[type="submit"]:active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: @prettyGreen;
+  outline: none;
+}
+
+h1 {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 600;
+  display: inline;
+}
+
+#mainHolder {
+  width: 80vw;
+  margin: 0 auto;
+  @media (max-width: 767px) {
+    width: 100vw;
+  }
+}
+
+.header {
+  text-align: center;
+  width: 20vw;
+  margin: 2.5vh auto 5vh auto;
+}
+
+.topLabelHolder {
+  padding: .5em;
+  border-radius: 5px;
+  border: solid 2px #b3b3b3;
+}
+
+.topLabel {
+  text-align: center;
+}
+
+.ui-datepicker-trigger {
+  margin: 0 1em 0 .25em;
+}
+
+.currRow {
+  color: white;
+}
+.matchAnnounce{
+  background-color: black;
+  color:white;
+  border-radius: 10px;
+  h1{
+    color:white;
+  }
+}
+.matchRow {
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.51);
+  border: solid 2px #b3b3b3;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+  padding: .35em .5em;
+  background-color: #c5c5c5;
+  transition: all .25s;
+  h1 {
+    margin: 0;
+  }
+  &.currentRowHover {
+    .currRow;
+    background-color: #336db9;
+  }
+  &.currentRowClick {
+    .currRow;
+    background-color: @darkerPrettyGreen;
+    .currP1 {
+      background-color: @prettyGreen;
+      color: white;
+      border: solid 3px white;
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+  @media(max-width:767px){
+    background-color: black;
+  }
+}
+.matchRow:nth-child(even){
+  background-color: #4a4a4a;
+  @media(max-width:767px){
+    background-color: black;
+  }
+  color:white;
+  h1{
+    color:white;
+  }
+
+}
+.matchData {
+  padding: .2em;
+  border-radius: 5px;
+}
+
+.userName {
+  margin: .25em 0;
+  font-size: 1.1em;
+  transition: background-color .25s;
+  &.currP1 {
+    background-color: @prettyGreen;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+  &.currentPlayerClicked {
+    background-color: #c4a67e;
+    color: white;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+  }
+}
+.indicator{
+  position: absolute;
+  left: .2em;
+  bottom: 0;
+  color: #e4e5dc;
+  font-size: 1.5em;
+  font-weight: 400;
+  opacity: .75;
+}
+.toonBg {
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.ken {
+  background-image: url("../images/SFBGpics/ken.png");
+  .toonBg;
+}
+
+.akuma {
+  background-image: url("../images/SFBGpics/akuma.png");
+  .toonBg;
+}
+
+.nash {
+  background-image: url("../images/SFBGpics/nash.png");
+  .toonBg;
+}
+
+.ryu {
+  background-image: url("../images/SFBGpics/ryu.png");
+  background-position: 0 -40;
+  .toonBg;
+}
+
+.necalli {
+  background-image: url("../images/SFBGpics/necalli.png");
+  .toonBg;
+}
+
+.rashid {
+  background-image: url("../images/SFBGpics/rashid.png");
+  .toonBg;
+}
+.karin {
+  background-image: url("../images/SFBGpics/karin.png");
+  .toonBg;
+}
+.guile {
+  background-image: url("../images/SFBGpics/guile.png");
+  .toonBg;
+}
