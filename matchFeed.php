@@ -2,7 +2,7 @@
     
     require 'dbconfig.php';
    
-    $sql = "SELECT match_date, win, loss, p1_id, p2_id, p1_char, p2_char, users.userName FROM match_stats INNER JOIN users ON match_stats.win = users.player_id ORDER BY match_date desc";
+    $sql = "SELECT match_id, match_date, win, loss, p1_id, p2_id, p1_char, p2_char, users.userName FROM match_stats INNER JOIN users ON match_stats.win = users.player_id ORDER BY match_date desc";
     $result2 = mysqli_query($conn, $sql);
 
     $data = array();
