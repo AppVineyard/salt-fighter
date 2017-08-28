@@ -1,0 +1,165 @@
+///usr/local/bin/lessc
+/// C:\Users\Ruben\AppData\Roaming\npm\lessc.cmd
+* {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Zilla Slab', serif;
+  box-sizing: border-box;
+}
+
+@prettyGreen: #8bc58b;
+@darkerPrettyGreen: #7caf7c;
+@borderColor: #b3b3b3;
+
+body {
+  background-color: #d0d0d0;
+}
+
+input[type='text'] {
+  font-size: 1.2em;
+  margin-bottom: 1vh;
+  height: 1.6em;
+  background-color: rgba(222, 222, 222, 0.61);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding-left: .25em;
+}
+
+input[type="submit"] {
+  font-size: 1.2em;
+  height: 1.6em;
+  padding: 0 .5em;
+  border-radius: 5px;
+  background-color: #93d293;
+  color: white;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5)
+}
+
+input[type="submit"]:active {
+  box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: @prettyGreen;
+  outline: none;
+}
+
+h1 {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 600;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 600;
+  display: inline;
+}
+
+#mainHolder {
+  width: 80vw;
+  margin: 0 auto;
+  @media (max-width: 767px) {
+    width: 100vw;
+  }
+}
+
+.header {
+  text-align: center;
+  width: 20vw;
+  margin: 2.5vh auto 5vh auto;
+}
+
+.topLabelHolder {
+  box-sizing: content-box;
+  width:60vw;
+  padding: .5em 0;
+  border-radius: 5px;
+  border: solid 2px #b3b3b3;
+}
+
+.topLabel {
+  width: 20vw;
+  display:inline-block;
+  text-align: center;
+}
+
+.matchRow {
+  box-sizing: content-box;
+  width: 60vw;
+  height: 12.5vh;
+  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.51);
+  border: solid 2px #b3b3b3;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: .5em;
+  padding: .35em 0;
+  background-color: #c5c5c5;
+  transition: all .25s;
+}
+.matchRow:nth-child(even){
+  background-color: #4a4a4a;
+  @media(max-width:767px){
+    background-color: black;
+  }
+  color:white;
+  h1{
+    color:white;
+  }
+
+}
+.matchData {
+  width: 20vw;
+  padding: .2em;
+  border-radius: 5px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+.userName {
+  transition: background-color .25s;
+}
+
+.toonBg {
+  color: white;
+  background-size: cover;
+  background-position: center;
+}
+
+.ken {
+  background-image: url("../images/SFBGpics/ken.png");
+  .toonBg;
+}
+
+.akuma {
+  background-image: url("../images/SFBGpics/akuma.png");
+  .toonBg;
+}
+
+.nash {
+  background-image: url("../images/SFBGpics/nash.png");
+  .toonBg;
+}
+
+.ryu {
+  background-image: url("../images/SFBGpics/ryu.png");
+  background-position: 0 -40;
+  .toonBg;
+}
+
+.necalli {
+  background-image: url("../images/SFBGpics/necalli.png");
+  .toonBg;
+}
+
+.rashid {
+  background-image: url("../images/SFBGpics/rashid.png");
+  .toonBg;
+}
+.karin {
+  background-image: url("../images/SFBGpics/karin.png");
+  .toonBg;
+}
+.guile {
+  background-image: url("../images/SFBGpics/guile.png");
+  .toonBg;
+}
