@@ -674,63 +674,119 @@ var LOCAL_MATCHES = [
 function App(props) {
     return (
         <div>
-            { props.matches.map(function (match) {
-
-                /**
-                 * Theonlyrealstreetfig : edd4e172-5b84-11e7-98d0-22000b95c3d9
-                 * Kellogz : c2eac02e-5b84-11e7-98d0-22000b95c3d9
-                 *  FrontEndRuben : 8b15de49-5dba-11e7-98d0-22000b95c3d9
-                 *  Cache: 2f9bbd2e-5b4f-11e7-98d0-22000b95c3d9
-                 *  Panda : d7bddfc7-5b84-11e7-98d0-22000b95c3d9
-                 *  Jason : 99f77fb3-5cec-11e7-98d0-22000b95c3d9
-                 *
-                 *
-                 *
-                 *
-                 *  "match_date": "1503435264",
-                 *  "win": "edd4e172-5b84-11e7-98d0-22000b95c3d9",
-                 *  "loss": "c2eac02e-5b84-11e7-98d0-22000b95c3d9",
-                 *  "p1_id": "edd4e172-5b84-11e7-98d0-22000b95c3d9",
-                 *  "p2_id": "c2eac02e-5b84-11e7-98d0-22000b95c3d9",
-                 *  "p1_char": "Nash",
-                 *  "p2_char": "Ryu",
-                 *  "userName": "Theonlyrealstreetfig"
-                 */
-
-                var date = match.match_date;
-                var p1ID = match.p1_id;
-                var p2ID = match.p2_id;
-                var winner = match.win === p1ID ? p1ID : p2ID;
-
-                return (
-                    <div className="matchRow" id={date}>
-                        <div className={"matchData userName " + match.p1_char.toLowerCase()}>
-                            <h1>Winner</h1>
-                        </div>
-                        <div className="middle">
-                            mid
-                        </div>
-                        <div className="loser">
-                            loss
-                        </div>
-                    </div>
-                );
-        })}
+            <MatchesTopRow></MatchesTopRow>
+            <MatchesArea matches={props.matches}></MatchesArea>
         </div>
     );
 }
-App.propTypes = {
-    matches: React.PropTypes.arrayOf(React.PropTypes.shape({
-        match_date: React.PropTypes.string,
-        win: React.PropTypes.string,
-        loss: React.PropTypes.string,
-        p1_id: React.PropTypes.string,
-        p2_id: React.PropTypes.string,
-        p1_char: React.PropTypes.string,
-        p2_char: React.PropTypes.string,
-        userName: React.PropTypes.String
-    }))
+var MatchesArea = React.createClass({
+        propTypes: {
+            matches: React.PropTypes.arrayOf(React.PropTypes.shape({
+                match_date: React.PropTypes.string,
+                win: React.PropTypes.string,
+                loss: React.PropTypes.string,
+                p1_id: React.PropTypes.string,
+                p2_id: React.PropTypes.string,
+                p1_char: React.PropTypes.string,
+                p2_char: React.PropTypes.string,
+                userName: React.PropTypes.String
+            }))
+        },
+        render: function () {
+            var that = this;
+            return (
+                <div>
+                    { this.props.matches.map(function (match) {
+                        var date = match.match_date;
+                        var p1ID = match.p1_id;
+                        var p2ID = match.p2_id;
+                        var winner = match.win === p1ID ? p1ID : p2ID;
+
+                        return (
+                            <div className="matchRow" id={date} key={date}>
+                                <div className={"matchData userName " + match.p1_char.toLowerCase()}>
+                                    {p2ID}<br/>
+                                    {match.p1_char}<br/>
+                                    <Counter></Counter>
+                                </div>
+                                <div className="matchData vs">
+                                    <h1>VS</h1>
+                                    {date}
+                                </div>
+                                <div className={"matchData userName " + match.p2_char.toLowerCase()}>
+                                    {p2ID}<br/>
+                                    {match.p2_char} <br/>
+                                    <Counter></Counter>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+            );
+        }
+    }
+);
+function MatchesTopRow() {
+    return (
+        <div className="topLabelHolder">
+            <span className="topLabel">Winner</span>
+            <span className="topLabel">Vs</span>
+            <span className="topLabel">Loser</span>
+        </div>
+    );
 }
 
+var Counter = React.createClass({
+    propTypes: {
+       initialScore: React.PropTypes.number
+    },
+    getInitialState: function () {
+        return {
+            score: this.props.initialScore || 0,
+        }
+    },
+    incrementScore: function () {
+        this.setState({
+            score: (this.state.score + 1)
+        });
+    },
+    decrementScore: function () {
+        this.setState({
+            score: (this.state.score - 1)
+        });
+    },
+    render: function () {
+        return (<div>
+                <button className="minus" onClick={this.decrementScore}>-</button>
+                score: {
+                this.state.score
+            }
+                <button className="plus" onClick={this.incrementScore}>+</button>
+            </div>
+        )
+    }
+});
 
-ReactDOM.render(<App yo="YO!" species="otter" matches={LOCAL_MATCHES}/>, document.getElementById('container'));
+ReactDOM.render(<App matches={LOCAL_MATCHES}/>, document.getElementById('container'));
+
+
+/**
+ * Theonlyrealstreetfig : edd4e172-5b84-11e7-98d0-22000b95c3d9
+ * Kellogz : c2eac02e-5b84-11e7-98d0-22000b95c3d9
+ *  FrontEndRuben : 8b15de49-5dba-11e7-98d0-22000b95c3d9
+ *  Cache: 2f9bbd2e-5b4f-11e7-98d0-22000b95c3d9
+ *  Panda : d7bddfc7-5b84-11e7-98d0-22000b95c3d9
+ *  Jason : 99f77fb3-5cec-11e7-98d0-22000b95c3d9
+ *
+ *
+ *
+ *
+ *  "match_date": "1503435264",
+ *  "win": "edd4e172-5b84-11e7-98d0-22000b95c3d9",
+ *  "loss": "c2eac02e-5b84-11e7-98d0-22000b95c3d9",
+ *  "p1_id": "edd4e172-5b84-11e7-98d0-22000b95c3d9",
+ *  "p2_id": "c2eac02e-5b84-11e7-98d0-22000b95c3d9",
+ *  "p1_char": "Nash",
+ *  "p2_char": "Ryu",
+ *  "userName": "Theonlyrealstreetfig"
+ */
