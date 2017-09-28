@@ -23,7 +23,7 @@ require 'dbconfig.php';
    
     
     
-<?php
+
 
 $csv_filename = 'Scores'.'_'.date('Y-m-d').'.csv';
 				
@@ -54,7 +54,7 @@ while($row = mysqli_fetch_array($conn,$result)) {
 header("Content-type: text/x-csv");
 header("Content-Disposition: attachment; filename=".$csv_filename."");
 echo($csv_export);
-?>
+
 
 
 
