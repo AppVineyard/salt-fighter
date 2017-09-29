@@ -33,19 +33,19 @@ $csv_export = '';
 
 $query = "SELECT * FROM `scoresEA` ORDER by `score` DESC";
 $result = mysqli_query($conn,$query) or die('Query failed: ' . mysqli_error());
-$field = mysqli_num_fields($conn,$result);
+$field = mysqli_num_fields($result);
 // create line with field names
 for($i = 0; $i < $field; $i++) {
-  $csv_export.= mysqli_field_name($conn,$result,$i).';';
+  $csv_export.= mysqli_field_name($result,$i).';';
 }
 // newline (seems to work both on Linux & Windows servers)
 $csv_export.= '
 ';
 // loop through database query and fill export variable
-while($row = mysqli_fetch_array($conn,$result)) {
+while($row = mysqli_fetch_array($result)) {
   // create line with field values
   for($i = 0; $i < $field; $i++) {
-    $csv_export.= '"'.$row[mysqli_field_name($conn,$result,$i)].'";';
+    $csv_export.= '"'.$row[mysqli_field_name($result,$i)].'";';
   }	
   $csv_export.= '
 ';	
