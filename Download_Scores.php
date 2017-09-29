@@ -36,7 +36,7 @@ $result = mysqli_query($conn,$query) or die('Query failed: ' . mysqli_error());
 $field = mysqli_num_fields($result);
 // create line with field names
 for($i = 0; $i < $field; $i++) {
-  $csv_export.= mysqli_field_name($result,$i).';';
+  $csv_export.= mysqli_fetch_assoc($result,$i).';';
 }
 // newline (seems to work both on Linux & Windows servers)
 $csv_export.= '
