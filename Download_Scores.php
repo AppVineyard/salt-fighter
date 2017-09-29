@@ -45,7 +45,7 @@ $csv_export.= '
 while($row = mysqli_fetch_array($result)) {
   // create line with field values
   for($i = 0; $i < $field; $i++) {
-    $csv_export.= '"'.$row[mysqli_field_name($result,$i)].'";';
+    $csv_export.= '"'.$row[mysqli_fetch_fields($result,$i)].'";';
   }	
   $csv_export.= '
 ';	
